@@ -163,7 +163,7 @@ use_math: true
 
 **4. Test Process**
 
-  - 테스트시, latent loss, apprent loss를 사용하며 총 anomaly score A(F)는 아랭 식으로 계산된다.
+  - 테스트시, latent loss, apprent loss를 사용하며 총 anomaly score A(F)는 아래 식으로 계산된다.
 
     > ![La](https://latex.codecogs.com/svg.latex?\small&space;A(F)=\lambda*L_a(F)+(1-\lambda)*L_l(F),\lambda=w_a/w_l)
 
