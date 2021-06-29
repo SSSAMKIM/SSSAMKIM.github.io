@@ -11,7 +11,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 thumbnail: null
 keywords: ODR, PHM
-permalink: /article/1
+permalink: /7
 use_math: true
 mathjax: true
 ---
