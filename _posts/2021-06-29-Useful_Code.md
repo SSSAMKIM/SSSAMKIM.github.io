@@ -11,7 +11,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 thumbnail: null
 keywords: DeepLearning, Keras, CNN, GPU
-permalink: /8
+permalink: /9
 mathjax: true
 use_math: true
 ---
