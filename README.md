@@ -6,7 +6,7 @@ permalink: /about/
 
 ## 1. Information
 
-<img src="/public/img/kth1.png" style="width:20%; height:auto">
+<img src="/public/img/kth1.png" style="width:15%; height:auto">
 
 ### Taehun Kim <br>
 
