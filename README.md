@@ -4,30 +4,24 @@ title: About
 permalink: /about/
 ---
 
-## Theme Monos
-> Simple and lightweight theme for Jekyll
+## Information
 
-### Features
-- Responsive.
-- Syntax Highlight
-- Most optimized theme for tech blog.
-- Lightweight with minimum stylesheet.
-- Easy to customize.
-- Offers category menu.
+Taehun Kim<br>
 
-### _config.yml
-> Code block will look like this.
-```yml
-highlighter-theme: monokai //you can change your syntax color scheme.
-date_format: "%Y-%M-%D" //and date format.
-```
+System Health and Risk Management Laboratory
 
-### Screenshots
-#### Page
-![alt text](/public/img/screenshot-1.png)
-#### Articles
-![alt text](/public/img/screenshot-2.png)
-#### Page - Mobile
-![alt text](/public/img/screenshot-m1.png)
-#### Page - Articles
-![alt text](/public/img/screenshot-m2.png)
+M.S Student in Mechanical Engineering
+
+Seoul National University, South Korea
+
+## Eudcation
+
+### Seoul National Univ.
+M.S Student in Mechanical Engineering
+2021.03 ~
+
+### Hanyang Univ.
+B.S in Mechanical Engineering
+2014.03 ~ 2021.02
+
+### Experience
