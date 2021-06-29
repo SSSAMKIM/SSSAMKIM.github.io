@@ -154,11 +154,11 @@ mathjax: true
 
 **3. Omnidirectional Regeneration**
 
-<div style="width:45%; height:auto; float:left; margin-left:4%;">
- <img src="/public/img/odr1.png" style="width:80%; height:auto;">
+<div style="width:25%; height:auto; float:left; margin-left:4%;">
+ <img src="/public/img/odr1.png" style="width:100%; height:auto;">
 </div>
-<div style="width:45%; height:auto; float:left; margin-left:2%;">
- <img src="/public/img/odr2.png" style="width:80%; height:auto;">
+<div style="width:25%; height:auto; float:left; margin-left:2%;">
+ <img src="/public/img/odr2.png" style="width:100%; height:auto;">
 </div><div style="clear:both;"></div><br>
 
 <center>
