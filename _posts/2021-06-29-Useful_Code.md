@@ -24,10 +24,10 @@ use_math: true
 
 - [Useful Code](#useful-code)
 
-#### Useful Code
+### Useful Code
 ---
 
-##### **1. Callback, Learning rate decay 참고 코드**
+#### **1. Callback, Learning rate decay 참고 코드**
 
 <br>
 
@@ -51,7 +51,7 @@ use_math: true
 
 <br>
 
-##### **2. GPU 관련**
+#### **2. GPU 관련**
 
 <br>
 
@@ -75,7 +75,7 @@ use_math: true
  
  <br>
   
-##### **3. FFT**
+#### **3. FFT**
   
   <br><br>
   
@@ -97,7 +97,7 @@ use_math: true
    
    <br>
    
-##### **4. Data Generator**
+#### **4. Data Generator**
 
  <br>
  
@@ -125,7 +125,7 @@ use_math: true
   
   <br>
   
-##### **5. 가상환경 설치 및 GPU 연결**
+#### **5. 가상환경 설치 및 GPU 연결**
 
   <br>
 
@@ -172,7 +172,7 @@ use_math: true
   
   <br>
 
-##### **6. 가상환경 삭제 및 jupyter내 가상환경 삭제**
+#### **6. 가상환경 삭제 및 jupyter내 가상환경 삭제**
 
   <br>
 
