@@ -121,6 +121,7 @@ use_math: true
 </center>
 
 <br>
+
 **2. Training**
 
   - GAN-based model은 학습시 D<sub>train</sub>으로만 학습하게 되고, 이 때 **목적은 각 training dataset에 대한 모델의 output의 variance를(추가 확인 필요) 최소화하는 것**이다.
@@ -177,8 +178,10 @@ use_math: true
 ---
 
 <br>
+
 #### Result
 ---
+
 **Result**
 
 <center>
