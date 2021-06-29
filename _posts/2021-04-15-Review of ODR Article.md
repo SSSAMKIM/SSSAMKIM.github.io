@@ -67,7 +67,7 @@ mathjax: true
     - cf) *Oil whip : Oil whirl frequency가 shaft의 natural frequency와 같을 때 발생하는 공진 현상으로, 이 진동수에 도달하면 rotor speed와 무관하게 oil whip frequency에 머물게 되어 journal bearing의 failure를 유발하게 된다.
   
 <center>
-  <img src = "/assets/img/posts/clearance.jpg" style = "width : 70%; height = auto;">
+  <img src = "/public/img/clearance.jpg" style = "width : 70%; height = auto;">
 </center>
 
 - Directional/Non-Directional Health State
@@ -141,7 +141,7 @@ mathjax: true
     - Objective function and Hypothesis
 
   <center>
-    <img src="/assets/img/posts/SVM.png" style = "width : 50%; height : auto;">
+    <img src="/public/img/SVM.png" style = "width : 50%; height : auto;">
   </center><br>
 
   - 1) 결정 함수(Hypothesis)의 기울기 dh/dx = ∥w∥로, 가중치 벡터의 norm과 같다. 이 기울기를 2로 나누면 결정 함수의 값이 1,-1이 되는 점들이 결정 경계로부터 2배만큼 더 멀어진다.
@@ -155,14 +155,14 @@ mathjax: true
 **3. Omnidirectional Regeneration**
 
 <div style="width:45%; height:auto; float:left; margin-left:4%;">
- <img src="/assets/img/posts/odr1.png" style="width:100%; height:auto;">
+ <img src="/public/img/odr1.png" style="width:100%; height:auto;">
 </div>
 <div style="width:45%; height:auto; float:left; margin-left:2%;">
- <img src="/assets/img/posts/odr2.png" style="width:100%; height:auto;">
+ <img src="/public/img/odr2.png" style="width:100%; height:auto;">
 </div><div style="clear:both;"></div><br>
 
 <center>
-  <img src="/assets/img/posts/odr3.png" style = "width : 35%; height : auto;">
+  <img src="/public/img/odr3.png" style = "width : 35%; height : auto;">
 </center>
 
 - 위 변환식을 이용하여 x<sub>1</sub>, ... , x<sub>N</sub> vector와 y<sub>1</sub>, ... , y<sub>N</sub> 벡터를 만들어내는데, 이 때 각 벡터는 n개의 component를 가진다. 
@@ -176,7 +176,7 @@ mathjax: true
   - Directional anomaly states의 진단 성능을 높이기 위해 먼저 어떤 fault class가 directionality를 가지는지 결정해야 하는데, 논문에서는 Directionality metric D를 도입하였다.
 
   <center>
-    <img src = "/assets/img/posts/direc_metric.png" style = "width : 35%; height : auto;">
+    <img src = "/public/img/direc_metric.png" style = "width : 35%; height : auto;">
   </center>
     
   - D는 vibration의 정도(level)과 health states에 무관하게 잘 작동하며, S<sub>N</sub>(f)는 N개의 ODR 신호에 대한 power spectrum을 의미하고, f<sub>1x</sub>는 회전 속도의 주파수, 즉 fundamental frequency를 의미한다.
@@ -190,7 +190,7 @@ mathjax: true
     - 아래는 3개의 datasets를 이용하여 5개의 health states에 대해 D value를 측정한 결과이다.
 
     <center>
-      <img src = "/assets/img/posts/d_dataset.png" style = "width : 95%; height : auto;">
+      <img src = "/public/img/d_dataset.png" style = "width : 95%; height : auto;">
     </center>
     
 **5. Classfication & Result**
