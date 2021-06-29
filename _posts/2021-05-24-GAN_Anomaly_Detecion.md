@@ -11,7 +11,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 thumbnail: null
 keywords: GAN, Anoamly Detection, Class Imbalance, AutoEncoder
-permalink: /article/2
+permalink: /7
 mathjax: true
 use_math: true
 ---
