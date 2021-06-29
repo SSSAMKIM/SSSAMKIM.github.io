@@ -4,7 +4,7 @@ title: "Useful Code for DeepLearning"
 summary: "딥러닝 학습시 주로 사용하는 코드 정리"
 author: taehun
 date: '2021-06-29 16:00:00 +0900'
-category: Study, Python
+category: Python
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
