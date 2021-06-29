@@ -6,7 +6,14 @@ permalink: /about/
 
 ## Information
 
+<img src="/public/img/kth1.png" style="width:30%; height:auto">
+
 ### Taehun Kim <br>
+
+<a href="https://www.instagram.com/tae_____hun/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+
+<i class="fa fa-instagram" aria-hidden="true"></i>
 
 System Health and Risk Management Laboratory
 
