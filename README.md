@@ -31,6 +31,5 @@ PHM, DeepLearning, Python 공부 정리하는 블로그
 
 ## Experience
 
-### 1. Data Challenge at PHM Asia Pacific 2021
-- 2nd place
-- <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard"></a>
+### 1. Data Challenge at PHM Asia Pacific 2021 - Classification 2nd place
+<a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">Kaggle link</a>
