@@ -47,6 +47,7 @@ use_math: true
   > 3) **Ambiguity of Starting Time of Abnormality** : 어느 시점부터 고장으로 지칭할 것인지에 대해 라벨링 이슈가 있기에, 고장을 판단하는 Threshold 설정에 대한 모호함으로 mis-labeled 문제가 있을 수 있다.
 
 <br>
+
 #### Class Imbalance Problem
 ---
 
@@ -60,6 +61,7 @@ use_math: true
   > 2) **Algorithm-level methods** : Bagging, Boosting ensemble-based methods 등을 이용하여 classifier를 불균형 데이터에 맞게 fitting 시키도록 변형하는 방법.
 
 <br>
+
 #### Dataset
 ---
 
@@ -86,6 +88,7 @@ use_math: true
       - Imbalanced time series data이므로, b+v >> u이 상황으로 설정한다.
 
 <br>
+
 #### Model Architecture and Training
 ---
 
@@ -169,6 +172,7 @@ use_math: true
     - 모델은 Normal data에 대해서만 학습되었기에, normal latent patten을 잘 나타낼 수 있으므로, normal sample일 경우 A(F)의 값은 0에 가까워진다.
 
 <br>
+
 #### Evaluation Metrics
 ---
 
@@ -182,7 +186,9 @@ use_math: true
 </center>
 
 <br>
+
 #### Reference
+---
 
 - WENQIAN JIANG, YANG HONG, BEITONG ZHOU, XIN HE, AND CHENG CHENG, A GAN-Based Anomaly Detection Approach for Imbalanced Industrial Time Series
 , IEEE Access, vol. 7, 2019
