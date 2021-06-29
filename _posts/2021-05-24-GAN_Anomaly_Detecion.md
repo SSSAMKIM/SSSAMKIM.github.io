@@ -32,8 +32,6 @@ use_math: true
 #### Anomaly Detection
 ---
 
-**Anomaly Detection**
-
   - 이상 탐지는 Time-series(시계열) 데이터를 입력을 받으며, **모델 학습 과정은 보통 1) feature extraction, 2) fault recognition 2단계**로 나뉜다.
 
   - 이상 탐지를 위한 패턴 인식 도구로, **Bayesian classifier, Support Vector Machine, Neural Networks, 그리고 DL methods**가 사용된다.
