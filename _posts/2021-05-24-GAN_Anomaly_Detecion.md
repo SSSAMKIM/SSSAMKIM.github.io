@@ -48,11 +48,9 @@ use_math: true
   > 
   > 3) **Ambiguity of Starting Time of Abnormality** : 어느 시점부터 고장으로 지칭할 것인지에 대해 라벨링 이슈가 있기에, 고장을 판단하는 Threshold 설정에 대한 모호함으로 mis-labeled 문제가 있을 수 있다.
 
-<br><br>
+<br>
 #### Class Imbalance Problem
 ---
-
-**Class Imbalance Problem**
 
   - 실제 산업 현장에서 얻을 수 있는 데이터는 normal states의 데이터에 비해 fault states의 데이터가 현저하게 부족함.
 
@@ -63,11 +61,9 @@ use_math: true
   > 1) **Data-level methods** : 불균형 데이터 분포를 해소하기 위해 under-sampling or over-sampling을 사용하는 방법.<br><br>
   > 2) **Algorithm-level methods** : Bagging, Boosting ensemble-based methods 등을 이용하여 classifier를 불균형 데이터에 맞게 fitting 시키도록 변형하는 방법.
 
-<br><br>
+<br>
 #### Dataset
 ---
-
-**Dataset** 
 
   - 1) **CWRU Rolling Bearing Dataset**
 
@@ -91,7 +87,7 @@ use_math: true
 
       - Imbalanced time series data이므로, b+v >> u이 상황으로 설정한다.
 
-<br><br>
+<br>
 #### Model Architecture and Training
 ---
 
@@ -123,7 +119,7 @@ use_math: true
   <img src="/assets/img/posts/gan_anomaly.png" style = "width : 70%; height : auto;">
 </center>
 
-<br><br>
+<br>
 **2. Training**
 
   - GAN-based model은 학습시 D<sub>train</sub>으로만 학습하게 되고, 이 때 **목적은 각 training dataset에 대한 모델의 output의 variance를(추가 확인 필요) 최소화하는 것**이다.
@@ -174,13 +170,11 @@ use_math: true
     
     - 모델은 Normal data에 대해서만 학습되었기에, normal latent patten을 잘 나타낼 수 있으므로, normal sample일 경우 A(F)의 값은 0에 가까워진다.
 
-<br><br>
+<br>
 #### Evaluation Metrics
 ---
 
-**Evaluation Metrics**
-
-<br><br>
+<br>
 #### Result
 ---
 **Result**
@@ -189,7 +183,7 @@ use_math: true
   <img src="/assets/img/posts/anomaly_cwru.png" style = "width : 50%; height : auto;">
 </center>
 
-<br><br>
+<br>
 #### Reference
 
 - WENQIAN JIANG, YANG HONG, BEITONG ZHOU, XIN HE, AND CHENG CHENG, A GAN-Based Anomaly Detection Approach for Imbalanced Industrial Time Series
