@@ -6,22 +6,18 @@ permalink: /about/
 
 ## 1. Information
 
-<img src="/public/img/kth1.png" style="width:15%; height:auto">
-![image](/public/img/kth1.png)
+![image](/public/img/kth1.png){width : 15%;}
 {: .align-left}
 
 ### Taehun Kim <br>
-
-<a href="https://www.instagram.com/tae_____hun/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-
-
-<i class="fa fa-instagram" aria-hidden="true"></i>
 
 System Health and Risk Management Laboratory
 
 M.S Student in Mechanical Engineering
 
 Seoul National University, South Korea
+
+https://www.instagram.com/tae_____hun/
 
 ## 2. Eudcation
 
