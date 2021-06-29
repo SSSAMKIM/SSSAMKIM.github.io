@@ -12,6 +12,8 @@ permalink: /about/
   <a href = "https://www.instagram.com/tae_____hun/"><i class="fa fa-instagram fa-2x" style="color:517fa4"></i></a>
   </div>
 
+<i class="fa fa-instagram" aria-hidden="true"></i>
+
 System Health and Risk Management Laboratory
 
 M.S Student in Mechanical Engineering
