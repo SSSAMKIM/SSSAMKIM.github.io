@@ -182,8 +182,6 @@ use_math: true
 #### Result
 ---
 
-**Result**
-
 <center>
   <img src="/public/img/anomaly_cwru.png" style = "width : 50%; height : auto;">
 </center>
