@@ -116,7 +116,7 @@ use_math: true
     (![Gehat](https://latex.codecogs.com/svg.latex?\small&space;\hat{G_e}) is the same as G<sub>e</sub> but with different parametrization and the dimension of output ![Gehat](https://latex.codecogs.com/svg.latex?\small&space;\hat{Z}) is the same as Z)
 
 <center>
-  <img src="/public/img/gan_anomaly.png" style = "width : 70%; height : auto;">
+  <img src="/public/img/gan_anomaly.png" style = "width : 50%; height : auto;">
 </center>
 
 <br>
