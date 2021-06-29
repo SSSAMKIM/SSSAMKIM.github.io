@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-PHM, DeepLearning, Python 공부 정리하는 블로그
+PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
 ## Information
 
