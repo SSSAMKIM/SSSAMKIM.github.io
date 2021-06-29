@@ -6,8 +6,7 @@ permalink: /about/
 
 ## 1. Information
 
-![image](/public/img/kth1.png){width = 15%}
-{: .align-left}
+<img src="/public/img/kth1.png" align="left" style="width:15%; height:auto">
 
 ### Taehun Kim <br>
 
