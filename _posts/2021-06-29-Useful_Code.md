@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "[Python]Useful Code for DeepLearning"
+title: "Useful Code for DeepLearning"
 summary: "딥러닝 학습시 주로 사용하는 코드 정리"
 author: taehun
 date: '2021-06-29 16:00:00 +0900'
-category: Study
+category: Study, Python
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
 toc_icon: "cog"
 thumbnail: null
 keywords: DeepLearning, Keras, CNN, GPU
-permalink: /blog/python/2
+permalink: /python/2
 mathjax: true
 use_math: true
 ---
@@ -29,7 +29,7 @@ use_math: true
 
 ##### **1. Callback, Learning rate decay 참고 코드**
 
-<br><br>
+<br>
 
   ```python
   lr_scheduler = keras.callbacks.ReduceLROnPlateau(factor = 0.5, patience = 5)
@@ -49,11 +49,11 @@ use_math: true
                        validation_data = (X_test, y_test), callbacks = [callbacks, lr_scheduler])
   ```
 
-<br><br>
+<br>
 
 ##### **2. GPU 관련**
 
-<br><br>
+<br>
 
   - GPU 사용 중인지 확인
 
@@ -73,7 +73,7 @@ use_math: true
   
    **0.4는 할당 비율로, 할당하고 싶은 만큼 할당하면 됨**
  
- <br><br>
+ <br>
   
 ##### **3. FFT**
   
@@ -95,12 +95,12 @@ use_math: true
   ```
    **적절히 설정해서 사용**
    
-   <br><br>
+   <br>
    
 ##### **4. Data Generator**
 
- <br><br>
-
+ <br>
+ 
   - Dataset 생성 코드 예시
 
   ```python
@@ -123,11 +123,11 @@ use_math: true
   data_generator(batch_size, sp,root_dir, label)
   ```
   
-  <br><br>
+  <br>
   
 ##### **5. 가상환경 설치 및 GPU 연결**
 
-  <br><br>
+  <br>
 
 - **사용환경**<br><br>
   - Intel i7-8700 CPU @3.20 GHz
@@ -138,11 +138,11 @@ use_math: true
   - CUDA 10.1(Nvidia driver의 CUDA Version과는 별개)
   - cuDNN 7.6.5
 
-  <br><br>
+  <br>
 
 **버전에 맞는 CUDA, cuDNN 설치 후 아래 진행**
   
-  <br><br>
+  <br>
 
   ```
   1. conda create -n 이름 python = 3.7
@@ -156,11 +156,11 @@ use_math: true
   9. pip install scikit-learn
   ```
   
-  <br><br>
+  <br>
   
   **PyTorch 설치시(PyTorch 설치 후 진행)**
 
-  <br><br>
+  <br>
   
   ```
   1. conda create -n 이름 python=3.7
@@ -170,11 +170,11 @@ use_math: true
   5. conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
   ```
   
-  <br><br>
+  <br>
 
 ##### **6. 가상환경 삭제 및 jupyter내 가상환경 삭제**
 
-  <br><br>
+  <br>
 
   ```
   1. conda remove --name 이름--all
