@@ -16,7 +16,8 @@ M.S Student in Mechanical Engineering
 
 Seoul National University, South Korea
 
-<a href = "https://www.instagram.com/tae_____hun/"><img src = "http://img.shields.io/badge/-Instagram-black?style=flat&logo=Instagram&link=https://instagram.com/alpox.dev/"
+<a href = "https://www.instagram.com/tae_____hun/">
+  <img src = "http://img.shields.io/badge/-Instagram-black?style=flat&logo=Instagram&link=https://instagram.com/alpox.dev/"
                                                         style="height : auto; margin-left : 10px; margin-right : 10px;"/></a>
 
 <a href="https://github.com/SSSAMKIM/SSSAMKIM.github.io">
