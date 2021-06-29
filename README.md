@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+PHM, DeepLearning, Python 공부 정리하는 블로그
+
 ## Information
 
 <img src="/public/img/kth1.png" align="left" style="width:15%; height:auto">
@@ -27,7 +29,6 @@ Seoul National University, South Korea
 
 <br><br>
 
-PHM, DeepLearning, Python 공부 정리하는 블로그
 
 ## Experience
 
