@@ -27,6 +27,7 @@ Seoul National University, South Korea
         style="height : auto; margin-right : 10px;"/>
 </a>
 
+<br>
 
 ## Experience
 
