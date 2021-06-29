@@ -11,7 +11,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 thumbnail: null
 keywords: python, linux, error
-permalink: /python/1
+permalink: /6
 use_math: true
 mathjax: true
 ---
