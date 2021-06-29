@@ -16,6 +16,6 @@ Seoul National University, South Korea
 
 <a href = https://www.instagram.com/tae_____hun/
 
-<br>
+<br><br>
 
 PHM, DeepLearning, Python 공부 정리하는 
