@@ -6,7 +6,7 @@ permalink: /about/
 
 ## Information
 
-<img src="/public/img/kth1.png" align="left" style="width:10%; height:auto">
+<img src="/public/img/kth1.png" align="left" style="width:15%; height:auto">
 
 ### Taehun Kim <br>
 
@@ -28,3 +28,9 @@ Seoul National University, South Korea
 <br><br>
 
 PHM, DeepLearning, Python 공부 정리하는 블로그
+
+## Experience
+
+### 1. Data Challenge at PHM Asia Pacific 2021
+- 2nd place
+- <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard"></a>
