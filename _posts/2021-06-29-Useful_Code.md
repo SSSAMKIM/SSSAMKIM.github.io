@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Useful Code for DeepLearning"
+title: "딥러닝시 자주 사용하는 코드 정리"
 summary: "딥러닝 학습시 주로 사용하는 코드 정리"
 author: taehun
 date: '2021-06-29 16:00:00 +0900'
