@@ -186,6 +186,8 @@ data_generator(batch_size, sp,root_dir, label)
 1. conda remove --name 이름--all
 2. jupyter kernelspec uninstall 
 ```
+
+<br>
   
 #### **7. mat 파일 불러오기**
 
