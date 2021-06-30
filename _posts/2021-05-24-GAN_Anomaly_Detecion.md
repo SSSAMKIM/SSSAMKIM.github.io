@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Article Review of GAN Based Anoamly Detection"
+title: "GAN기반 이상 탐지 논문 리뷰"
 summary: "GAN기반 이상 탐지 논문 Review"
 author: taehun
 date: '2021-05-24 12:00:00 +0900'
