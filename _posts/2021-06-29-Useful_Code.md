@@ -86,7 +86,7 @@ def fft_th(data, sampling_frequency, mode = 1):
     sf = sampling_frequency
     y = data - np.mean(data)
     yf = np.abs(np.fft.fft(y).real)
-    xf = np.fft.fftfreq(sf, 1/sf)
+    xf = np.fft.fftfreq(len(data), 1/sf)
     xf = xf[xf>0]
   
     if mode == 1:
