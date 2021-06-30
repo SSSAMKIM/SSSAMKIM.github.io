@@ -83,15 +83,15 @@ session = tf.compat.v1.Session(config = config)
 
 ```python
 def fft_th(data, sampling_frequency, mode = 1):
-  sf = sampling_frequency
-  y = data - np.mean(data)
-  yf = np.abs(np.fft.fft(y).real)
-  xf = np.fft.fftfreq(sf, 1/sf)
-  xf = xf[xf>0]
+    sf = sampling_frequency
+    y = data - np.mean(data)
+    yf = np.abs(np.fft.fft(y).real)
+    xf = np.fft.fftfreq(sf, 1/sf)
+    xf = xf[xf>0]
   
-  if mode == 1:
-      plt.plot(xf, yf[:len(xf)], label = lab)
-      plt.legend(loc = 'upper right')
+    if mode == 1:
+        plt.plot(xf, yf[:len(xf)], label = lab)
+        plt.legend(loc = 'upper right')
 ```
    **적절히 설정해서 사용**
    
