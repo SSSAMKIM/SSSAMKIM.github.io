@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Error & Solution in python and linux"
+title: "Python, Linux에서 발생하는 오류 및 해결 방법 정리"
 summary: "python, linux에서 발생하는 오류에 대한 해결책 정리"
 author: taehun
 date: '2021-04-15 10:46:00 +0900'
