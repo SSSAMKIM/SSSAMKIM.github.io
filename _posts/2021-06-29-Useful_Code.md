@@ -114,12 +114,16 @@ use_math: true
               df_ = pd.DataFrame(np.array(data[data.columns[0]][rand:rand + sample_point]).reshape(1,sample_point))
               df = df.append(df_)
           df.to_csv(root_dir + '\\' + 'sample_point_{}'.format(sample_point) + '\\' + '{}.csv'.format(i), header = None, index = None)
+  ```
   
+  ```python
   batch_size = 1000
   sp = 512
   label = ['12k_OF_7_1797']
   root_dir = './'
+  ```
   
+  ```python
   data_generator(batch_size, sp,root_dir, label)
   ```
   
@@ -179,4 +183,11 @@ use_math: true
   ```
   1. conda remove --name 이름--all
   2. jupyter kernelspec uninstall 
+  ```
+  
+#### **7. mat 파일 불러오기**
+
+  ```python
+  import scipy.io
+  mat = scipy.io.loadmat('filepath')
   ```
