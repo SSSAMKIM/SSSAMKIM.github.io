@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Review of ODR Article"
+title: "ODR논문 "
 summary: "ODR논문 Review"
 author: taehun
 date: '2021-04-15 11:00:00 +0900'
