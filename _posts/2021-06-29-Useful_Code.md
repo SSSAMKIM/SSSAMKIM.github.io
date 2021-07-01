@@ -82,16 +82,16 @@ session = tf.compat.v1.Session(config = config)
   - FFT Code
 
 ```python
-def fft_th(data, sampling_frequency, mode = 1):
+def fft_th(data, sampling_frequency, label, mode = 1):
     sf = sampling_frequency
     y = data - np.mean(data)
-    yf = np.abs(np.fft.fft(y).real)
+    yf = np.abs(np.fft.fft(y).real)/len(y)
     xf = np.fft.fftfreq(len(data), 1/sf)
     xf = xf[xf>0]
   
     if mode == 1:
-        plt.plot(xf, yf[:len(xf)], label = lab)
-        plt.legend(loc = 'upper right')
+        plt.plot(xf, yf[:len(xf)], label = label)
+        plt.legend(loc = 'upper right', fontsize = 14)
 ```
    **적절히 설정해서 사용**
    
