@@ -92,6 +92,7 @@ def fft_th(data, sampling_frequency, label, mode = 1):
     if mode == 1:
         plt.plot(xf, yf[:len(xf)], label = label)
         plt.legend(loc = 'upper right', fontsize = 14)
+    return xf, yf[:len(xf)]
 ```
    **적절히 설정해서 사용**
    
