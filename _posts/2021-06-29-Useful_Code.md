@@ -96,6 +96,8 @@ def fft_th(data, sampling_frequency, label, mode = 1):
 ```
    **적절히 설정해서 사용**
 
+<br>
+
 **아래 코드는 low frequency일 경우 좀 더 깔끔하게 FFT 결과를 보여주는 코드**
 
 ```python
@@ -149,7 +151,7 @@ data_generator(batch_size, sp,root_dir, label)
   
   <br>
   
-### **5. 1D-CNN 10번 반복 코드 및 confusion matrix 저장 코드**
+#### **5. 1D-CNN 10번 반복 코드 및 confusion matrix 저장 코드**
 
 ```python
 def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
@@ -201,7 +203,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **5. 가상환경 설치 및 GPU 연결**
+#### **6. 가상환경 설치 및 GPU 연결**
 
   <br>
 
@@ -248,7 +250,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
   
   <br>
 
-#### **6. 가상환경 삭제 및 jupyter내 가상환경 삭제**
+#### **7. 가상환경 삭제 및 jupyter내 가상환경 삭제**
 
   <br>
 
@@ -259,7 +261,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **7. mat 파일 불러오기**
+#### **8. mat 파일 불러오기**
 
 ```python
 import scipy.io
