@@ -95,6 +95,23 @@ def fft_th(data, sampling_frequency, label, mode = 1):
     return xf, yf[:len(xf)]
 ```
    **적절히 설정해서 사용**
+
+**아래 코드는 low frequency일 경우 좀 더 깔끔하게 FFT 결과를 보여주는 코드**
+
+```python
+def fft_th_low(data, sampling_frequency, label, mode = 1):
+    sf = sampling_frequency
+    y = data - np.mean(data)
+    yf = np.abs(np.fft.fft(y).real)/len(y)
+    xf = np.fft.fftfreq(len(data), 1/sf)
+    xf = xf[xf>0]
+  
+    if mode == 1:
+        plt.figure(figsize = (6,3))
+        for i in range(len(xf)):
+            plt.plot([xf[i], xf[i]], [0,yf[i]], 'b')
+    return xf, yf[:len(xf)]
+```   
    
    <br>
    
@@ -131,6 +148,58 @@ data_generator(batch_size, sp,root_dir, label)
 ```
   
   <br>
+  
+### **5. 1D-CNN 10번 반복 코드 및 confusion matrix 저장 코드**
+
+```python
+def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
+                     file_path, label = ['Normal', 'Misalignment', 'Oil Whirl', 'Rubbing', 'Unbalance']):
+
+    def model_generate():
+        model = Sequential()
+        model.add(Conv1D(4,8, padding = 'same'))
+        model.add(BatchNormalization())
+        model.add(ReLU())
+
+        model.add(Conv1D(8,4, padding = 'same'))
+        model.add(BatchNormalization())
+        model.add(ReLU())
+        model.add(MaxPooling1D(padding = 'same'))
+
+        model.add(Flatten())
+
+        model.add(Dense(5))
+        model.add(Softmax())
+
+        lr_scheduler = keras.callbacks.ReduceLROnPlateau(factor = 0.5, patience = 5)
+
+        optimizer = keras.optimizers.Adam(lr = 0.0001)
+        model.compile(optimizer = optimizer
+                     ,loss = 'categorical_crossentropy' #'mse', 'categoricla_crossentropy', 'binary_crossentropy', 'sparse_categorical_crossentropy'
+                     ,metrics = ['accuracy'])
+
+        callbacks = [keras.callbacks.ModelCheckpoint(filepath= file_path,
+                                                        monitor='val_loss',
+                                                        save_best_only=True)]
+        return model, callbacks, lr_scheduler
+    
+    cf_stack = np.zeros([5,5], dtype = np.int32)
+
+    for i in range(n_iter):
+        print(f'----------------------------------------------------{i+1}th----------------------------------------------------')
+        model, callbacks, lr_scheduler = model_generate()
+        hist = model.fit(X_train, y_train,
+                             epochs = 100, validation_data = (X_valid, y_valid), callbacks = [callbacks, lr_scheduler])
+        model = load_model(file_path)
+        y_pred = model.predict(X_test)
+        cf = confusion_matrix(np.argmax(y_test, axis = 1), np.argmax(y_pred, axis = 1))
+        cf_stack = cf_stack + cf
+        
+    return cf_stack
+```
+**적절한 Hyperparameter 설정 후 사용**
+
+<br>
   
 #### **5. 가상환경 설치 및 GPU 연결**
 
