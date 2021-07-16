@@ -57,12 +57,22 @@ hist = model.fit(X_train, y_train, epochs = 40,
 
   - GPU 사용 중인지 확인
 
+1) Tensorflow
+
 ```python
 import tensorflow as tf
 from tf.python.client import device_lib
 print(device_lib.list_local_devices())  
 ```
-  
+
+2) PyTorch
+
+```python
+print('cuda index:', torch.cuda.current_device())
+print('gpu 개수:', torch.cuda.device_count())
+print('graphic name:', torch.cuda.get_device_name())
+```
+
   - GPU Memory 할당
 
 ```python
