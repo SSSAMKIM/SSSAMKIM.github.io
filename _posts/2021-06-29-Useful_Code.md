@@ -91,19 +91,39 @@ session = tf.compat.v1.Session(config = config)
   
   - FFT Code
 
+Version 1
+
 ```python
 def fft_th(data, sampling_frequency, label, mode = 1):
-    sf = sampling_frequency
-    y = data - np.mean(data)
-    yf = np.abs(np.fft.fft(y).real)/len(y)
-    xf = np.fft.fftfreq(len(data), 1/sf)
-    xf = xf[xf>0]
-  
-    if mode == 1:
-        plt.plot(xf, yf[:len(xf)], label = label)
-        plt.legend(loc = 'upper right', fontsize = 14)
-    return xf, yf[:len(xf)]
+    y =data-np.mean(data)
+    yf = np.abs(np.fft.fft(y).real)
+    xf = np.fft.fftfreq(len(y))
+    xf=xf*sampling_frequency
+    xf_=xf[:np.argmax(xf)]
+    yf_=yf[:np.argmax(xf)]
+    
+    if mode==1:
+        plt.plot(xf_, np.abs(yf_), label = label)
+        plt.legend(loc = 'upper right')
+    return xf_, yf_
 ```
+
+Version 2
+
+```python
+def fft(data, sampling_rate):
+    tmp_data = data - np.mean(data)
+    n = len(tmp_data)
+    y = np.fft.fft(tmp_data)/n
+    y = y[range(int(n/2))]
+    y = abs(y.real)
+    k = np.arange(n)
+    
+    x = np.fft.fftfreq(n, d = 1/sampling_rate)
+    x = x[range(int(n/2))]
+    return x, y
+```
+
    **적절히 설정해서 사용**
 
 <br>
@@ -112,17 +132,18 @@ def fft_th(data, sampling_frequency, label, mode = 1):
 
 ```python
 def fft_th_low(data, sampling_frequency, label, mode = 1):
-    sf = sampling_frequency
-    y = data - np.mean(data)
-    yf = np.abs(np.fft.fft(y).real)/len(y)
-    xf = np.fft.fftfreq(len(data), 1/sf)
-    xf = xf[xf>0]
+    y =data-np.mean(data)
+    yf = np.abs(np.fft.fft(y).real)
+    xf = np.fft.fftfreq(len(y))
+    xf=xf*sampling_frequency
+    xf_=xf[:np.argmax(xf)]
+    yf_=yf[:np.argmax(xf)]
   
     if mode == 1:
         plt.figure(figsize = (6,3))
-        for i in range(len(xf)):
-            plt.plot([xf[i], xf[i]], [0,yf[i]], 'b')
-    return xf, yf[:len(xf)]
+        for i in range(len(xf_)):
+            plt.plot([xf_[i], xf_[i]], [0,yf_[i]], 'b')
+    return xf_, yf_            
 ```   
    
    <br>
