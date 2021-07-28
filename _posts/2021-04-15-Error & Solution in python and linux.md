@@ -134,4 +134,29 @@ mathjax: true
 
 **38. Warning! HDF5 library version mismatched error**
   - 특정 module 및 library를 import 할 때 발생했던 문제 => conda uninstall hdf5 이후 다시 install하면 위 warning은 뜨지 않지만, keras도 삭제됨. => hdf5 uninstall 이후 keras를 install 해야 함.
-  - 위 방법 모두 해결되지 않았고, pip로 h5py uninstall후 다시 설치하면 해결됨. 이 때 현재 numpy, scipy, h5py에 대하여 tensorflow와 tensorflow-gpu가 요구하는 버전이 맞지 않다는 error문구가 뜨지만, 모든게 정상적으로 실행되긴 <br><br>
+  - 위 방법 모두 해결되지 않았고, pip로 h5py uninstall후 다시 설치하면 해결됨. 이 때 현재 numpy, scipy, h5py에 대하여 tensorflow와 tensorflow-gpu가 요구하는 버전이 맞지 않다는 error문구가 뜨지만, 모든게 정상적으로 실행되긴 <br>
+
+**39. a view of a leaf Variable that requires grad is being used in an in-place operation.**
+  - 리프 노드(leaf node)는 randn이나 tensor 메서드 등을 이용해 처음 생성한 텐서로, 그 자체를 갱신하려고 하는 경우 해당 에러가 발생함. 리프 노드에 어떤 연산을 가한 텐서는 더이상 리프 노드가 아니게 됨.
+  - ex)
+```python
+W1 = torch.tensor([1.0], requires_grad = True)
+W1 -= lr*W1.grad 를 하면 위 에러가 발생.
+```
+
+  - 리프 노드 확인은 is_leaf를 이용하여 확인할 수 있음.
+  - ex)
+```python
+W1.is_leaf
+```
+  => True/False
+
+  - 해결 방법
+: 연산할게 없다면 clone()을 통해서 해결 가능
+
+  - ex)
+
+```python
+W1_ = W1.clone()
+W1_ -= lr*W1_.grad
+```
