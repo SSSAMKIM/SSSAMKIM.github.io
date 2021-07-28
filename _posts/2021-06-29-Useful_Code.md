@@ -293,6 +293,9 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 3. conda install ipykernel jupyter
 4. python -m ipykernel install --user --name 이름 --display-name "이름"
 5. conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+6. pip install torchsummary
+7. pip install torch_snippets
+(torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
 ```
   
   <br>
@@ -323,4 +326,14 @@ ex)
 
 ```python
 dir(nn.Module)
+```
+
+#### **10. 긴  한줄 코드 여러줄로 작성할 경우
+
+  - 역슬래시 이용
+
+ex)
+```python
+url = ‘abcdefghi’\
+      + ‘jklmnopqrs …’
 ```
