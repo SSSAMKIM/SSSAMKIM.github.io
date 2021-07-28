@@ -314,3 +314,13 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 import scipy.io
 mat = scipy.io.loadmat('filepath')
 ```
+
+<br>
+
+#### **9. Module내 함수 목록 확인**
+
+ex)
+
+```python
+dir(nn.Module)
+```
