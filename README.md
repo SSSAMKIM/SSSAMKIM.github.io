@@ -31,5 +31,7 @@ Seoul National University, South Korea
 
 ## Experience
 
-### 1. Data Challenge at PHM Asia Pacific 2021 - Classification 2nd place
-Kaggle Link : <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
+### 1. PHMAP 2021 Data Challenge Competition - Winner(1st Place)
+Kaggle Link 1 : <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
+<br>
+Kaggle Link 2 : <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
