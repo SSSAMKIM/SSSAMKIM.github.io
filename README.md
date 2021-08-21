@@ -35,3 +35,7 @@ Seoul National University, South Korea
 Kaggle Link 1 : <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
 Kaggle Link 2 : <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
+<br>
+### 2. POSTECH Open Innovation Big data Challenge - 3rd Place
+Link : <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
+<br>
