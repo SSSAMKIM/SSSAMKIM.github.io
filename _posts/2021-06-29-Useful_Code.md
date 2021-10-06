@@ -328,6 +328,8 @@ ex)
 dir(nn.Module)
 ```
 
+<br>
+
 #### **10. 긴  한줄 코드 여러줄로 작성할 경우**
 
   - 역슬래시 이용
@@ -337,6 +339,8 @@ ex)
 url = ‘abcdefghi’\
       + ‘jklmnopqrs …’
 ```
+
+<br>
 
 #### **11. matplotlib.pyplot params**
 
@@ -349,3 +353,5 @@ params = {'axes.labelsize' : 16,
          'font.family' : 'Times New Roman'}
 plt.rcParams.update(params)
 ```
+
+<br>
