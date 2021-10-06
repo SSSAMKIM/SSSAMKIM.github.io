@@ -32,10 +32,14 @@ Seoul National University, South Korea
 ## Experience
 
 ### 1. PHMAP 2021 Data Challenge Competition - Winner(1st Place)
-Kaggle Link 1 : <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
+Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
-Kaggle Link 2 : <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
+Kaggle Link 2: <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
 <br>
-### 2. POSTECH Open Innovation Big data Challenge - 3rd Place
-Link : <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
+Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.ac.kr/ko/board/news/view/14739</a>
+<br>
+### 2. POSTECH Open Innovation Big data Challenge - 2nd Place
+Link: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
+<br>
+Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
