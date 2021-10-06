@@ -337,3 +337,15 @@ ex)
 url = ‘abcdefghi’\
       + ‘jklmnopqrs …’
 ```
+
+#### **11. matplotlib.pyplot params**
+
+```python
+params = {'axes.labelsize' : 16,
+         'axes.titlesize' : 18,
+         'xtick.labelsize' : 14,
+         'ytick.labelsize' : 14,
+         'legend.fontsize' : 14,
+         'font.family' : 'Times New Roman'}
+plt.rcParams.update(params)
+```
