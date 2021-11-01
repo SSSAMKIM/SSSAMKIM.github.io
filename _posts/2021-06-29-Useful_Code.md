@@ -39,7 +39,7 @@ use_math: true
 ### Useful Code
 ---
 
-#### **1. Callback, Learning rate decay**
+#### 1. Callback, Learning rate decay
 
 <br>
 
