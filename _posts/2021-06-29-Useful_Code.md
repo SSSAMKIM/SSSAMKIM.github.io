@@ -36,7 +36,7 @@ use_math: true
 - [11.matplotlib.pyplot params](#11-matplotlib-pyplot-params)
 - [12.Adding noise function given SNR](#12-adding-noise-function-given-snr)
 
-#### 1. Callback and Learning rate decay
+#### **1. Callback and Learning rate decay**
 ---
 
 <br>
@@ -61,7 +61,7 @@ hist = model.fit(X_train, y_train, epochs = 40,
 
 <br>
 
-#### 2. GPU Check and Allocation
+#### **2. GPU Check and Allocation**
 ---
 
 <br>
