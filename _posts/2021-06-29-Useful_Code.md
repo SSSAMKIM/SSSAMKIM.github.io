@@ -23,11 +23,23 @@ use_math: true
 ---
 
 - [Useful Code](#useful-code)
+- [1. Callback, Learning rate decay](#1.-callback,-learning-rate-decay)
+- [2. GPU Check, Allocation](#2.-gpu-check,-allocation)
+- [3. FFT](#3.-fft)
+- [4. Data Generator](#4.-data-generator)
+- [5. 1DCNN 10 times iteration and save confusion matrix](#5.-1dcnn-10-times-iteration-and-save-confusion-matrix)
+- [6. GPU setting and install virtual env](#6.-gpu-setting-and-install-virtual-env)
+- [7. Remove virtual env both in local and jupyter](#7.-remove-virtual-env-both-in-local-and-jupyter)
+- [8. Load mat file](#8.-load-mat-file)
+- [9. Check method list in Module](#9.-check-method-list-in-Module)
+- [10. Application of backslash for long code](#10.-application-of-backslash-for-long-code)
+- [11. matplotlib.pyplot params](#11.-matplotlib.pyplot-params)
+- [12. Adding noise function given SNR](#12.-adding-noise-function-given-snr)
 
 ### Useful Code
 ---
 
-#### **1. Callback, Learning rate decay 참고 코드**
+#### **1. Callback, Learning rate decay**
 
 <br>
 
@@ -51,7 +63,7 @@ hist = model.fit(X_train, y_train, epochs = 40,
 
 <br>
 
-#### **2. GPU 관련**
+#### **2. GPU Check, Allocation**
 
 <br>
 
@@ -75,8 +87,6 @@ print('graphic name:', torch.cuda.get_device_name())
 
   - GPU Memory 할당
 
-    - 아래보다는 위 방법 사용해보기
-
 ```python
 gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
@@ -91,19 +101,11 @@ if gpus:
     print(e)
 ```
 
-```python
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.4
-session = tf.compat.v1.Session(config = config)
-```
-  
-   **0.4는 할당 비율로, 할당하고 싶은 만큼 할당하면 됨**
- 
- <br>
+<br>
   
 #### **3. FFT**
   
-  <br>
+<br>
   
   - FFT Code
 
@@ -198,7 +200,7 @@ data_generator(batch_size, sp,root_dir, label)
   
   <br>
   
-#### **5. 1D-CNN 10번 반복 코드 및 confusion matrix 저장 코드**
+#### **5. 1D-CNN 10 times iteration and save confusion matrix**
 
 ```python
 def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
@@ -250,7 +252,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **6. 가상환경 설치 및 GPU 연결**
+#### **6. GPU setting and install virtual env**
 
   <br>
 
@@ -300,7 +302,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
   
   <br>
 
-#### **7. 가상환경 삭제 및 jupyter내 가상환경 삭제**
+#### **7. Remove virtual env both in local and jupyter**
 
   <br>
 
@@ -311,7 +313,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **8. mat 파일 불러오기**
+#### **8. Load mat file**
 
 ```python
 import scipy.io
@@ -320,7 +322,7 @@ mat = scipy.io.loadmat('filepath')
 
 <br>
 
-#### **9. Module내 함수 목록 확인**
+#### **9. Check method list in Module**
 
 ex)
 
@@ -330,7 +332,7 @@ dir(nn.Module)
 
 <br>
 
-#### **10. 긴  한줄 코드 여러줄로 작성할 경우**
+#### **10. Application of backslash for long code**
 
   - 역슬래시 이용
 
@@ -352,6 +354,22 @@ params = {'axes.labelsize' : 16,
          'legend.fontsize' : 14,
          'font.family' : 'Times New Roman'}
 plt.rcParams.update(params)
+```
+
+#### **12. Adding noise function given SNR**
+
+```python
+def SNR(snr, signal):
+    power = np.mean(signal ** 2)
+    power_db = 10 * np.log10(power)
+    
+    noise_power_db = power_db - snr
+    noise_power = 10 ** (noise_power_db / 10)
+    
+    mean_noise = 0
+    noise = np.random.normal(mean_noise, np.sqrt(noise_power), len(signal))
+    
+    return signal+noise
 ```
 
 <br>
