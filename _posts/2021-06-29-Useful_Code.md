@@ -22,28 +22,22 @@ use_math: true
 #### Index
 ---
 
-- [Useful Code](#useful-code)
+- [1.Callback and Learning rate decay](#1-callback-and-learning-rate-decay)
 
+- [2.GPU Check and Allocation](#2-gpu-check-and-allocation)
+- [3.FFT](#3-fft)
+- [4.Data Generator](#4-data-generator)
+- [5.1DCNN 10 times iteration and save confusion matrix](#5-1dcnn-10-times-iteration-and-save-confusion-matrix)
+- [6.GPU setting and install virtual env](#6-gpu-setting-and-install-virtual-env)
+- [7.Remove virtual env both in local and jupyter](#7-remove-virtual-env-both-in-local-and-jupyter)
+- [8.Load mat file](#8-load-mat-file)
+- [9.Check method list in Module](#9-check-method-list-in-module)
+- [10.Application of backslash for long code](#10-application-of-backslash-for-long-code)
+- [11.matplotlib.pyplot params](#11-matplotlib-pyplot-params)
+- [12.Adding noise function given SNR](#12-adding-noise-function-given-snr)
 
-- [Callback, Learning rate decay](#callback,-learning-rate-decay)
-
-
-- [2. GPU Check, Allocation](#2.-gpu-check,-allocation)
-- [3. FFT](#3.-fft)
-- [4. Data Generator](#4.-data-generator)
-- [5. 1DCNN 10 times iteration and save confusion matrix](#5.-1dcnn-10-times-iteration-and-save-confusion-matrix)
-- [6. GPU setting and install virtual env](#6.-gpu-setting-and-install-virtual-env)
-- [7. Remove virtual env both in local and jupyter](#7.-remove-virtual-env-both-in-local-and-jupyter)
-- [8. Load mat file](#8.-load-mat-file)
-- [9. Check method list in Module](#9.-check-method-list-in-Module)
-- [10. Application of backslash for long code](#10.-application-of-backslash-for-long-code)
-- [11. matplotlib.pyplot params](#11.-matplotlib.pyplot-params)
-- [12. Adding noise function given SNR](#12.-adding-noise-function-given-snr)
-
-### Useful Code
+#### 1. Callback and Learning rate decay
 ---
-
-#### Callback, Learning rate decay
 
 <br>
 
@@ -67,7 +61,8 @@ hist = model.fit(X_train, y_train, epochs = 40,
 
 <br>
 
-#### **2. GPU Check, Allocation**
+#### 2. GPU Check and Allocation
+---
 
 <br>
 
@@ -204,7 +199,7 @@ data_generator(batch_size, sp,root_dir, label)
   
   <br>
   
-#### **5. 1D-CNN 10 times iteration and save confusion matrix**
+#### **5. 1DCNN 10 times iteration and save confusion matrix**
 
 ```python
 def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
@@ -348,7 +343,7 @@ url = ‘abcdefghi’\
 
 <br>
 
-#### **11. matplotlib.pyplot params**
+#### **11. matplotlib pyplot params**
 
 ```python
 params = {'axes.labelsize' : 16,
