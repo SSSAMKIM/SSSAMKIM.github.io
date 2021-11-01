@@ -22,19 +22,19 @@ use_math: true
 #### Index
 ---
 
-- [1.Callback and Learning rate decay](#1-callback-and-learning-rate-decay)
+- [1. Callback and Learning rate decay](#1-callback-and-learning-rate-decay)
 
-- [2.GPU Check and Allocation](#2-gpu-check-and-allocation)
-- [3.FFT](#3-fft)
-- [4.Data Generator](#4-data-generator)
-- [5.1DCNN 10 times iteration and save confusion matrix](#5-1dcnn-10-times-iteration-and-save-confusion-matrix)
-- [6.GPU setting and install virtual env](#6-gpu-setting-and-install-virtual-env)
-- [7.Remove virtual env both in local and jupyter](#7-remove-virtual-env-both-in-local-and-jupyter)
-- [8.Load mat file](#8-load-mat-file)
-- [9.Check method list in Module](#9-check-method-list-in-module)
-- [10.Application of backslash for long code](#10-application-of-backslash-for-long-code)
-- [11.matplotlib.pyplot params](#11-matplotlib-pyplot-params)
-- [12.Adding noise function given SNR](#12-adding-noise-function-given-snr)
+- [2. GPU Check and Allocation](#2-gpu-check-and-allocation)
+- [3. FFT](#3-fft)
+- [4. Data Generator](#4-data-generator)
+- [5. 1DCNN 10 times iteration and save confusion matrix](#5-1dcnn-10-times-iteration-and-save-confusion-matrix)
+- [6. GPU 설정 및 가상환경 설치](#6-gpu-설정-및-가상환경-설치)
+- [7. 로컬 환경과 주피터 내에서 가상환경 삭제](#7-로컬-환경과-주피터-내에서-가상환경-삭제)
+- [8. mat 파일 불러오기](#8-mat-파일-불러오기)
+- [9. Module내 함수 목록 확인](#9-module-내-함수-목록-확인)
+- [10. 긴 한 줄 코드 여러 줄로 작성](#10-긴-한-줄-코드-여러-줄로-작성)
+- [11. matplotlib.pyplot params](#11-matplotlib-pyplot-params)
+- [12. 신호에 SNR 값에 따른 노이즈 추가](#12-신호에-snr-값에-따른-노이즈-추가)
 
 #### **1. Callback and Learning rate decay**
 ---
@@ -251,7 +251,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **6. GPU setting and install virtual env**
+#### **6. GPU 설정 및 가상환경 설치**
 
   <br>
 
@@ -301,7 +301,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
   
   <br>
 
-#### **7. Remove virtual env both in local and jupyter**
+#### **7. 로컬 환경과 주피터 내에서 가상환경 삭제**
 
   <br>
 
@@ -312,7 +312,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **8. Load mat file**
+#### **8. mat 파일 불러오기**
 
 ```python
 import scipy.io
@@ -321,7 +321,7 @@ mat = scipy.io.loadmat('filepath')
 
 <br>
 
-#### **9. Check method list in Module**
+#### **9. Module 내 함수 목록 확인**
 
 ex)
 
@@ -331,7 +331,7 @@ dir(nn.Module)
 
 <br>
 
-#### **10. Application of backslash for long code**
+#### **10. 긴 한 줄 코드 여러 줄로 작성**
 
   - 역슬래시 이용
 
@@ -355,7 +355,7 @@ params = {'axes.labelsize' : 16,
 plt.rcParams.update(params)
 ```
 
-#### **12. Adding noise function given SNR**
+#### **12. 신호에 SNR 값에 따른 노이즈 추가**
 
 ```python
 def SNR(snr, signal):
