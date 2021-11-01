@@ -23,7 +23,7 @@ use_math: true
 ---
 
 - [Useful Code](#useful-code)
-- [1. Callback, Learning rate decay](#1.-callback,-learning-rate-decay)
+- [Callback, Learning rate decay](#callback,-learning-rate-decay)
 - [2. GPU Check, Allocation](#2.-gpu-check,-allocation)
 - [3. FFT](#3.-fft)
 - [4. Data Generator](#4.-data-generator)
