@@ -121,8 +121,8 @@ optimizer = BayesianOptimization(
 ```
 
 ```python
-  optimizer.maximize(
-    init_points = 2,
-    n_iter = 5
+optimizer.maximize(
+  init_points = 2,
+  n_iter = 5
 )
 ```
