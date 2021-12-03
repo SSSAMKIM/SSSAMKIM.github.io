@@ -119,7 +119,8 @@ optimizer = BayesianOptimization(
   random_state = 1
   )
 ```
-  
+
+```python
   optimizer.maximize(
     init_points = 2,
     n_iter = 5
