@@ -29,9 +29,9 @@ Seoul National University, South Korea
 
 <br>
 
-## Experience
+## Competition
 
-### 1. PHMAP 2021 Data Challenge Competition - Winner(1st Place)
+### 1. PHMAP 2021 Data Challenge Competition - 1st Place
 Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
 Kaggle Link 2: <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
@@ -43,3 +43,14 @@ Link: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2
 <br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
+### 3. PHM Society 2021 Data Challenge Competition - 4th Place
+Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
+<br>
+
+## Conference
+
+### 1. Asia Pacific Conference of the Prognostics and Health Management Society 2021
+Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputation and Fault Diagnosis of Oil-Injection Screw Compressor", Asia Pacific Conference of the Prognostics and Health Management Society 2021, Jeju, Korea, September 8-11, 2021
+<br>
+### 2. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
+Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
