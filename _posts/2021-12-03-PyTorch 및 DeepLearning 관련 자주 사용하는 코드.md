@@ -11,7 +11,7 @@ toc_label: "My Table of Contents"
 toc_icon: "cog"
 thumbnail: null
 keywords: DeepLearning, PyTorch, CNN, GPU
-permalink: /9
+permalink: /10
 mathjax: true
 use_math: true
 ---
