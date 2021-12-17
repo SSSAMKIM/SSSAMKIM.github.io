@@ -46,6 +46,9 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.
 ### 3. PHM Society 2021 Data Challenge Competition - 4th Place
 Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
 <br>
+### 4. 1st Korea-AI Manufacturing Data Analysis Competition 2021 - 대상 (중기부 장관상)
+Article: <a href="http://mbiz.heraldcorp.com/amp/view.php?ud=20211217000210">http://mbiz.heraldcorp.com/amp/view.php?ud=20211217000210</a>
+<br>
 
 ## Conference
 
