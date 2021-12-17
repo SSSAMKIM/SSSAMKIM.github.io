@@ -31,22 +31,22 @@ Seoul National University, South Korea
 
 ## Competition
 
-### 1. PHMAP 2021 Data Challenge Competition - 1st Place
+### 1. PHMAP 2021 Data Challenge Competition, November 2021 - 1등
 Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
 Kaggle Link 2: <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
 <br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.ac.kr/ko/board/news/view/14739</a>
 <br>
-### 2. POSTECH Open Innovation Big data Challenge - 2nd Place
+### 2. POSTECH Open Innovation Big data Challenge, November 2021 - 2등 (우수상)
 Link: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
 <br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
-### 3. PHM Society 2021 Data Challenge Competition - 4th Place
+### 3. PHM Society 2021 Data Challenge Competition, October 2021 - 4등
 Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
 <br>
-### 4. 1st Korea-AI Manufacturing Data Analysis Competition 2021 - 대상 (중기부 장관상)
+### 4. Korea-AI Manufacturing Data Analysis Competition, December 2021 - 대상 (중소벤처기업부 장관상)
 Article: <a href="http://mbiz.heraldcorp.com/amp/view.php?ud=20211217000210">http://mbiz.heraldcorp.com/amp/view.php?ud=20211217000210</a>
 <br>
 
