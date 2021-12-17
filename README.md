@@ -47,7 +47,7 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.
 Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
 <br>
 ### 4. Korea-AI Manufacturing Data Analysis Competition, December 2021 - 대상 (중소벤처기업부 장관상)
-Article: <a href="http://mbiz.heraldcorp.com/amp/view.php?ud=20211217000210">http://mbiz.heraldcorp.com/amp/view.php?ud=20211217000210</a>
+Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
 
 ## Conference
