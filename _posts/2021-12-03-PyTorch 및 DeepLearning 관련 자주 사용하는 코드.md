@@ -25,6 +25,7 @@ use_math: true
 - [2. matplotlib.pyplot params](#2-matplotlib-pyplot-params)
 - [3. 신호에 SNR 값에 따른 노이즈 추가](#3-신호에-snr-값에-따른-노이즈-추가)
 - [4. Bayesian Optimization](#4-bayesian-optimization)
+- [5. t-SNE](#5-tsne)
 
 
 #### **3. FFT**
@@ -125,4 +126,24 @@ optimizer.maximize(
   init_points = 2,
   n_iter = 5
 )
+```
+
+#### **5. TSNE**
+
+```python
+from sklearn.manifold import TSNE
+tsne = TSNE(n_components = 2)
+embed = tsne.fit_transform(X_test)
+
+markers = ['.', '+', '*', '.']
+colors = ['y', 'r', 'g', 'b']
+size = [8, 20, 20, 20]
+
+plt.figure(figsize = (6,6))
+
+for i in range(len(y_test)):
+    plt.plot(embed[i,0], embed[i,1], marker = markers[int(y_test[i])],\
+            markersize = size[int(y_test[i])], color = colors[int(y_test[i])])
+    
+plt.show()
 ```
