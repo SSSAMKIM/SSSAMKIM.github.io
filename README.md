@@ -27,8 +27,6 @@ Seoul National University, South Korea
         src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr"
         style="height : auto; margin-right : 10px;"/>
 </a>
-
-<br>
 <br>
 
 ## Competition
