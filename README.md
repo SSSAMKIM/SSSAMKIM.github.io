@@ -6,7 +6,6 @@ permalink: /about/
 
 PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
----
 ## Information
 ---
 
@@ -30,8 +29,8 @@ Seoul National University, South Korea
 </a>
 
 <br>
+<br>
 
----
 ## Competition
 ---
 
@@ -53,16 +52,16 @@ Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-chall
 ### 4. Korea-AI Manufacturing Data Analysis Competition, December 2021 - 대상 (중소벤처기업부 장관상)
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
+<br>
 
----
 ## International Conference
 ---
 
 ### 1. Asia Pacific Conference of the Prognostics and Health Management Society 2021
 Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputation and Fault Diagnosis of Oil-Injection Screw Compressor", Asia Pacific Conference of the Prognostics and Health Management Society 2021, Jeju, Korea, September 8-11, 2021
 <br>
+<br>
 
----
 ## Domestic Conference
 ---
 
