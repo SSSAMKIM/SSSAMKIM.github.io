@@ -7,6 +7,7 @@ permalink: /about/
 PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
 ## Information
+---
 
 <img src="/public/img/kth1.png" align="left" style="width:15%; height:auto">
 
@@ -30,6 +31,7 @@ Seoul National University, South Korea
 <br>
 
 ## Competition
+---
 
 ### 1. PHMAP 2021 Data Challenge Competition, November 2021 - 1등
 Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
@@ -50,15 +52,15 @@ Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-chall
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
 
-## Conference
-
-### International
+## International Conference
+---
 
 ### 1. Asia Pacific Conference of the Prognostics and Health Management Society 2021
 Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputation and Fault Diagnosis of Oil-Injection Screw Compressor", Asia Pacific Conference of the Prognostics and Health Management Society 2021, Jeju, Korea, September 8-11, 2021
 <br>
 
-### Domestic
+## Domestic Conference
+---
 
 ### 1. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
 Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
