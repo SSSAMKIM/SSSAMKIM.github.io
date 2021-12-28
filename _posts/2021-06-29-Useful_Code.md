@@ -309,7 +309,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 ```
 1. conda remove --name 이름 --all
-2. jupyter kernelspec uninstall 
+2. jupyter kernelspec uninstall 이름
 ```
 
 <br>
