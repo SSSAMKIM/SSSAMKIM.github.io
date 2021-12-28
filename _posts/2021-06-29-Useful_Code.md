@@ -290,6 +290,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
   
 ```
 1. conda create -n 이름 python=3.7
+  (conda create --prefix path\이름 python=3.7) --> envs 이외에 다른 폴더에 가상환경 설치하는 경우
 2. conda activate 이름
 3. conda install ipykernel jupyter
 4. python -m ipykernel install --user --name 이름 --display-name "이름"
@@ -297,6 +298,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 6. pip install torchsummary
 7. pip install torch_snippets
 (torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
+8. pip install mlxtend
 ```
   
   <br>
@@ -306,7 +308,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
   <br>
 
 ```
-1. conda remove --name 이름--all
+1. conda remove --name 이름 --all
 2. jupyter kernelspec uninstall 
 ```
 
