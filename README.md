@@ -9,7 +9,7 @@ PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 ## Information
 ---
 
-<img src="/public/img/kth1.png" align="left" style="width:15%; height:15%">
+<img src="/public/img/kth1.png" align="left" style="width:200px; height:200px">
 
 ### Taehun Kim <br>
 
@@ -27,6 +27,7 @@ Seoul National University, South Korea
         src="http://img.shields.io/badge/-Tech%20Blog-655ced?style=flat&logo=github&link=https://alpox.kr"
         style="height : auto; margin-right : 10px;"/>
 </a>
+<br>
 <br>
 
 ## Competition
