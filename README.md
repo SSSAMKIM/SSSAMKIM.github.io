@@ -9,7 +9,7 @@ PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 ## Information
 ---
 
-<img src="/public/img/kth1.png" align="left" style="width:15%; height:auto">
+<img src="/public/img/kth1.png" align="left" style="width:15%; height:15%">
 
 ### Taehun Kim <br>
 
