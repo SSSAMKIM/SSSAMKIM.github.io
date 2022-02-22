@@ -9,7 +9,7 @@ PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 ## Information
 ---
 
-<img src="/public/img/kth1.png" align="left" style="width:200px; height:200px">
+<img src="/public/img/kth1.png" align="left" style="width:150px; height:150px">
 
 ### Taehun Kim <br>
 
@@ -42,7 +42,7 @@ Link: <a href="https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387">
 ### 3. 제 3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
 Leaderboard: <a href="http://aifactory.space/competition/leaderboard/1908">http://aifactory.space/competition/leaderboard/1908</a>
 <br>
-### 4. 제 1회 K-인공지능 제조데잍 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
+### 4. 제 1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
 ### 5. 2021 PHM Society 데이터 챌린지, 2021년 10월 - 4등
