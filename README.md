@@ -36,7 +36,7 @@ Seoul National University, South Korea
 ### 1. 제 2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
 Link: <a href="https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387">https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387</a>
 <br>
-### 2. 제 3호 팩토리핵 코리아 2022, 2022년 2월 - 장려상
+### 2. 제 3회 팩토리핵 코리아 2022, 2022년 2월 - 장려상
 Link: <a href="https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387">https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387</a>
 <br>
 ### 3. 제 3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
@@ -45,7 +45,7 @@ Leaderboard: <a href="http://aifactory.space/competition/leaderboard/1908">http:
 ### 4. 제 1회 K-인공지능 제조데잍 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
-### 5. PHM Society 2021 데이터 챌린지, 2021년 10월 - 4등
+### 5. 2021 PHM Society 데이터 챌린지, 2021년 10월 - 4등
 Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
 <br>
 ### 6. 2021 POSTECH OIBC 태양광 발전량 예측 경진대회, November 2021년 9월 - 2등 (우수상)
@@ -53,7 +53,7 @@ Link: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2
 <br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
-### 7. PHMAP 2021 데이터 챌린지, 2021년 9월 - 1등
+### 7. 2021 PHMAP 데이터 챌린지, 2021년 9월 - 1등
 Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
 Kaggle Link 2: <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
