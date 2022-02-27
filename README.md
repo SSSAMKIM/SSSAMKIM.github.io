@@ -33,16 +33,16 @@ Seoul National University, South Korea
 ## Competition
 ---
 
-### 1. 현대중공업그룹 제 2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
+### 1. 현대중공업그룹 제2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
 Link: <a href="https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387">https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387</a>
 <br>
-### 2. 제 3회 산업AI해커톤 팩토리핵 코리아 2022, 2022년 2월 - 장려상
+### 2. 제3회 산업AI해커톤 팩토리핵 코리아 2022, 2022년 2월 - 장려상
 Link: <a href="https://me.snu.ac.kr/ko/board/news/view/15576">https://me.snu.ac.kr/ko/board/news/view/15576</a>
 <br>
-### 3. 제 3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
+### 3. 제3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
 Leaderboard: <a href="http://aifactory.space/competition/leaderboard/1908">http://aifactory.space/competition/leaderboard/1908</a>
 <br>
-### 4. 제 1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
+### 4. 제1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
 ### 5. 2021 PHM Society 데이터 챌린지, 2021년 10월 - 4등
