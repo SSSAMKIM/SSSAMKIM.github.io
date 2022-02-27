@@ -59,15 +59,13 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.
 <br>
 Leaderboard: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
 <br>
-Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
-<br>
 ### 7. 2021 PHMAP 데이터 챌린지, 2021년 9월 - 1등
 The 1st Place Winner, Prognostics and Health Management (PHM) Asia Pacific Data Challenge, September, 2021<br>
+Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.ac.kr/ko/board/news/view/14739</a>
+<br>
 Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
 Kaggle Link 2: <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
-<br>
-Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.ac.kr/ko/board/news/view/14739</a>
 <br>
 <br>
 
