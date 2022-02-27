@@ -30,7 +30,7 @@ Seoul National University, South Korea
 <br>
 <br>
 
-## COMPETITIONS
+## [1] COMPETITIONS
 ---
 
 ### 1. 현대중공업그룹 제2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
@@ -69,7 +69,7 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.
 <br>
 <br>
 
-## PUBLICATIONS
+## [2] PUBLICATIONS
 ---
 
 ## International Conference
@@ -84,7 +84,7 @@ Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Gener
 <br>
 <br>
 
-## SOCIAL ACTIVITIES
+## [3] SOCIAL ACTIVITIES
 ---
 
 ## Academic Program Participation
