@@ -6,6 +6,7 @@ permalink: /about/
 
 PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
+---
 ## INFORMATION
 ---
 
@@ -31,7 +32,6 @@ Seoul National University, South Korea
 <br>
 
 ---
-
 ## COMPETITION
 ---
 
@@ -71,28 +71,27 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.
 <br>
 <br>
 
+---
 ## PUBLICATIONS
 ---
 
 ## International Conference
----
 
 ### 1. Asia Pacific Conference of the Prognostics and Health Management Society 2021
 Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputation and Fault Diagnosis of Oil-Injection Screw Compressor", Asia Pacific Conference of the Prognostics and Health Management Society 2021, Jeju, Korea, September 8-11, 2021
 
 ## Domestic Conference
----
 
 ### 1. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
 Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
 <br>
 <br>
 
+---
 ## SOCIAL ACTIVITIES
 ---
 
 ## Academic Program Participation
----
 
 ### 1. 삼성드림클래스 중학교 방과후 수학 강사
 Mathematics Instructor for Middle School, SAMSUNG Dream Class Program, 2014, 2018, 2019
@@ -101,7 +100,6 @@ Mathematics Instructor for Middle School, SAMSUNG Dream Class Program, 2014, 201
 Mathematics Tutor for Multicultural Student, Korea Scholarship Foundation, 2014
 
 ## Other Experience
----
 
 ### 1. 국가경영전략연구원 차세대 오피니언 리더 6기 회장
 6th President of Next-generation Opinion Leader Debate Program, National Strategy Institute, 2017
