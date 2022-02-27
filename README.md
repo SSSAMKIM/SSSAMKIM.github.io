@@ -43,7 +43,7 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/15576">https://me.snu.
 <br>
 ### 3. 제3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
 The Encourage Prize, Director of Future Technology Convergence Center Award), The 3rd Korea Eeast-West Power Big data Competition, December, 2021<br>
-Leaderboard: <a href="http://aifactory.space/competition/leaderboard/1908">http://aifactory.space/competition/leaderboard/1908</a>
+Article: <a href="https://me.snu.ac.kr/ko/board/news/view/15334">https://me.snu.ac.kr/ko/board/news/view/15334</a>
 <br>
 ### 4. 제1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
 The Grand Prize (The Minister of SMEs and Startups Award), The 1st Korea-AI Manufacturing Data Analysis Competition, December, 2021<br>
@@ -55,7 +55,9 @@ Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-chall
 <br>
 ### 6. 2021 POSTECH OIBC 태양광 발전량 예측 경진대회, November 2021년 9월 - 2등 (우수상)
 The Excellent Prize (The 2nd Place Winner), Postech Open Innovation Big Data Challenge, September, 2021<br>
-Link: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
+Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
+<br>
+Leaderboard: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
 <br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
