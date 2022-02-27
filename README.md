@@ -39,7 +39,7 @@ Link: <a href="https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387">
 <br>
 ### 2. 제3회 산업AI해커톤 팩토리핵 코리아 2022, 2022년 2월 - 장려상
 The Encourage Prize, The 3rd Industrial AI Hackathon Factory Hack Korea, February, 2022<br>
-Link: <a href="https://me.snu.ac.kr/ko/board/news/view/15576">https://me.snu.ac.kr/ko/board/news/view/15576</a>
+Article: <a href="https://me.snu.ac.kr/ko/board/news/view/15576">https://me.snu.ac.kr/ko/board/news/view/15576</a>
 <br>
 ### 3. 제3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
 The Encourage Prize, Director of Future Technology Convergence Center Award), The 3rd Korea Eeast-West Power Big data Competition, December, 2021<br>
