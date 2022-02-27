@@ -30,7 +30,7 @@ Seoul National University, South Korea
 <br>
 <br>
 
-## COMPETITION
+## COMPETITIONS
 ---
 
 ### 1. 현대중공업그룹 제2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
