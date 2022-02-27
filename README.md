@@ -6,7 +6,7 @@ permalink: /about/
 
 PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
-## [1] INFORMATION
+## INFORMATION
 ---
 
 <img src="/public/img/kth1.png" align="left" style="width:200px; height:200px">
@@ -30,7 +30,7 @@ Seoul National University, South Korea
 <br>
 <br>
 
-## [2] COMPETITIONS
+## COMPETITIONS
 ---
 
 ### 1. 현대중공업그룹 제2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
@@ -69,7 +69,7 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.
 <br>
 <br>
 
-## [3] PUBLICATIONS
+## PUBLICATIONS
 ---
 
 ## International Conference
@@ -84,23 +84,3 @@ Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Gener
 <br>
 <br>
 
-## [4] SOCIAL ACTIVITIES
----
-
-## Academic Program Participation
-
-### 1. 삼성드림클래스 중학교 방과후 수학 강사
-Mathematics Instructor for Middle School, SAMSUNG Dream Class Program, 2014, 2018, 2019
-
-### 2. 한국장학재단 다문화 학생 수학 멘토링
-Mathematics Tutor for Multicultural Student, Korea Scholarship Foundation, 2014
-
-## Other Experience
-
-### 1. 국가경영전략연구원 차세대 오피니언 리더 6기 회장
-6th President of Next-generation Opinion Leader Debate Program, National Strategy Institute, 2017
-
-### 2. 대구 영남고등학교 학생회장
-Student President, Daegu Yeungnam High School, 2013
-
----
