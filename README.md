@@ -102,3 +102,5 @@ Mathematics Tutor for Multicultural Student, Korea Scholarship Foundation, 2014
 
 ### 2. 대구 영남고등학교 학생회장
 Student President, Daegu Yeungnam High School, 2013
+
+---
