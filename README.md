@@ -6,7 +6,6 @@ permalink: /about/
 
 PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
----
 ## INFORMATION
 ---
 
@@ -31,7 +30,6 @@ Seoul National University, South Korea
 <br>
 <br>
 
----
 ## COMPETITION
 ---
 
@@ -71,7 +69,6 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.
 <br>
 <br>
 
----
 ## PUBLICATIONS
 ---
 
@@ -87,7 +84,6 @@ Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Gener
 <br>
 <br>
 
----
 ## SOCIAL ACTIVITIES
 ---
 
