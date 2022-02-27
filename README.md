@@ -76,13 +76,13 @@ Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.
 
 #### 1. Asia Pacific Conference of the Prognostics and Health Management Society 2021
 Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputation and Fault Diagnosis of Oil-Injection Screw Compressor", Asia Pacific Conference of the Prognostics and Health Management Society 2021, Jeju, Korea, September 8-11, 2021
-<br>
-<br>
 
 ### Domestic Conference
 
 #### 1. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
 Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
+<br>
+<br>
 
 ## SOCIAL ACTIVITIES
 ---
