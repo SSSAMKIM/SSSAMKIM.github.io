@@ -46,21 +46,21 @@ The Encourage Prize, Director of Future Technology Convergence Center Award), Th
 Leaderboard: <a href="http://aifactory.space/competition/leaderboard/1908">http://aifactory.space/competition/leaderboard/1908</a>
 <br>
 ### 4. 제1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
-The Grand Prize (The Minister of SMEs and Startups Award), The 1st Korea-AI Manufacturing Data Analysis Competition, December, 2021
+The Grand Prize (The Minister of SMEs and Startups Award), The 1st Korea-AI Manufacturing Data Analysis Competition, December, 2021<br>
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
 ### 5. 2021 PHM Society 데이터 챌린지, 2021년 10월 - 4등
-Prognostics and Health Management (PHM) Society Data Challenge, October, 2021
+Prognostics and Health Management (PHM) Society Data Challenge, October, 2021<br>
 Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
 <br>
 ### 6. 2021 POSTECH OIBC 태양광 발전량 예측 경진대회, November 2021년 9월 - 2등 (우수상)
-The Excellent Prize (The 2nd Place Winner), Postech Open Innovation Big Data Challenge, September, 2021
+The Excellent Prize (The 2nd Place Winner), Postech Open Innovation Big Data Challenge, September, 2021<br>
 Link: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
 <br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
 ### 7. 2021 PHMAP 데이터 챌린지, 2021년 9월 - 1등
-The 1st Place Winner, Prognostics and Health Management (PHM) Asia Pacific Data Challenge, September, 2021
+The 1st Place Winner, Prognostics and Health Management (PHM) Asia Pacific Data Challenge, September, 2021<br>
 Kaggle Link 1: <a href="https://www.kaggle.com/c/phmap21-classification-task/leaderboard">https://www.kaggle.com/c/phmap21-classification-task/leaderboard</a>
 <br>
 Kaggle Link 2: <a href="https://www.kaggle.com/c/phmap21-regression-task2/leaderboard">https://www.kaggle.com/c/phmap21-regression-task2/leaderboard</a>
