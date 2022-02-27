@@ -84,7 +84,7 @@ Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputati
 #### 1. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
 Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
 
-## Social Activities
+## SOCIAL ACTIVITIES
 ---
 
 ### Academic Program Participation
