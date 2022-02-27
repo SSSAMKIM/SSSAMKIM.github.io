@@ -36,7 +36,7 @@ Seoul National University, South Korea
 ### 1. 현대중공업그룹 제 2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
 Link: <a href="https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387">https://hicontest.hhi.co.kr/community.html?cmd=content&b_no=387</a>
 <br>
-### 2. 산업AI해커톤 제 3회 팩토리핵 코리아 2022, 2022년 2월 - 장려상
+### 2. 제 3회 산업AI해커톤 팩토리핵 코리아 2022, 2022년 2월 - 장려상
 Link: <a href="https://me.snu.ac.kr/ko/board/news/view/15576">https://me.snu.ac.kr/ko/board/news/view/15576</a>
 <br>
 ### 3. 제 3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
