@@ -42,9 +42,9 @@ use_math: true
   - Fault diagnosis model에서 어떤 feature가 유의미한지 확인 후 신호 생성보다는 feature를 생성하는 것이 더 나을지?<br><br>
 - Quantitative metric 관련
   - Time domain에서는 차이가 커지도록, frequency domain에서는 차이가 작아지도록 adversarial하게 학습하는 방법? (loss는 미분가능한 함수로 선택)<br><br>
-  - Multivariate에서는 제곱의 평균 = 평균의 제곱 + 공분산인데, 공분산이 커질 경우 제곱의 평균 즉, L2 norm도 커지므로 high dimensional feature space에서 둘 간 거리도 멀어질 것이고, 이르 통해 uncertainty나 similarity를 측정할 수 있을지도.
+  - Multivariate에서는 제곱의 평균 = 평균의 제곱 + 공분산인데, 공분산이 커질 경우 제곱의 평균 즉, L2 norm도 커지므로 high dimensional feature space에서 둘 간 거리도 멀어질 것이고, 이를 통해 uncertainty나 similarity를 측정할 수 있을지도.
   - 이미지의 diversity의 경우에는 Learned Perceptual Image Patch Similarity (LPIPS)를 이용하여 측정함
-  - 신호처리르 가미한 positional encoding 방식 찾아보기<br><br>
+  - 신호처리를 가미한 positional encoding 방식 찾아보기<br><br>
 - Compound fault 관련
   - KAMP data에서 looseness & unbalance 이용하여 compound fault<br><br>
 - Semi-supervised 관련
