@@ -49,3 +49,6 @@ use_math: true
   - KAMP data에서 looseness & unbalance 이용하여 compound fault<br><br>
 - Semi-supervised 관련
   - 생성된 신호중 quality가 떨어지는 것들을 활용한 semi-supervised learning으로 feature를 학습한 다음 knowledge transfer으로 부족한 데이터들에 대한 classification 진행<br><br>
+- 작동 조건 다른 신호 생성 관련
+  - RPM이 다른 신호를 생성하기 위해 discriminator가 하나 또는 두 파장의 신호만 보고 real/fake 판별
+    - 하나 또는 두 파장의 신호만 보고 판별하면 고장 특성만 볼 것이라 추측할 수 있고, generator는 들어온 신호가 어떤 속도 조건으로 움직이냐와 무관하게 다양한 파장을 가지는 신호를 생성할 수 있지 않을까?<br><br>
