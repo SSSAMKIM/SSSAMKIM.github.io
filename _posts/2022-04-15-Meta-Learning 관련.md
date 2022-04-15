@@ -33,7 +33,7 @@ use_math: true
 Few-shot learning과 결합하여, 적은 양의 데이터로 빠르게 수렴하는 모델(정확하게는 Feature extractor)의 paramter를 찾는 것이 목적
 
 - **메타러닝은 크게 outer-level과 inner-level**로 나뉜다. 의미적으로 보면,
-  - **inner-level은 큰 범주(ex. 자동차 종류 구분)에서 일반적인 지식을 습득하는 과정**(feature extractor의 initial parameter에 해당)<br><br>
+  - **inner-level은 큰 범주(ex. 자동차 종류 구분)에서 일반적인 지식을 습득하는 과정**(feature extractor의 initial parameter에 해당)<br>
   - **Outer-level은 작은 범주에서(ex. 5가지 자동차에 대한 분류) 특정 지식을 습득하는 과정**(feature extractor의 updated된 parameter에 해당)<br><br>
 
 - 각각의 역할을 조금 더 자세히 정리하면,
@@ -48,7 +48,7 @@ Few-shot learning과 결합하여, 적은 양의 데이터로 빠르게 수렴�
     - **Inner-level에서 계산된 initial parameter ϕ에서 시작**해서, parameter update를 통해 현재 수행하고자 하는 문제의 parameter θ를 찾아냄**
       (prototypical network의 경우 support set이 prototype을 만들고, 모델 성능 계산에 사용되며, task-wise parameter를 구하는 데 사용됨)<br><br>
       
-  - 따라서, 메타러닝 자체의 목적은 Inner-level에서 구한 initial parameter(= meta knowledge, meta parameter)이며, 큰 범주의 지식인 initial parameter를 활용해서 작은 범주의 다양한 문제에 적용했을 때 fast adaptation을 달성할 수 있게 된다.
+  - 따라서, 메타러닝 자체의 목적은 Inner-level에서 구한 initial parameter(= meta knowledge, meta parameter)이며, 큰 범주의 지식인 initial parameter를 활용해서 작은 범주의 다양한 문제에 적용했을 때 fast adaptation을 달성할 수 있게 된다.<br><br>
 
 
 #### **2. Dataset**
