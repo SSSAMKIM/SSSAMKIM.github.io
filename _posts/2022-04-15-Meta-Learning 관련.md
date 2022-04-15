@@ -3,7 +3,7 @@ layout: post
 title: "Meta/Few-shot Learning 기본 개념 정리"
 summary: "메타러닝 및 퓨샷러닝 관련 개념 정리"
 author: taehun
-date: '2022-03-17 23:00:00 +0900'
+date: '2022-04-15 17:00:00 +0900'
 category: Study
 toc: true
 toc_sticky: true
