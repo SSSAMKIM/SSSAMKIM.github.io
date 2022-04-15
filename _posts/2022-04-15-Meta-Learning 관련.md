@@ -40,7 +40,7 @@ Few-shot learning과 결합하여, 적은 양의 데이터로 빠르게 수렴�
   - **Inner-level**
     - learning strategy 학습. **Feature extractor의 initial parameter ϕ를 구하는 과정**
     - 학습에 참여하지 않은 validation dataset을 활용하여 meta loss를 구하고, 이를 통해 initial parameter ϕ를 구함<br>
-      (prototypcal network의 경우 prototype을 만들지 않는 query set이 initial parameter ϕ를 만들어내는 데 사용됨)
+      (prototypical network의 경우 prototype을 만들지 않는 query set이 initial parameter ϕ를 만들어내는 데 사용됨)
     - 이 때 initial parameter ϕ는 큰 범주의 feature를 추출하는 것이 목적<br><br>
 
   - **Outer-level**
