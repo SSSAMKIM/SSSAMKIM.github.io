@@ -32,7 +32,7 @@ use_math: true
 **Meta-learning의 목적은 fast adaptation이 가능한,** 즉, 어떤 클래스 조합의 데이터가 들어오더라도 빠르게 수렴하는 모델의 **initial parameter ϕ를 찾아내는 것.**<br>
 Few-shot learning과 결합하여, 적은 양의 데이터로 빠르게 수렴하는 모델(정확하게는 Feature extractor)의 paramter를 찾는 것이 목적
 
-- **메타러닝은 크게 outer-level과 inner-level**로 나뉜다. 의미적으로 보면,
+- **메타러닝은 크게 inner-level과 outer-level**로 나뉜다. 의미적으로 보면,
   - **inner-level은 큰 범주(ex. 자동차 종류 구분)에서 일반적인 지식을 습득하는 과정**(feature extractor의 initial parameter에 해당)<br>
   - **Outer-level은 작은 범주에서(ex. 5가지 자동차에 대한 분류) 특정 지식을 습득하는 과정**(feature extractor의 updated된 parameter에 해당)<br><br>
 
