@@ -39,13 +39,13 @@ Few-shot learning과 결합하여, 적은 양의 데이터로 빠르게 수렴�
 - 각각의 역할을 조금 더 자세히 정리하면,
   - **Inner-level**
     - learning strategy 학습. **Feature extractor의 initial parameter ϕ를 구하는 과정**
-    - 학습에 참여하지 않은 validation dataset을 활용하여 meta loss를 구하고, 이를 통해 initial parameter ϕ를 구함
+    - 학습에 참여하지 않은 validation dataset을 활용하여 meta loss를 구하고, 이를 통해 initial parameter ϕ를 구함<br>
       (prototypcal network의 경우 prototype을 만들지 않는 query set이 initial parameter ϕ를 만들어내는 데 사용됨)
     - 이 때 initial parameter ϕ는 큰 범주의 feature를 추출하는 것이 목적<br><br>
 
   - **Outer-level**
     - **task-wise parameter** 학습. 예를 들어 분류 문제의 경우, 주어진 데이터셋의 class 수에 맞게 분류가 가능하도록 feature를 추출하는 과정
-    - **Inner-level에서 계산된 initial parameter ϕ에서 시작**해서, **parameter update를 통해 현재 수행하고자 하는 문제의 parameter θ를 찾아냄**
+    - **Inner-level에서 계산된 initial parameter ϕ에서 시작**해서, **parameter update를 통해 현재 수행하고자 하는 문제의 parameter θ를 찾아냄**<br>
       (prototypical network의 경우 support set이 prototype을 만들고, 모델 성능 계산에 사용되며, task-wise parameter를 구하는 데 사용됨)<br><br>
       
   - 따라서, 메타러닝 자체의 목적은 Inner-level에서 구한 initial parameter(=meta knowledge, meta parameter)이며, 큰 범주의 지식인 initial parameter를 활용해서 작은 범주의 다양한 문제에 적용했을 때 fast adaptation을 달성할 수 있게 된다.<br><br>
