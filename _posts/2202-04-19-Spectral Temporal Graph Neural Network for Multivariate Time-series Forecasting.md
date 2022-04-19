@@ -57,7 +57,7 @@ use_math: true
     - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;Y_i)는 future value를 estimation하기 위함 output이며, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\widehat{X_i})는 backcasting output을 estimation<br>
     - Final loss<br>
       ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L(\widehat{X},X;\Delta_\theta)=\sum_{t=0}^T||\widehat{X_t}-X_t||_2^2+\sum_{t=K}^T\sum_{i=1}^K||B_{t-i}(X)-X_{t-i}||_2^2)<br>
-      - First term: forecasting loss, last term: backcasting loss<br><br>
+      (First term: forecasting loss, last term: backcasting loss)<br><br>
 
 - **Latent Correlation Layer**
   - GNN 기반의 방식은 graph structure를 필요로 하며, 보통 human knowledge를 prior로 활용한다.<br>
