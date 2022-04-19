@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-> `Alias-Free Generative Adversarial Networks 논문 리뷰`
+> `NeurIPS 2021 Alias-Free Generative Adversarial Networks 논문 리뷰`
 
 #### Index
 ---
