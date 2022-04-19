@@ -53,8 +53,8 @@ use_math: true
     - Frequency domain에서 representation은 1d convolution과 GLU sub-layer를 통해 feature pattern을 찾아냄<br>
     - 이후 inverse DFT(IDFT)를 통해 다시 time domain으로 변환되고, 마지막으로 inverse GFT(IGFT) 적용<br>
   - Additional layer
-    - StemGNN layer 이후 GLU layer와 FC layer를 추가하여 두 가지 output ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\{Y_i},\widehat{X_i})를 얻음<br>
-    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\{Y_i})는 future value를 estimation하기 위함 output이며, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\widehat{X_i})는 backcasting output을 estimation<br>
+    - StemGNN layer 이후 GLU layer와 FC layer를 추가하여 두 가지 output ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\Y_i,\widehat{X_i})를 얻음<br>
+    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\Y_i)는 future value를 estimation하기 위함 output이며, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\widehat{X_i})는 backcasting output을 estimation<br>
     - Final loss
       ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L(\widehat{X},X;\Delta_\theta)=\sum_{t=0}^T||\widehat{X_t}-X_t||_2^2+\sum_{t=K}^T\sum_{i=1}^K||B_{t-i}(X)-X_{t-i}||_2^2)<br>
       - First term: forecasting, last term: backcasting<br><br>
@@ -69,16 +69,16 @@ use_math: true
   - StemGNN block은 Spectral Sequential(Spe-Seq) cell을 spectral graph convolution module에 embedding 시키는 block<br>
   - Spectral domain에서 다변수 시계열 입력의 latent representation을 학습하는 능력이 우수하다고 함<br>
   - Key는 inter-series 관계를 파악하는 GFT를 적용하는 것. 이 때 output 역시 다변수 시계열이지만, intra-series temporal relationship은 학습하지 않음<br>
-  - 따라서, GFT 적용 후 Spe-Seq cell 내에 DFT를 적용하여 intra-series relationship을 파악하고자 하는 것<br>
+  - 따라서, GFT 적용 후 Spe-Seq cell 내에 DFT를 적용하여 intra-series relationship을 파악하고자 하는 것<br><br>
 
 - **Spectral Sequential Cell(Spe-Seq Cell)**
   - Spe-Seq cell은 DFT -> 1d-conv -> GLU -> IDFT로 이루어짐<br>
-  - 1d-conv, GLU layer는 DFT 이후 frequency domain에서 feature representation을 학습하기 위함<br>
+  - 1d-conv, GLU layer는 DFT 이후 frequency domain에서 feature representation을 학습하기 위함<br><br>
 
 - **Spectral Graph Convolution**
   - GFT는 Spectral Graph Convolution의 basic operator이며, bases가 normalized graph Laplacian의 eigenvector로 구성된 orthonormal space에 input graph를 사영시킴<br>
   - Normalized graph Laplacian은 아래와 같이 계산됨<br>
     - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L=I_N-D^{-1/2}WD^{-1/2})<br>
-  - Graph convolution operator는 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;g_\Theta(\Lambda)) 함수를 통해 연산됨<br>
+  - Graph convolution operator는 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;g_\Theta(\Lambda)) 함수를 통해 연산됨<br><br>
 
 <br>
