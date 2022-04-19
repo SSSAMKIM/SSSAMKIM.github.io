@@ -35,7 +35,7 @@ use_math: true
   - 그 대신에, 많은 fine detail들이 pixel coordinates에 고정되는 것 같다는 것.<br><br>
 
 <center>
-  <img src="public/img/alias_free_1.png" "width:600; height:auto;">
+  <img src="/public/img/alias_free_1.PNG" "width:600; height:auto;">
 </center>
 
 - **Figure 설명**
