@@ -16,6 +16,8 @@ mathjax: true
 use_math: true
 ---
 
+Last update: 2022.04.19
+
 > `NeurIPS 2020 Spectral Temporal Graph Neural Network for Multivariate Time-series Forecasting 리뷰`
 
 #### Index
