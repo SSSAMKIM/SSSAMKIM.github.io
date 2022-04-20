@@ -47,6 +47,10 @@ Last update: 2022.04.20
       (투자 확대 등으로 전체 stock이 상승하는 경우 그 correlation의 의미가 흐려질 수 있다는 의미?)<br>
     2. Sector가 모호하거나, sector 정보가 없는 경우 prediction model이 적용될 수 없다.<br>
     3. 예측 성능이 prediction model이 아닌, sector information의 quality에 강하게 의존한다.<br>
+  - Data-axis Transformer with Multi-Level contexts(DTML) 요약<br>
+    1. temporal attention을 활용하여 multivariate historical price를 요약하는 comprehensive context vector를 생성해 낸다.<br>
+    2. 생성된 context vector를 시장의 global movement와 결합하여 multi-level로 확장시킨다.<br>
+    3. Transformer encoder를 활용해서 multi-level context로부터 stock 간에 비대칭적, 동적 attention score를 학습한다.
 
 
 #### **2. Technical background**
