@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update: 2022.04.19
+Last update: 2022.04.19<br>
 
 > `NeurIPS 2021 Alias-Free Generative Adversarial Networks 논문 리뷰`
 
