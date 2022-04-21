@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update: 2022.04.15
+Last update: 2022.04.15<br>
 
 > `메타러닝 기본 개념 정리`
 
