@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update: 2022.04.20
+Last update: 2022.04.20<br>
 
 > `IEEE Access Discriminant Feature Extraction for Centrifugal Pump Fault Diagnosis 논문 리뷰`
 
