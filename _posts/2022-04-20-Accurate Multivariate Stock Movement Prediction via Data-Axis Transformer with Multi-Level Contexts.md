@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update: 2022.04.20
+Last update: 2022.04.21
 
 > `ACM SIGKDD Conference on Knowledge Discovery and Data Mining Proceeding 리뷰`
 
