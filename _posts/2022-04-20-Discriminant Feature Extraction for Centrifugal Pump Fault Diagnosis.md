@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update: 2022.04.20<br>
+Last update: 2022.04.22<br>
 
 > `IEEE Access Discriminant Feature Extraction for Centrifugal Pump Fault Diagnosis 논문 리뷰`
 
@@ -24,15 +24,15 @@ Last update: 2022.04.20<br>
 ---
 
 - [1. Introduction](#1-introduction)
-- [2. Problem Definition](#2-problem-definition)<br><br>
+- [2. Technical background](#2-technical-background)<br><br>
 
 - **Research gap**
   - Raw statistical feature는 약한 초기 고장(incipient fault)이나, 훨씬 심각한 고장에 사용하기에는 부적절하다.<br><br>
 
 - **Brief explanation for the proposed method**
-  - 1. 정상 진동 신호가 선정됨<br>
-  - 2. 정상 진동 신호와 다른 고장 클래스의 신호 간에 cross-correlation 계산<br>
-  - 3. 시간, 주파수, 시간-주파수 영역에서 raw hybrid features 추출<br>
+  - 1. 정상 진동 신호가 선정됨
+  - 2. 정상 진동 신호와 다른 고장 클래스의 신호 간에 cross-correlation 계산
+  - 3. 시간, 주파수, 시간-주파수 영역에서 raw hybrid features 추출
   - 4. Raw hybrid feature 간에 correlation coefficient를 조사하여 새로운 feature set을 만들고, 이 feature set들을 single feature vector로 합침<br><br>
   
   - 한 줄 정리: Two-types of correlation function utilized<br>
