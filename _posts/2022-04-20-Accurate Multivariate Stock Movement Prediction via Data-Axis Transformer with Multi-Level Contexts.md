@@ -55,8 +55,8 @@ Last update:2022.04.21<br><br>
 
 #### **2. Related Works**
 
-<center>
-  <img src="https://user-images.githubusercontent.com/86653075/165923568-49c9d7b5-f680-497a-966f-071e522cfce9.png" style="width:400;height:auto;">
-  </center>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/86653075/165923568-49c9d7b5-f680-497a-966f-071e522cfce9.png" width="800";height="auto";>
+</p>
 
 <br>
