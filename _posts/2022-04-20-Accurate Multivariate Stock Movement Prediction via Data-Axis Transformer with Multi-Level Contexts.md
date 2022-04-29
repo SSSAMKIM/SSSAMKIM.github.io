@@ -24,7 +24,7 @@ Last update:2022.04.21<br><br>
 ---
 
 - [1. Introduction](#1-introduction)
-- [2. Problem Definition](#2-problem-definition)<br><br>
+- [2. Related Works](#2-related-works)<br><br>
 
 - **Research gap**
   - Stock prediction에 대한 정확도를 높이기 위해서는 stock 간 correlation으 활용할 필요가 있다.
@@ -50,11 +50,13 @@ Last update:2022.04.21<br><br>
   - Data-axis Transformer with Multi-Level contexts(DTML) 요약<br>
     1. temporal attention을 활용하여 multivariate historical price를 요약하는 comprehensive context vector를 생성해 낸다.<br>
     2. 생성된 context vector를 시장의 global movement와 결합하여 multi-level로 확장시킨다.<br>
-    3. Transformer encoder를 활용해서 multi-level context로부터 stock 간에 비대칭적, 동적 attention score를 학습한다.
+    3. Transformer encoder를 활용해서 multi-level context로부터 stock 간에 비대칭적, 동적 attention score를 학습한다.<br><br>
 
 
-#### **2. Technical background**
+#### **2. Related Works**
 
-
+<center>
+  <img src="https://user-images.githubusercontent.com/86653075/165923568-49c9d7b5-f680-497a-966f-071e522cfce9.png" style="width:600;height:auto;">
+  </center>
 
 <br>
