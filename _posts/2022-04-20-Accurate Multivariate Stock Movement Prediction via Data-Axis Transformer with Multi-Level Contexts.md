@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update:2022.04.21<br><br>
+Last update:2022.05.01<br><br>
 
 > 'ACM SIGKDD Conference on Knowledge Discovery and Data Mining Proceeding 리뷰`
 
@@ -54,7 +54,7 @@ Last update:2022.04.21<br><br>
 
 #### **2. Related Works**
 
-  - Time Axis Attention: temporal attention을 활용하여 각 stock 혹은 market index에 대한 context vector를 계산하느 과정<br>
+  - Time Axis Attention: temporal attention을 활용하여 각 stock 혹은 market index에 대한 context vector를 계산하는 과정<br>
   - Context Aggregation: 계산된 market index의 context vector와 각 stock의 context vector를 combining하여 multi-level context vector를 계산하는 과정<br>
   - Data-Axis Attention: 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention을 활용하여 attention map으 만들고, 최종적으로 각 stock에 대한 final prediction으 만드느 과정<br><br>
 
@@ -66,9 +66,11 @@ Last update:2022.04.21<br><br>
 
 ### **3. Proposed Approach**
 
-<p align="center">
+<center>
   <img src="https://user-images.githubusercontent.com/86653075/165923568-49c9d7b5-f680-497a-966f-071e522cfce9.png" width="800";height="auto";>
-</p><br>
+</center>
+
+<br>
 
 
 
