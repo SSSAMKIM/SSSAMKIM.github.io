@@ -28,7 +28,7 @@ Last update:2022.05.01<br><br>
 - [3. Proposed Approach](#3-proposed-approach)<br><br>
 
 - **Research gap**
-  - Stock prediction에 대한 정확도를 높이기 위해서는 stock 간 correlation으 활용할 필요가 있다.
+  - Stock prediction에 대한 정확도를 높이기 위해서는 stock 간 correlation을 활용할 필요가 있다.
   - 그러나 Stock은 시장의 세계적이 흐름에 영향을 받기에, 비대칭성이 크고 유동적이므로 stock 간에 correlation을 정확히 얻는 것이 힘들다.<br><br>
 
 - **Brief explanation for the proposed method**
@@ -54,10 +54,6 @@ Last update:2022.05.01<br><br>
 
 #### **2. Related Works**
 
-  - Time Axis Attention: temporal attention을 활용하여 각 stock 혹은 market index에 대한 context vector를 계산하는 과정<br>
-  - Context Aggregation: 계산된 market index의 context vector와 각 stock의 context vector를 combining하여 multi-level context vector를 계산하는 과정<br>
-  - Data-Axis Attention: 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention을 활용하여 attention map으 만들고, 최종적으로 각 stock에 대한 final prediction으 만드느 과정<br><br>
-
 - **Correlated Stock Prediction**
 
   - Closing price(종가)만 입력 데이터 활용하는 것은 제한적이며, opening price(시가), highest price(고가), 그리고 lowest price(저가) 또한 주가 예측에 중요한 변수이 수 있음<br>
@@ -72,6 +68,10 @@ Last update:2022.05.01<br><br>
 
 <br>
 
+- **Descriptions of Figure 2**
+  - Time Axis Attention: temporal attention을 활용하여 각 stock 혹은 market index에 대한 context vector를 계산하는 과정<br>
+  - Context Aggregation: 계산된 market index의 context vector와 각 stock의 context vector를 combining하여 multi-level context vector를 계산하는 과정<br>
+  - Data-Axis Attention: 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention을 활용하여 attention map으 만들고, 최종적으로 각 stock에 대한 final prediction으 만드는 과정<br><br>
 
 
 <br>
