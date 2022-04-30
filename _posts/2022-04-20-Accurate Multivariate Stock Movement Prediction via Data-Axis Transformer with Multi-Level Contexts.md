@@ -66,7 +66,9 @@ Last update:2022.05.01<br><br>
   <img src="https://user-images.githubusercontent.com/86653075/165923568-49c9d7b5-f680-497a-966f-071e522cfce9.png" width="800" height="auto">
 </p>
 
-![title](https://user-images.githubusercontent.com/86653075/166113999-23d86d5b-a73a-42fb-a65b-384506c7d931.png){: width="800" height="auto"}
+![title](https://user-images.githubusercontent.com/86653075/166113999-23d86d5b-a73a-42fb-a65b-384506c7d931.png){: width="800" height="auto"}{: center}
+
+![Image](https://user-images.githubusercontent.com/86653075/166113999-23d86d5b-a73a-42fb-a65b-384506c7d931.png){: width="800" height="auto"}{: center}
 
 
 <br>
