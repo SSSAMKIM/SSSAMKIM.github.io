@@ -62,21 +62,26 @@ Last update:2022.05.01<br><br>
 
 ### **3. Proposed Approach**
 
+- **Overview**
+
+  - Considering multivariate features: 주가 예측에서 price=feature로 활용되며, opening, highest, lowest, closing price를 입력 변수로 활용<br>
+  - Capturing global movements: Stock 간 correlation이 bull market(강세장)인지, bear market(약세장)인지에 따라서도 큰 영향을 받기에, market index를 활용하여 global trend는 따로 학습을 할 수 있도록 설계<br>
+  - Modeling asymmetric and dynamic relationships: 정보 확산 속도가 상이한 이유로 주가는 asynchronous(비동시성)한 방식으로 변화하기에 stock 간의 실제 correlation에는 asymmetric(비대칭성)한 특징을 가진다. 따라서, 실제 상관관계의 비대칭성과 동적 특성을 모두 고려할 수 있어야 한다.<br>
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/165923568-49c9d7b5-f680-497a-966f-071e522cfce9.png" width="800" height="auto">
 </p>
 
-![title](https://user-images.githubusercontent.com/86653075/166113999-23d86d5b-a73a-42fb-a65b-384506c7d931.png){: width="800" height="auto"}{: center}
-
-![Image](https://user-images.githubusercontent.com/86653075/166113999-23d86d5b-a73a-42fb-a65b-384506c7d931.png){: width="800" height="auto"}{: center}
-
-
 <br>
 
 - **Descriptions of Figure**
-  - Time Axis Attention: temporal attention을 활용하여 각 stock 혹은 market index에 대한 context vector를 계산하는 과정<br>
-  - Context Aggregation: 계산된 market index의 context vector와 각 stock의 context vector를 combining하여 multi-level context vector를 계산하는 과정<br>
-  - Data-Axis Attention: 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention을 활용하여 attention map으 만들고, 최종적으로 각 stock에 대한 final prediction으 만드는 과정<br><br>
+  - Time Axis Attention
+    - Attentive context generation: Temporal attention을 활용하여 각 stock 혹은 market index에 대한 context vector를 계산하는 과정<br>
+  - Context Aggregation
+    - Multi-level context aggregation: 계산된 market index의 context vector와 각 stock의 context vector를 combining하여 multi-level context vector를 계산하는 과정<br>
+  - Data-Axis Attention
+    - Data-axis self-attention: Multi-level context vector를 활용하여 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention으로 attention map을 만들고, 이르 활용하여 최종적으로 각 stock에 대한 final prediction을 만드는 과정.  이를 통해 시간에 따라 동적으로 변화하는 해석 가능한 상관관계를 얻을 수 있음.<br><br>
+
 
 
 <br>
