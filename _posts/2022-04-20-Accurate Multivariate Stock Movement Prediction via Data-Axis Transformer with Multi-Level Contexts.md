@@ -105,6 +105,6 @@ Last update:2022.05.02<br><br>
     - 두 번째 term이 stock에 더 큰 weight를 부여하고, 주식의 movements를 global movement와 correlate 하는 역할을 하게 된다.
     - 세 번째 term은 market movement를 고려한 값으로, 모든 주식 간 correlation의 background value가 된다.<br><br>
 
-- **[3] Data-Axis Self-Attention
+- **[3] Data-Axis Self-Attention**
 
 <br>
