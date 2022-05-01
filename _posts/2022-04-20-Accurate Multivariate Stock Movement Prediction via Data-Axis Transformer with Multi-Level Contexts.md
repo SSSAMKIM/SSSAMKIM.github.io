@@ -85,11 +85,12 @@ Last update:2022.05.01<br><br>
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left\{z_{ut}\right\}\leq T) (l은 (아마) multivariate으로 사용하려는 prices의 개수, u는 stocks, t는 time indices를 의미)를 input으로 받아서, 현재 time step T까지의 local movements를 summarize 하는 comprehensive context vector 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^c)를 학습하는 것이 목적.<br>
   - **Feature Transformation**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{z_{ut}}=tanh(W_sz_{ut}+b_s))
-    - 위 식과 같이 모든 feature vector ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{ut})를 tanh을 activation으로 하는 single layer로 transform 한다. 
+    - 위 식과 같이 모든 feature vector ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{ut})를 tanh을 activation으로 하는 single layer로 transform 한다.<br> 
   - **Attention LSTM**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i = \frac{exp(h_i^Th_T)}{\sum_{j=1}^Texp(h_i^Th_T)})
     - LSTM의 output인 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)대신 위 식과 같이 attention score을 활용하여 context vector
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{h^c}=\sum_{i}\alpha_ih_i)를 계산. Query vector로는 마지막 hidden state인
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용. Step i에서의 attention score 
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i) 
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용. Attention score ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i)는 현재 step T에 관한 step i의 중요도를 의미.<br>
+  - **Context Normalization**:![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_{ui}^c=\gamma_{ui}\frac{\tilde{h_{ui}^c}-mean(\tilde{h_{ui}^c})}{std(\tilde{h_{ui}^c})}+\beta_{ui})
+    - 각 stock이 다양한 범위의 feature를 가지고, historical prices의 pattern 또한 다양하기에 attention LSTM에 의해 만들어진 context vector는 다양한 범위의 값을 가지게 될 것이며, 이는 추후 학습 과정의 불안정성을 야기할 것. 따라서, 위 식과 같이 layer normalization의 변형인 context normalization을 활용하며, i는 context vector에 있는 요소들의 index, mean과 std는 모든 주식과 요소들에 대해 계산된 값이고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\gamma_{ui})와 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta_{ui})는 학습되는 파라미터이다.
 
 <br>
