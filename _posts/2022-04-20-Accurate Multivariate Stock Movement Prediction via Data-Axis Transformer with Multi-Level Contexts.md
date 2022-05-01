@@ -82,6 +82,8 @@ Last update:2022.05.01<br><br>
 
 - **Attentive Context Generation**
   - 첫 번째는 각 stock의 multivariate historical prices를 single context vector로 summarize 하는 것. 
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left \{z_{ut}} \right \})
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left\{z_{ut}\right\}\leq T) (l은 (아마) multivariate으로 사용하려는 prices의 개수, u는 stocks, t는 time indices를 의미)
+![Lf](https://latex.codecogs.com/svg.image?\left\{&space;z_{ut}\right\}\leq{T})
+https://latex.codecogs.com/svg.image?\left\{&space;z_{ut}\right\}\leq{T}
 
 <br>
