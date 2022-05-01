@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update:2022.05.01<br><br>
+Last update:2022.05.02<br><br>
 
 > 'ACM SIGKDD Conference on Knowledge Discovery and Data Mining Proceeding 리뷰`
 
@@ -80,17 +80,23 @@ Last update:2022.05.01<br><br>
   - Data-Axis Attention
     - Data-axis self-attention: Multi-level context vector를 활용하여 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention으로 attention map을 만들고, 이르 활용하여 최종적으로 각 stock에 대한 final prediction을 만드는 과정.  이를 통해 시간에 따라 동적으로 변화하는 해석 가능한 상관관계를 얻을 수 있음.<br><br>
 
-- **Attentive Context Generation**
+- **[1] Attentive Context Generation**
   - 첫 번째는 각 stock의 multivariate historical prices를 single context vector로 summarize 하는 것. 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left\{z_{ut}\right\}\leq T) (l은 (아마) multivariate으로 사용하려는 prices의 개수, u는 stocks, t는 time indices를 의미)를 input으로 받아서, 현재 time step T까지의 local movements를 summarize 하는 comprehensive context vector 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^c)를 학습하는 것이 목적.<br>
-  - **Feature Transformation**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{z_{ut}}=tanh(W_sz_{ut}+b_s))
+  - **[1-1] Feature Transformation**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{z_{ut}}=tanh(W_sz_{ut}+b_s))
     - 위 식과 같이 모든 feature vector ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{ut})를 tanh을 activation으로 하는 single layer로 transform 한다.<br> 
-  - **Attention LSTM**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i = \frac{exp(h_i^Th_T)}{\sum_{j=1}^Texp(h_i^Th_T)})
+  - **[1-2] Attention LSTM**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i = \frac{exp(h_i^Th_T)}{\sum_{j=1}^Texp(h_i^Th_T)})
     - LSTM의 output인 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)대신 위 식과 같이 attention score을 활용하여 context vector
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{h^c}=\sum_{i}\alpha_ih_i)를 계산. Query vector로는 마지막 hidden state인
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용. Attention score ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i)는 현재 step T에 관한 step i의 중요도를 의미.<br>
-  - **Context Normalization**:![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_{ui}^c=\gamma_{ui}\frac{\tilde{h_{ui}^c}-mean(\tilde{h_{ui}^c})}{std(\tilde{h_{ui}^c})}+\beta_{ui})
-    - 각 stock이 다양한 범위의 feature를 가지고, historical prices의 pattern 또한 다양하기에 attention LSTM에 의해 만들어진 context vector는 다양한 범위의 값을 가지게 될 것이며, 이는 추후 학습 과정의 불안정성을 야기할 것. 따라서, 위 식과 같이 layer normalization의 변형인 context normalization을 활용하며, i는 context vector에 있는 요소들의 index, mean과 std는 모든 주식과 요소들에 대해 계산된 값이고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\gamma_{ui})와 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta_{ui})는 학습되는 파라미터이다.
+  - **[1-3] Context Normalization**:![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_{ui}^c=\gamma_{ui}\frac{\tilde{h_{ui}^c}-mean(\tilde{h_{ui}^c})}{std(\tilde{h_{ui}^c})}+\beta_{ui})
+    - 각 stock이 다양한 범위의 feature를 가지고, historical prices의 pattern 또한 다양하기에 attention LSTM에 의해 만들어진 context vector는 다양한 범위의 값을 가지게 될 것이며, 이는 추후 학습 과정의 불안정성을 야기할 것. 따라서, 위 식과 같이 layer normalization의 변형인 context normalization을 활용하며, i는 context vector에 있는 요소들의 index, mean과 std는 모든 주식과 요소들에 대해 계산된 값이고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\gamma_{ui})와 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta_{ui})는 학습되는 파라미터이다.<br>
+
+- **[2] Multi-Level Context Aggregation**
+  - 미국 주식 시장에서는 NDX100, 중국 시장에서는 CSI300과 같은 market index를 사용함으로써 short-term fluctutation이나 개별 주식의 properties와 무관한, long-term perspective인 market movement를 따를 수 있도록 하는 과정. 여기에서는 개별 주식들의 time range와 같은 SNP500에 대한 데이터를 활용하고(물론 중국의 경우 CSI300 활용), attention LSTM을 사용하여 market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 출력.
+    - Q. 각 국가의 주식들 또한 다른 market index에 영향을 받을텐데 이는 어떻게 고려할지?
+  - [2-1] Multi-Level Contexts: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m=h_u^c+\beta h^i)
+    - 각 
 
 <br>
