@@ -32,7 +32,7 @@ Last update:2022.05.02<br><br>
   - 그러나 Stock은 시장의 세계적이 흐름에 영향을 받기에, 비대칭성이 크고 유동적이므로 stock 간에 correlation을 정확히 얻는 것이 힘들다.<br><br>
 
 - **Brief explanation for the proposed method**
-  - Data-axis Transformer with Multi-Level contexts(DTML)으 활용항 비대칭적, 동적 상관관계를 아래 3가지를 활용하여 구한다.<br>
+  - Data-axis Transformer with Multi-Level contexts(DTML)을 활용한 비대칭적, 동적 상관관계를 아래 3가지를 활용하여 구한다.<br>
     1. 각 stock 내에서 temporal correlation을 계산한다.<br>
     2. Global market context에 기반하여 multi-level contexts를 구한다.<br>
     3. Inter-stock correlation을 계산하기 위해 transformer encoder를 활용한다.<br><br>
@@ -91,12 +91,20 @@ Last update:2022.05.02<br><br>
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{h^c}=\sum_{i}\alpha_ih_i)를 계산. Query vector로는 마지막 hidden state인
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용. Attention score ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i)는 현재 step T에 관한 step i의 중요도를 의미.<br>
   - **[1-3] Context Normalization**:![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_{ui}^c=\gamma_{ui}\frac{\tilde{h_{ui}^c}-mean(\tilde{h_{ui}^c})}{std(\tilde{h_{ui}^c})}+\beta_{ui})
-    - 각 stock이 다양한 범위의 feature를 가지고, historical prices의 pattern 또한 다양하기에 attention LSTM에 의해 만들어진 context vector는 다양한 범위의 값을 가지게 될 것이며, 이는 추후 학습 과정의 불안정성을 야기할 것. 따라서, 위 식과 같이 layer normalization의 변형인 context normalization을 활용하며, i는 context vector에 있는 요소들의 index, mean과 std는 모든 주식과 요소들에 대해 계산된 값이고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\gamma_{ui})와 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta_{ui})는 학습되는 파라미터이다.<br>
+    - 각 stock이 다양한 범위의 feature를 가지고, historical prices의 pattern 또한 다양하기에 attention LSTM에 의해 만들어진 context vector는 다양한 범위의 값을 가지게 될 것이며, 이는 추후 학습 과정의 불안정성을 야기할 것. 따라서, 위 식과 같이 layer normalization의 변형인 context normalization을 활용하며, i는 context vector에 있는 요소들의 index, mean과 std는 모든 주식과 요소들에 대해 계산된 값이고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\gamma_{ui})와 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta_{ui})는 학습되는 파라미터이다.<br><br>
 
 - **[2] Multi-Level Context Aggregation**
-  - 미국 주식 시장에서는 NDX100, 중국 시장에서는 CSI300과 같은 market index를 사용함으로써 short-term fluctutation이나 개별 주식의 properties와 무관한, long-term perspective인 market movement를 따를 수 있도록 하는 과정. 여기에서는 개별 주식들의 time range와 같은 SNP500에 대한 데이터를 활용하고(물론 중국의 경우 CSI300 활용), attention LSTM을 사용하여 market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 출력.
-    - Q. 각 국가의 주식들 또한 다른 market index에 영향을 받을텐데 이는 어떻게 고려할지?
+  - 미국 주식 시장에서는 NDX100, 중국 시장에서는 CSI300과 같은 market index를 사용함으로써 short-term fluctutation이나 개별 주식의 properties와 무관한, long-term perspective인 market movement를 따를 수 있도록 하는 과정.<br>
+  - 여기에서는 개별 주식들의 time range와 같은 SNP500에 대한 데이터를 활용하고(물론 중국의 경우 CSI300 활용), attention LSTM을 사용하여 market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 출력.
+    - Q. 각 국가의 주식들 또한 다른 market index에 영향을 받을텐데 이는 어떻게 고려할지?<br>
   - [2-1] Multi-Level Contexts: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m=h_u^c+\beta h^i)
-    - 각 
+    - 각 주식 u에 대해서 global market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 모든 correlation의 base knowledge로 활용함으로써 multi-level context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m)을 계산. 이 때 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta)는 hyperparameter이며, global market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)에 대한 weight를 결정.
+      - Q. 각 주식별로 global movement에 영향을 받는 정도는 다를텐데, 고정하기보다는 learnable한 parameter로 바꾸면 어떨지?<br>
+  - [2-2] The Effect of Global Contexts: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m^{\top}h_v^m=h_u^c^{\top}h_v^c+\beta h^i^{\top}(h_u^c+h_v^c)+\beta^2h^i^{\top}h^i)
+    - 우변의 첫 번째 term은 각 주식별 상관관계를 의미하며, 두 번째, 세 번째 term이 global context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 추가하여 correlation의 amount를 증가시키는 역할을 함.
+    - 두 번째 term이 stock에 더 큰 weight를 부여하고, 주식의 movements를 global movement와 correlate 하는 역할을 하게 된다.
+    - 세 번째 term은 market movement를 고려한 값으로, 모든 주식 간 correlation의 background value가 된다.<br><br>
+
+- **[3] Data-Axis Self-Attention
 
 <br>
