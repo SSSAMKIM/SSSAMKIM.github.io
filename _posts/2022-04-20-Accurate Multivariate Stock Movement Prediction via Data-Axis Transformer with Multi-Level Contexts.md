@@ -97,10 +97,10 @@ Last update:2022.05.02<br><br>
   - 미국 주식 시장에서는 NDX100, 중국 시장에서는 CSI300과 같은 market index를 사용함으로써 short-term fluctutation이나 개별 주식의 properties와 무관한, long-term perspective인 market movement를 따를 수 있도록 하는 과정.<br>
   - 여기에서는 개별 주식들의 time range와 같은 SNP500에 대한 데이터를 활용하고(물론 중국의 경우 CSI300 활용), attention LSTM을 사용하여 market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 출력.
     - Q. 각 국가의 주식들 또한 다른 market index에 영향을 받을텐데 이는 어떻게 고려할지?<br>
-  - [2-1] Multi-Level Contexts: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m=h_u^c+\beta h^i)
+  - **[2-1] Multi-Level Contexts**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m=h_u^c+\beta h^i)
     - 각 주식 u에 대해서 global market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 모든 correlation의 base knowledge로 활용함으로써 multi-level context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m)을 계산. 이 때 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta)는 hyperparameter이며, global market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)에 대한 weight를 결정.
       - Q. 각 주식별로 global movement에 영향을 받는 정도는 다를텐데, 고정하기보다는 learnable한 parameter로 바꾸면 어떨지?<br>
-  - [2-2] The Effect of Global Contexts: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m^{\top}h_v^m=h_u^c^{\top}h_v^c+\beta h^i^{\top}(h_u^c+h_v^c)+\beta^2h^i^{\top}h^i)
+  - **[2-2] The Effect of Global Contexts**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m^{\top}h_v^m=h_u^c^{\top}h_v^c+\beta h^i^{\top}(h_u^c+h_v^c)+\beta^2h^i^{\top}h^i)
     - 우변의 첫 번째 term은 각 주식별 상관관계를 의미하며, 두 번째, 세 번째 term이 global context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 추가하여 correlation의 amount를 증가시키는 역할을 함.
     - 두 번째 term이 stock에 더 큰 weight를 부여하고, 주식의 movements를 global movement와 correlate 하는 역할을 하게 된다.
     - 세 번째 term은 market movement를 고려한 값으로, 모든 주식 간 correlation의 background value가 된다.<br><br>
