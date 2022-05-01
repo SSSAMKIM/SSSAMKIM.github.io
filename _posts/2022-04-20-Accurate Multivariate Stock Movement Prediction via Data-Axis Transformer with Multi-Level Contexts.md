@@ -88,7 +88,7 @@ Last update:2022.05.01<br><br>
     - 위 식과 같이 모든 feature vector ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{ut})를 tanh을 activation으로 하는 single layer로 transform 한다. 
   - **Attention LSTM**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i = \frac{exp(h_i^Th_T)}{\sum_{j=1}^Texp(h_i^Th_T)})
     - LSTM의 output인 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)대신 attention을 활용하여 context vector
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{h^c}=\sum_i\alpha_ih_i)를 계산. Query vector로는 마지막 hidden state인
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{h^c}=\sum_{i}\alpha_ih_i)를 계산. Query vector로는 마지막 hidden state인
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용.
 
 <br>
