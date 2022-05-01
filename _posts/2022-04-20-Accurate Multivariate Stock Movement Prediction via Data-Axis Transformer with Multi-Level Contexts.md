@@ -81,6 +81,7 @@ Last update:2022.05.01<br><br>
     - Data-axis self-attention: Multi-level context vector를 활용하여 서로 다른 stock 간의 correlation을 transformer encoder가 multi-head attention으로 attention map을 만들고, 이르 활용하여 최종적으로 각 stock에 대한 final prediction을 만드는 과정.  이를 통해 시간에 따라 동적으로 변화하는 해석 가능한 상관관계를 얻을 수 있음.<br><br>
 
 - **Attentive Context Generation**
-  - 
+  - 첫 번째는 각 stock의 multivariate historical prices를 single context vector로 summarize 하는 것. 
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left \{z_{ut}} \right \})
 
 <br>
