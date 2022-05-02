@@ -83,28 +83,47 @@ Last update:2022.05.02<br><br>
 - **[1] Attentive Context Generation**
   - 첫 번째는 각 stock의 multivariate historical prices를 single context vector로 summarize 하는 것. 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left\{z_{ut}\right\}\leq T) (l은 (아마) multivariate으로 사용하려는 prices의 개수, u는 stocks, t는 time indices를 의미)를 input으로 받아서, 현재 time step T까지의 local movements를 summarize 하는 comprehensive context vector 
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^c)를 학습하는 것이 목적.<br>
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^c)를 학습하는 것이 목적.<br><br>
   - **[1-1] Feature Transformation**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{z_{ut}}=tanh(W_sz_{ut}+b_s))
-    - 위 식과 같이 모든 feature vector ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{ut})를 tanh을 activation으로 하는 single layer로 transform 한다.<br> 
+    - 위 식과 같이 모든 feature vector ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{ut})를 tanh을 activation으로 하는 single layer로 transform 한다.<br><br> 
   - **[1-2] Attention LSTM**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i = \frac{exp(h_i^Th_T)}{\sum_{j=1}^Texp(h_i^Th_T)})
     - LSTM의 output인 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)대신 위 식과 같이 attention score을 활용하여 context vector
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{h^c}=\sum_{i}\alpha_ih_i)를 계산. Query vector로는 마지막 hidden state인
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용. Attention score ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i)는 현재 step T에 관한 step i의 중요도를 의미.<br>
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_T)를 사용. Attention score ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\alpha_i)는 현재 step T에 관한 step i의 중요도를 의미.<br><br>
   - **[1-3] Context Normalization**:![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_{ui}^c=\gamma_{ui}\frac{\tilde{h_{ui}^c}-mean(\tilde{h_{ui}^c})}{std(\tilde{h_{ui}^c})}+\beta_{ui})
     - 각 stock이 다양한 범위의 feature를 가지고, historical prices의 pattern 또한 다양하기에 attention LSTM에 의해 만들어진 context vector는 다양한 범위의 값을 가지게 될 것이며, 이는 추후 학습 과정의 불안정성을 야기할 것. 따라서, 위 식과 같이 layer normalization의 변형인 context normalization을 활용하며, i는 context vector에 있는 요소들의 index, mean과 std는 모든 주식과 요소들에 대해 계산된 값이고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\gamma_{ui})와 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta_{ui})는 학습되는 파라미터이다.<br><br>
 
 - **[2] Multi-Level Context Aggregation**
   - 미국 주식 시장에서는 NDX100, 중국 시장에서는 CSI300과 같은 market index를 사용함으로써 short-term fluctutation이나 개별 주식의 properties와 무관한, long-term perspective인 market movement를 따를 수 있도록 하는 과정.<br>
   - 여기에서는 개별 주식들의 time range와 같은 SNP500에 대한 데이터를 활용하고(물론 중국의 경우 CSI300 활용), attention LSTM을 사용하여 market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 출력.
-    - Q. 각 국가의 주식들 또한 다른 market index에 영향을 받을텐데 이는 어떻게 고려할지?<br>
+    - Q. 각 국가의 주식들 또한 다른 market index에 영향을 받을텐데 이는 어떻게 고려할지?<br><br>
   - **[2-1] Multi-Level Contexts**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m=h_u^c+\beta h^i)
     - 각 주식 u에 대해서 global market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 모든 correlation의 base knowledge로 활용함으로써 multi-level context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m)을 계산. 이 때 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\beta)는 hyperparameter이며, global market context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)에 대한 weight를 결정.
-      - Q. 각 주식별로 global movement에 영향을 받는 정도는 다를텐데, 고정하기보다는 learnable한 parameter로 바꾸면 어떨지?<br>
+      - Q. 각 주식별로 global movement에 영향을 받는 정도는 다를텐데, 고정하기보다는 learnable한 parameter로 바꾸면 어떨지?<br><br>
   - **[2-2] The Effect of Global Contexts**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h_u^m^{\top}h_v^m=h_u^c^{\top}h_v^c+\beta h^i^{\top}(h_u^c+h_v^c)+\beta^2h^i^{\top}h^i)
     - 우변의 첫 번째 term은 각 주식별 상관관계를 의미하며, 두 번째, 세 번째 term이 global context ![Lf](https://latex.codecogs.com/svg.latex?\small&space;h^i)를 추가하여 correlation의 amount를 증가시키는 역할을 함.
     - 두 번째 term이 stock에 더 큰 weight를 부여하고, 주식의 movements를 global movement와 correlate 하는 역할을 하게 된다.
     - 세 번째 term은 market movement를 고려한 값으로, 모든 주식 간 correlation의 background value가 된다.<br><br>
 
 - **[3] Data-Axis Self-Attention**
+  - Correlation 계산을 위해 transformer encoder를 활용하는데, 이 때 correlation은 asymmetric attention score로 주식 시장에서 정보 확산 속도를 나타낸다고 볼 수 있다.
+  - 또한, 이전 단계에서 attention LSTM에 의한 context vector 계산 시 최근 정보가 더 유용한 정보를 담고 있을 것이므로 최근 step의 hidden state에 집중하게 되는 반면, global movement도 반영하여 transformer encoder까지 활용하는 경우, locality에 의존하지 않게 된다.<br><br>
 
-<br>
+  - **[3-1] Self-Attention**
+    - Multi-level context matrix ![Lf](https://latex.codecogs.com/svg.latex?\small&space;H\in\mathbb{R}^{d\times h})는 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left\{h_u^m \right\}_m)를 stacking 함으로써 쌓는다. 이 때 d는 stocks의 수, h는 context vector의 길이이다.
+    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;Q=HW_q), ![Lf](https://latex.codecogs.com/svg.latex?\small&space;K=HW_k), ![Lf](https://latex.codecogs.com/svg.latex?\small&space;V=HW_v)로 query, key, value 계산.
+    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{H}=SV where S=softmax(\frac{QK^{\top}}{\sqrt{h}})로 attention score 계산하는데, softmax function은 V의 row vector에 attention을 적용하기 위해 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;QK^{\top})의 rows를 따라서 적용된다.
+    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;S_{ji})는 현재 time step에서 stock i가 prediction j에 미치는 중요도를 나타낸다.
+    - Attention score 계산 시 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\sqrt{h})를 나눠주는 이유는 고차원 context에서는 one-hot vector에 수렴하는 sharp score를 만들어내는 경향이 크기 때문이다.
+    - 이 부분에서는 multi-head attention을 활용하며, m개의 서로 다른 Q,K, 그리고 V의 집합을 가지고 각각 attention 결과를 얻은 후 concat 한다. 이후 attention matrix S를 attention heads에 대해 평균내어 계산한다.<br><br>
+
+  - **[3-2] Nonlinear Transformation**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;H_p=tanh(H+\tilde{H}+MLP(H+\tilde{H})))
+    - Residual connection을 활용해서 aggregated contexts를 update 하는 과정으로, MLP는 size가 4h이고, ReLU activation을 가진 하나의 hidden layer를 활용해서 context vector의 size를 h -> 4h -> h로 다시 복원하는 과정에서 self-attention이 할 수 없는 비선형성을 추가해준다.
+    - 두 개의 residual connections을 가지며, 하나는 self-attention을 위해, 하나는 비선형성 부과를 위한 MLP를 위해 활용된다.
+    - 또한, dropout과 layer normalization이 attention과 nonlinear transformation 이후에 추가된다.<br><br>
+
+  - **[3-3] Final Prediction**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\hat{y}=\sigma(H_pW_p+b_p))
+    - 마지막 단계로, transformed contexts에 single linear layer를 태워 마지막 prediction을 얻는다. 이 때, logistic sigmoid function은 각 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\hat{y}_u)는 stock u를 확률로 해석하고, stock movement prediction을 위한 DTML의 output으로 바로 활용한다.<br><br>
+
+
+
