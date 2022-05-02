@@ -113,7 +113,7 @@ Last update:2022.05.02<br><br>
   - **[3-1] Self-Attention**
     - Multi-level context matrix ![Lf](https://latex.codecogs.com/svg.latex?\small&space;H\in\mathbb{R}^{d\times h})는 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\left\{h_u^m \right\}_m)를 stacking 함으로써 쌓는다. 이 때 d는 stocks의 수, h는 context vector의 길이이다.
     - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;Q=HW_q), ![Lf](https://latex.codecogs.com/svg.latex?\small&space;K=HW_k), ![Lf](https://latex.codecogs.com/svg.latex?\small&space;V=HW_v)로 query, key, value 계산.
-    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{H}=SV where S=softmax(\frac{QK^{\top}}{\sqrt{h}})로 attention score 계산하는데, softmax function은 V의 row vector에 attention을 적용하기 위해 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;QK^{\top})의 rows를 따라서 적용된다.
+    - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\tilde{H}=SV\;\; where \;\; S=softmax(\frac{QK^{\top}}{\sqrt{h}}))로 attention score 계산하는데, softmax function은 V의 row vector에 attention을 적용하기 위해 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;QK^{\top})의 rows를 따라서 적용된다.
     - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;S_{ji})는 현재 time step에서 stock i가 prediction j에 미치는 중요도를 나타낸다.
     - Attention score 계산 시 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\sqrt{h})를 나눠주는 이유는 고차원 context에서는 one-hot vector에 수렴하는 sharp score를 만들어내는 경향이 크기 때문이다.
     - 이 부분에서는 multi-head attention을 활용하며, m개의 서로 다른 Q,K, 그리고 V의 집합을 가지고 각각 attention 결과를 얻은 후 concat 한다. 이후 attention matrix S를 attention heads에 대해 평균내어 계산한다.<br><br>
