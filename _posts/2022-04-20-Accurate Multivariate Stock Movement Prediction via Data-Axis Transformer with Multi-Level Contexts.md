@@ -129,7 +129,8 @@ Last update:2022.05.02<br><br>
 - **[4] Training with Selective Regularization**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L(\chi,y)=-\frac{1}{d}\sum_u(y_u\log \hat{y}_u+(1-y_u)\log(1-\hat{y}_u)))
   - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\chi \in \mathbb{R}^{w\times d \times l})은 현재 time step의 input tensor, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;y)는 실제 stock movements.
   - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;w)는 length of observations, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;d)는 stocks의 총 개수, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;l)은 features의 개수.<br><br>
-  - **[4-1] Selective Regularization**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{reg}(\chi,y)=L(\chi,y)+\lambda(||W_p||_F^2+||b_p||_2^2))
+  - **[4-1] Selective Regularization**: 
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{reg}(\chi,y)=L(\chi,y)+\lambda(||W_p||_F^2+||b_p||_2^2))
     - L2 regularization은 overfitting을 방지하는 대표적인 방식으로 모든 learnable parameters의 L2 norm에 coefficient ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\lambda)를 곱하여 objective function에 추가하는 방법. 이 coefficient의 최적의 값을 위한 tuning이 어렵다는 것이 한계점.
     - 따라서, 위 식과 같이 last predictor의 parameters만 penalize 주어서 regularizer가 outer space에만 restriction을 주고, attention LSTM이나 transformer encoder와 같은 core modules의 representation은 보존하는 방식으로 개선.<br><br>
 
