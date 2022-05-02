@@ -25,7 +25,8 @@ Last update:2022.05.02<br><br>
 
 - [1. Introduction](#1-introduction)
 - [2. Related Works](#2-related-works)
-- [3. Proposed Approach](#3-proposed-approach)<br><br>
+- [3. Proposed Approach](#3-proposed-approach)
+- [4. Experiments](#4-experiments)<br><br>
 
 - **Research gap**
   - Stock prediction에 대한 정확도를 높이기 위해서는 stock 간 correlation을 활용할 필요가 있다.
@@ -125,5 +126,21 @@ Last update:2022.05.02<br><br>
   - **[3-3] Final Prediction**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\hat{y}=\sigma(H_pW_p+b_p))
     - 마지막 단계로, transformed contexts에 single linear layer를 태워 마지막 prediction을 얻는다. 이 때, logistic sigmoid function은 각 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\hat{y}_u)는 stock u를 확률로 해석하고, stock movement prediction을 위한 DTML의 output으로 바로 활용한다.<br><br>
 
+- **[4] Training with Selective Regularization**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L(\chi,y)=-\frac{1}{d}\sum_u(y_u\log \hat{y}_u+(1-y_u)\log(1-\hat{y}_u)))
+  - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\chi \in \mathbb{R}^{w\times d \times l})은 현재 time step의 input tensor, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;y)는 실제 stock movements.
+  - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;w)는 length of observations, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;d)는 stocks의 총 개수, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;l)은 features의 개수.<br><br>
 
+  - **[4-1] Selective Regularization**: ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{reg}(\chi,y)=L(\chi,y)+\lambda(||W_p||_F^2+||b_p||_2^2))
+    - L2 regularization은 overfitting을 방지하는 대표적인 방식으로 모든 learnable parameters의 L2 norm에 coefficient ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\lambda)를 곱하여 objective function에 추가하는 방법. 이 coefficient의 최적의 값을 위한 tuning이 어렵다는 것이 한계점.
+    - 따라서, 위 식과 같이 last predictor의 parameters만 penalize 주어서 regularizer가 outer space에만 restriction을 주고, attention LSTM이나 transformer encoder와 같은 core modules의 representation은 보존하는 방식으로 개선.<br><br>
 
+- **4. Experiments**
+
+  - **[1] Experimental Setup**
+    - **[1-1] Datasets**
+      - Public datasets ACL18, KDD17을 사용, github repository에는 전처리 된 버전 공유되어 있음 (github.com/fulifeng/Adv-ALSTM)
+      - NDX100, CSI300, NI225, 그리고 FTSE100은 각각 미국, 중국, 일본, 그리고 영국 주식 시장에서 취득한 새 benchmark datasets
+      - Day t까지의 stock prices가 주어질 때 다음 날의 price movement가 오르면 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;(y_i=1)), 내리면 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;(y_i=0))을 예측하는 것이 목적<br><br>
+    
+    - **[1-2] Feature Vectors**
+      - 총 11개 features ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{open}, z_{high}, z_{low}, z_{close}, z_{adj_close}, z_{d5,d10,d15,d20,d25,d30}) 사용.
