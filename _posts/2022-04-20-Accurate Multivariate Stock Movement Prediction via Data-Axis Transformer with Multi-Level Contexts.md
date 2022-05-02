@@ -143,4 +143,7 @@ Last update:2022.05.02<br><br>
       - Day t까지의 stock prices가 주어질 때 다음 날의 price movement가 오르면 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;(y_i=1)), 내리면 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;(y_i=0))을 예측하는 것이 목적<br><br>
     
     - **[1-2] Feature Vectors**
-      - 총 11개 features ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{open}, z_{high}, z_{low}, z_{close}, z_{adj_close}, z_{d5,d10,d15,d20,d25,d30}) 사용.
+      - 총 11개 features ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{open}, z_{high}, z_{low}, z_{close}, z_{adj\;close}, z_{d5},z_{d10},z_{d15},z_{d20},z_{d25},z_{d30}) 사용.
+      - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{open(or high,low)})=open_t/close_t-1, z_{close}=close_t/close_{t-1}, z_{adj\;close}=adj\;close_t/adj\;close_{t-1}-1)
+      - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{dk}=\frac{\sum_{i=0}^k adj\;close_{t-i}}{k\cdot adj\;close_t}-1)
+      - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{open},z_{high},z_{low})는 종가에 대한 각각의 값의 비율을 의미, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{close},z_{adj\;close})는 이전 time step의 종가 및 조정된 종가에 대한 각각의 값의 비율을 의미하고, ![Lf](https://latex.codecogs.com/svg.latex?\small&space;z_{dk})는 이전 k days 동안 조정된 종가에대한 long-term trend를 의미한다.<br><br>
