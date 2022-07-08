@@ -79,11 +79,15 @@ Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputati
 
 ## Domestic Conference
 
-### 1. Korean Society of Mechanical Engineers (KSME) 2022 Anual Spring Conference
+### 3. Korean Society of Prognostics and Health Management (KSPHM) 2022
+Kim T., Ko J.U., Lee J., Kim Y.C., Youn B.D., "Unseen Signal Generation Through Latent Space Analysis of GAN in Rotating Machinery," Proceedings of the Korean Society of Prognostics and Health Management (KSPHM) 2022 Annual Conference, Seoul, Korea, June 29-July 1, 2022
+
+### 2. Korean Society of Mechanical Engineers (KSME) 2022 Anual Spring Conference
 Kim T., Ko J.U., Lee J., Kim Y.C., Youn B.D., "Latent Space Analysis of GAN for Reliable Signal Generation in Rotating Machinery," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2022 Annual Spring Conference, Busan, Korea, May 18-21, 2022<br><br>
 
-### 2. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
+### 3. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
 Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
+
 <br>
 <br>
 
