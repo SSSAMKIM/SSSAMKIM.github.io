@@ -14,19 +14,19 @@ keywords: Rolling element bearing, CWRU, PHM
 permalink: /17
 mathjax: true
 use_math: true
----![fffd](https://user-images.githubusercontent.com/86653075/177991206-b9a7c3b9-0378-4572-8eb0-24b4d6bf19e2.gif)
 
+---
 
 Last update: 2022.07.08<br>
 
-> `Rolling element bearing diagnostics using the Case Western Reserve University data: A benchmark study 리뷰'
->> 'Mechanical Systems and Signal Processing Journal (IF: 8.934, rank: 97.45%, 2022.07.08 기준)'
+> `Rolling element bearing diagnostics using the Case Western Reserve University data: A benchmark study 리뷰'<br>
+> > Mechanical Systems and Signal Processing Journal (IF: 8.934, rank: 97.45%, 2022.07.08 기준)
 
 #### Index
 ---
 
 - [1. Introduction](#1-introduction)
-- [2. Technical background](#2-technical-background)<br><br>
+- [2. Bearing diagnosis fundamentals](#2-bearing-diagnosis-fundamentals)<br><br>
 
 #### **1. Introduction**
   
