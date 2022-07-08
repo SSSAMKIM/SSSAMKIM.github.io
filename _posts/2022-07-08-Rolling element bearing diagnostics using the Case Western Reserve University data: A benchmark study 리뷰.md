@@ -14,7 +14,6 @@ keywords: Rolling element bearing, CWRU, PHM
 permalink: /17
 mathjax: true
 use_math: true
-
 ---
 
 Last update: 2022.07.08<br>
