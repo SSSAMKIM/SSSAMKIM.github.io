@@ -69,8 +69,10 @@ Last update: 2022.07.20<br>
   <img src="https://user-images.githubusercontent.com/86653075/179857179-bad11ef9-3e47-4aba-a969-7bb5ddbdeeb9.png" width="1200" height="auto">
 </p>
 
-- 본 논문에서는 CWRU testbed를 다룬 많은 논문들에서 'load'가 사실상 무의미하다는 것을 간과한다고 주장.
-  - 
+- 본 논문에서는 CWRU testbed를 다룬 많은 논문들에서 'load'가 사실상 무의미하다는 것을 간과한다고 주장한다.
+  - 예를 들면 기어와 같은, 토크를 radial load로 변환하는 mechanism이 없기 때문이다.
+  - moto load의 주요 영향은 shaft speed에 미치는 영향인데, 최대 load 조건에서 대략 4% 정도의 shaft speed 감소가 일어나지만, 고장 진단 결과에 영향을 크게 미치지는 않는다.
+  - 따라서, 베어링에 가해지는 유일한 radial load는 이론적으로는 6시 방향의 static gravitational load이다.
 
 <br>
 
