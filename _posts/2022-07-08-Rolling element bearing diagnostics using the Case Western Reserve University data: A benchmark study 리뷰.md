@@ -16,7 +16,7 @@ mathjax: true
 use_math: true
 ---
 
-Last update: 2022.07.08<br>
+Last update: 2022.07.20<br>
 
 > `Rolling element bearing diagnostics using the Case Western Reserve University data: A benchmark study 리뷰'<br>
 > > Mechanical Systems and Signal Processing Journal (IF: 8.934, rank: 97.45%, 2022.07.08 기준)
