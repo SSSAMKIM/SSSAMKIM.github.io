@@ -79,7 +79,7 @@ Kim T., Choi H., Lee I.C., Lee H., Youn B.D., "Deep Learning-Based Data Imputati
 
 ## Domestic Conference
 
-### 3. Korean Society of Prognostics and Health Management (KSPHM) 2022
+### 1. Korean Society of Prognostics and Health Management (KSPHM) 2022
 Kim T., Ko J.U., Lee J., Kim Y.C., Youn B.D., "Unseen Signal Generation Through Latent Space Analysis of GAN in Rotating Machinery," Proceedings of the Korean Society of Prognostics and Health Management (KSPHM) 2022 Annual Conference, Seoul, Korea, June 29-July 1, 2022
 
 ### 2. Korean Society of Mechanical Engineers (KSME) 2022 Anual Spring Conference
