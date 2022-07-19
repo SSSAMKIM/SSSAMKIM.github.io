@@ -63,5 +63,15 @@ Last update: 2022.07.20<br>
   <img src="https://user-images.githubusercontent.com/86653075/179839488-f5625fee-66a1-42da-8d8a-295289c6dd47.png" width="1200" height="auto">
 </p>
 
+- 아래는 drive end와 fan end에 위치하는 bearing의 fault frequencies 관련 table
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/86653075/179857179-bad11ef9-3e47-4aba-a969-7bb5ddbdeeb9.png" width="1200" height="auto">
+</p>
+
+- 본 논문에서는 CWRU testbed를 다룬 많은 논문들에서 'load'가 사실상 무의미하다는 것을 간과한다고 주장.
+  - 
+
 <br>
+
 
