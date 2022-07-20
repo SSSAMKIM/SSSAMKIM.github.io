@@ -86,7 +86,7 @@ Last update: 2022.07.20<br>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179983878-b1f0c77f-cfc4-4f83-88ff-e4d29fa8a930.png" width="1200" height="auto">
-</p>
+</p><br><br>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179983786-115eb26e-7843-46a6-a1c7-d71db7eed0f6.png" width="1200" height="auto">
