@@ -57,13 +57,13 @@ Last update: 2022.07.20<br>
 
 #### **3. CWRU testbed**
 
-- 아래는 fault type별 envelope 적용 후 예상 발생 frequency에 관한 table
+- 아래는 fault type별 envelope 적용 후 예상 발생 frequency에 관한 table이다.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179839488-f5625fee-66a1-42da-8d8a-295289c6dd47.png" width="1200" height="auto">
 </p>
 
-- 아래는 drive end와 fan end에 위치하는 bearing의 fault frequencies 관련 table
+- 아래는 drive end와 fan end에 위치하는 bearing의 fault frequencies 관련 table이다.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179857179-bad11ef9-3e47-4aba-a969-7bb5ddbdeeb9.png" width="1200" height="auto">
@@ -73,6 +73,25 @@ Last update: 2022.07.20<br>
   - 예를 들면 기어와 같은, 토크를 radial load로 변환하는 mechanism이 없기 때문이다.
   - moto load의 주요 영향은 shaft speed에 미치는 영향인데, 최대 load 조건에서 대략 4% 정도의 shaft speed 감소가 일어나지만, 고장 진단 결과에 영향을 크게 미치지는 않는다.
   - 따라서, 베어링에 가해지는 유일한 radial load는 이론적으로는 6시 방향의 static gravitational load이다.
+
+- 아래는 데이터 취득 과정에서 발생한 문제와, 해당 데이터셋에 대한 table이다.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/86653075/179977815-637a4d12-4789-4964-962c-069d9c3e05d1.png" width="1200" height="auto">
+</p>
+
+- 추가적으로, 논문의 결과를 정리하면 아래와 같다.
+  - 최소 하나의 method 이상으로 classical fault symptoms을 보이는 데이터셋 (위 table)은 spall size 결정이나 딥러닝/머신러닝 모델 학습에 사용되느 것을 권장.
+  - 본 논문에서 사용한 방식으로 undiagnosable 결과를 보인 데이터셋 (아래 table)은 학습한 모델의 robust 함을 보이기 위해 사용을 권장.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/86653075/179983878-b1f0c77f-cfc4-4f83-88ff-e4d29fa8a930.png" width="1200" height="auto">
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/86653075/179983786-115eb26e-7843-46a6-a1c7-d71db7eed0f6.png" width="1200" height="auto">
+</p>
+
 
 <br>
 
