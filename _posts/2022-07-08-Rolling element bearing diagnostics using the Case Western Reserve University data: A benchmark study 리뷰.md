@@ -81,8 +81,8 @@ Last update: 2022.07.20<br>
 </p>
 
 - 추가적으로, 논문의 결과를 정리하면 아래와 같다.
-  - 최소 하나의 method 이상으로 classical fault symptoms을 보이는 데이터셋 (위 table)은 spall size 결정이나 딥러닝/머신러닝 모델 학습에 사용되느 것을 권장.
-  - 본 논문에서 사용한 방식으로 undiagnosable 결과를 보인 데이터셋 (아래 table)은 학습한 모델의 robust 함을 보이기 위해 사용을 권장.
+  - 최소 하나의 method 이상으로 classical fault symptoms을 보이는 데이터셋 (위 table)은 spall size 결정이나 딥러닝/머신러닝 모델 학습에 사용할 것을 권장.
+  - 본 논문에서 사용한 방식으로 undiagnosable 결과를 보인 데이터셋 (아래 table)은 학습한 모델의 robust 함을 보이기 위해 사용할 것을 권장.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179983878-b1f0c77f-cfc4-4f83-88ff-e4d29fa8a930.png" width="1200" height="auto">
