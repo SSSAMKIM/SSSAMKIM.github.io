@@ -57,6 +57,10 @@ Last update: 2022.07.20<br>
 
 #### **3. CWRU testbed**
 
+- Ball fault
+  - 가장 진단하기 어려운 fault type으로 예상되며, 그 이유는 BSF의 harmonics에 대한 classic envelope spectrum symptoms가 거의 보이지 않기 때문이며, 이마저도 짝수번째 harmonics에서만 두드러진다.
+  - 이 BSF의 harmonics들은 cage speed (FTF)와 FTF의 low harmonics에 대한 modulation sideband에 둘러쌓여 고장 특성이 잘 보이지 않는 것으로 고려된다.
+
 - 아래는 fault type별 envelope 적용 후 예상 발생 frequency에 관한 table이다.
 
 <p align="center">
@@ -83,6 +87,7 @@ Last update: 2022.07.20<br>
 - 추가적으로, 논문의 결과를 정리하면 아래와 같다.
   - 최소 하나의 method 이상으로 classical fault symptoms을 보이는 데이터셋 (위 table)은 spall size 결정이나 딥러닝/머신러닝 모델 학습에 사용할 것을 권장.
   - 본 논문에서 사용한 방식으로 undiagnosable 결과를 보인 데이터셋 (아래 table)은 학습한 모델의 robust 함을 보이기 위해 사용할 것을 권장.
+  - 추가로, 대부분의 경우에서 fault type 그 자체보다 test rig assembly가 문제가 된 경우가 많았는데, 이는 많은 데이터셋에서 mechanical looseness가 관찰되 것으로 확인했다. 또한, 많은 데이터셋에서 non-stationary한 특징을 보였으며, 아주 작은 부분에서만 fault가 관찰되는 것도 동반되었다.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179983878-b1f0c77f-cfc4-4f83-88ff-e4d29fa8a930.png" width="1200" height="auto">
@@ -91,6 +96,7 @@ Last update: 2022.07.20<br>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/86653075/179983786-115eb26e-7843-46a6-a1c7-d71db7eed0f6.png" width="1200" height="auto">
 </p>
+
 
 
 <br>
