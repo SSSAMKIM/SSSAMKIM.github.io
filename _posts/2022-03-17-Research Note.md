@@ -58,3 +58,7 @@ Last update: 2022.04.21<br>
 - Question
   - Raw signal을 딥러닝 모델에 넣어서 얻을 수 있는 feature와 feature extraction을 거쳐서 딥러닝에 넣는 것의 차이?<br>
     - 딥러닝 모델을 통해서도 manual feature extraction 과정에서 얻을 수 있는 feature를 얻을 수는 있으나, 아마 특정 방향으로 학습이 되기에 manual feature extraction을 통해 얻은 feature는 포함될 수도 있고, 안될 수도 있을 듯?<br>
+
+- Feedback
+  - 2022 PHM Society의 경우, AutoEncoder를 학스 후 Encoder를 이용하여 classification 하느 것보다, Decoder 없이 Encoder와 Classifier를 동시에 학습하는 것이 학습하지 않은 individual의 data들도 잘 맞혔ㄷ.
+  - 이를 통해 단순히 유사한 task를 진행한다해서 shared feature를 뽑으 수 있느 것이 아니라는 것을 알 수 있고 (실제로 각 task에 해당하는 loss를 관찰했을 때 여러 task의 합의점을 못찾는 듯 보였다.), Multi-task learning
