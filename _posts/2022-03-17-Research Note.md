@@ -61,4 +61,4 @@ Last update: 2022.04.21<br>
 
 - Feedback
   - 2022 PHM Society의 경우, AutoEncoder를 학스 후 Encoder를 이용하여 classification 하느 것보다, Decoder 없이 Encoder와 Classifier를 동시에 학습하는 것이 학습하지 않은 individual의 data들도 잘 맞혔ㄷ.
-  - 이를 통해 단순히 유사한 task를 진행한다해서 shared feature를 뽑으 수 있느 것이 아니라는 것을 알 수 있고 (실제로 각 task에 해당하는 loss를 관찰했을 때 여러 task의 합의점을 못찾는 듯 보였다.), Multi-task learning
+  - 이를 통해 단순히 유사한 task를 진행한다해서 shared feature를 뽑으 수 있느 것이 아니라는 것을 알 수 있고 (실제로 각 task에 해당하는 loss를 관찰했을 때 여러 task의 합의점을 못찾는 듯 보였다.), Multi-task learning을 진행할 때 추가적인 장치들이 필요할 것 같다.
