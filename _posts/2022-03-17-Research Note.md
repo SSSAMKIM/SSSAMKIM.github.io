@@ -52,12 +52,16 @@ Last update: 2022.04.21<br>
 - 작동 조건 다른 신호 생성 관련
   - RPM이 다른 신호를 생성하기 위해 discriminator가 하나 또는 두 파장의 신호만 보고 real/fake 판별<br>
     - 하나 또는 두 파장의 신호만 보고 판별하면 고장 특성만 볼 것이라 추측할 수 있고, generator는 들어온 신호가 어떤 속도 조건으로 움직이냐와 무관하게 다양한 파장을 가지는 신호를 생성할 수 있지 않을까?<br><br>
+
 - Data Imputation 관련
   - GNN을 활용한 결측치 or meta-learning<br><br>
 
+- Domain Shift 관련
+  - 다른 도메인의 데이터들이 각각의 Encoder로 들어가서 각각의 latent들을 crossentropy로 맞춰주면 결국 domain에 관계없는 feature를 뽑을 수 있을지?<br><br>
+
 - Question
   - Raw signal을 딥러닝 모델에 넣어서 얻을 수 있는 feature와 feature extraction을 거쳐서 딥러닝에 넣는 것의 차이?<br>
-    - 딥러닝 모델을 통해서도 manual feature extraction 과정에서 얻을 수 있는 feature를 얻을 수는 있으나, 아마 특정 방향으로 학습이 되기에 manual feature extraction을 통해 얻은 feature는 포함될 수도 있고, 안될 수도 있을 듯?<br>
+    - 딥러닝 모델을 통해서도 manual feature extraction 과정에서 얻을 수 있는 feature를 얻을 수는 있으나, 아마 특정 방향으로 학습이 되기에 manual feature extraction을 통해 얻은 feature는 포함될 수도 있고, 안될 수도 있을 듯?<br><br>
 
 - Feedback
   - 2022 PHM Society의 경우, AutoEncoder를 학스 후 Encoder를 이용하여 classification 하느 것보다, Decoder 없이 Encoder와 Classifier를 동시에 학습하는 것이 학습하지 않은 individual의 data들도 잘 맞혔ㄷ.
