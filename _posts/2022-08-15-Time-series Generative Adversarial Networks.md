@@ -48,8 +48,6 @@ Last update: 2022.08.15<br>
 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_tp(\mathbf{X_t}|\mathbf{S},\mathbf{X_{1:t-1}}))
 
-![Lf](https://latex.codecogs.com/svg.image?p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_tp(\mathbf{X_t}|\mathbf{S},\mathbf{X_{1:t-1}}))
-
 <br>
 
 <p align="center">
