@@ -46,6 +46,8 @@ Last update: 2022.08.15<br>
 - Feature 쌍은 시계열의 길이, 차원, 데이터의 분포 등에 depend 하므로 일반적인 GAN에서 수행하기 어렵기에 autoregressive decomposition을 추가함
   - ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_tp(\mathbf{X_t}|\mathbf{S},\mathbf{X_{1:t-1}})
 
+https://latex.codecogs.com/svg.image?p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_tp(\mathbf{X_t}|\mathbf{S},\mathbf{X_{1:t-1}})
+
 <br>
 
 <p align="center">
