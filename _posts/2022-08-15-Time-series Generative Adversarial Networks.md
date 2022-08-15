@@ -19,7 +19,7 @@ use_math: true
 Last update: 2022.08.15<br>
 
 > `Time-series Generative Adversarial Networks 리뷰'<br>
-> > NeurIPS Conference
+> > 2019 NeurIPS Conference
 
 #### Index
 ---
