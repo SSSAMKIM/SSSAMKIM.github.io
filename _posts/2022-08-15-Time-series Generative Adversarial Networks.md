@@ -63,7 +63,7 @@ Last update: 2022.08.15<br>
 </p>
 
 - 3가지 Loss function<br>
-1. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{R}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~p}[||\mathbf{s}-\mathbf{\tilde{s}||_{2}+\sum_{t}||\mathbf{x}_{t}-\mathbf{\tilde{x}_{t}}||_2])
-2. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{U}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~p}[logy_{\mathbf{S}}+\sum_{t}logy_{t}]+\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~\hat{p}}[log(1-\hat{p}_{\mathbf{S}+\sum_{t}log(1-\hat{y}_{t})])
-3. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{\mathbf{S}}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~p}[\sum_{t}||\mathbf{h}_{t}-g_{\chi}(\mathbf{h}_{\mathbf{S}},\mathbf{h}_{t-1},{mathbf{z}_{t})||_{2})
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{R}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~p}[||\mathbf{s}-\mathbf{\tilde{s}||_{2}+\sum_{t}||\mathbf{x}_{t}-\mathbf{\tilde{x}_{t}}||_2])<br>
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{U}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~p}[logy_{\mathbf{S}}+\sum_{t}logy_{t}]+\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~\hat{p}}[log(1-\hat{p}_{\mathbf{S}+\sum_{t}log(1-\hat{y}_{t})])<br>
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{\mathbf{S}}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}~p}[\sum_{t}||\mathbf{h}_{t}-g_{\chi}(\mathbf{h}_{\mathbf{S}},\mathbf{h}_{t-1},{mathbf{z}_{t})||_{2})
 
