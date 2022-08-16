@@ -27,7 +27,7 @@ Last update: 2022.08.15<br>
 - [1. Abstract](#1-abstract)
 - [2. Problem Formulation](#2-problem-formulation)<br><br>
 
-#### **1. Abstractn**
+#### **1. Abstract**
   
 <br>
 
