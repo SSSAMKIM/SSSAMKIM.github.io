@@ -59,7 +59,7 @@ Last update: 2022.08.15<br>
   - Generator와 discriminator는 feature space가 아닌, embedding된 latent space에서 실행됨.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/86653075/184839646-f7cee316-ffea-4cb4-a1f5-46f473f49ba8.png" width="600" height="auto">
+  <img src="https://user-images.githubusercontent.com/86653075/184839646-f7cee316-ffea-4cb4-a1f5-46f473f49ba8.png" width="800" height="auto">
 </p>
 
 - 3가지 Loss function<br>
