@@ -42,9 +42,14 @@ Last update: 2022.08.15<br>
 <br>
 
 - 시계열 데이터의 일반적 세팅은 두가지 elements를 가짐: gender 같은, 시간에 무관한 static features와 vital signs과 같이 시간에 따라 변하는 temporal features
-- 본 논문의 목적은 static feature와 temporal feature 쌍에 대해 실제 density function에 근사하도록 밀도 함수![Lf](https://latex.codecogs.com/svg.latex?\small&space;(\hat{p}(\mathbf{S},\mathbf{X}_{1:T})))를 학습하는 것
+- 본 논문의 목적은 static feature와 temporal feature 쌍에 대해 실제 density function에 근사하도록 밀도 함수![Lf](https://latex.codecogs.com/svg.latex?\small&space;\hat{p}(\mathbf{S},\mathbf{X}_{1:T}))를 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T}))에 근사하도록 학습하는 것
 - Feature 쌍은 시계열의 길이, 차원, 데이터의 분포 등에 depend 하므로 일반적인 GAN에서 수행하기 어렵기에 autoregressive decomposition을 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_{t}p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:t-1}})) 을 통해 추가함
+- Two obejectives<br>
+  ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))
+  : Real/synthetic feature의 길이 T에 대한 distribution의 차이를 줄이고자 하는 objective function으로, Jensen-Shannon divergence를 활용한다. D는 distributions 사이 거리를 측정하는 적절한 방법.
+  ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))<br>
+  
 
 <br>
 
