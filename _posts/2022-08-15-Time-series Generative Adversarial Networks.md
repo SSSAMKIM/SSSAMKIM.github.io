@@ -46,7 +46,7 @@ Last update: 2022.08.15<br>
 - Feature 쌍은 시계열의 길이, 차원, 데이터의 분포 등에 depend 하므로 일반적인 GAN에서 수행하기 어렵기에 autoregressive decomposition을 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_{t}p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:t-1}})) 을 통해 추가함
 - Two obejectives<br>
-  ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))
+  1. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))
   : Real/synthetic feature의 길이 T에 대한 distribution의 차이를 줄이고자 하는 objective function으로, Jensen-Shannon divergence를 활용한다. D는 distributions 사이 거리를 측정하는 적절한 방법.
   ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))<br>
   
