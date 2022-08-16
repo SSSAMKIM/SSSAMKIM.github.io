@@ -38,17 +38,13 @@ Last update: 2022.08.16<br>
   - Properties
     - Time and frequency covariance: spectrogram의 정의로 인해 time, frequency shifts가 보존됨
     - Time-frequency resolution: spectrogram은 STFT의 squared modulus이므로 time, frequency resolution 또한 STFT와 동일
-    - Interference structure: spectrogram은 quadratic form이므로, 두 신호 합의 spectrogram과 각 신호의 spectrogram의 합은 다름. Interference term이 추가 돼야 함
+    - Interference structure: spectrogram은 quadratic form이므로, 두 신호 합의 spectrogram과 각 신호의 spectrogram의 합은 다름. Interference term이 추가 돼야 함.<br> 하지만 interference term인 cross-spectrogram은 각각의 spectrogram이 겹치는 region으로 제한되기에, 두 신호 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;x_{1}(t), x_{2}(t))의 spectrogram이 겹치지 않을 정도로 충분히 멀면, interference term은 0에 수렴하게 됨.
 
 #### **2. Problem Formulation**
 
 <br>
 
-- 시계열 데이터의 일반적 세팅은 두가지 elements를 가짐: gender 같은, 시간에 무관한 static features와 vital signs과 같이 시간에 따라 변하는 temporal features
-- 본 논문의 목적은 static feature와 temporal feature 쌍에 대해 실제 density function에 근사하도록 밀도 함수![Lf](https://latex.codecogs.com/svg.latex?\small&space;(\hat{p}(\mathbf{S},\mathbf{X}_{1:T})))를 학습하는 것
-- Feature 쌍은 시계열의 길이, 차원, 데이터의 분포 등에 depend 하므로 일반적인 GAN에서 수행하기 어렵기에 autoregressive decomposition을 
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_{t}p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:t-1}})) 을 통해 추가함
-
+- 
 <br>
 
 <p align="center">
