@@ -25,7 +25,8 @@ Last update: 2022.08.15<br>
 ---
 
 - [1. Abstract](#1-abstract)
-- [2. Problem Formulation](#2-problem-formulation)<br><br>
+- [2. Problem Formulation](#2-problem-formulation)
+- [3. TimeGAN](#3-timegan)<br><br>
 
 #### **1. Abstract**
   
@@ -46,13 +47,20 @@ Last update: 2022.08.15<br>
 - Feature 쌍은 시계열의 길이, 차원, 데이터의 분포 등에 depend 하므로 일반적인 GAN에서 수행하기 어렵기에 autoregressive decomposition을 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_{t}p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:t-1}})) 을 통해 추가함
 - Two obejectives<br>
-  1. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))
-  : Real/synthetic feature의 길이 T에 대한 distribution의 차이를 줄이고자 하는 objective function으로, Jensen-Shannon divergence를 활용한다. D는 distributions 사이 거리를 측정하는 적절한 방법.
-  ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))<br>
-  
+  1. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T}))): Real/synthetic feature의 distribution의 차이를 줄이고자 하는 objective function으로, Jensen-Shannon divergence를 활용한다. D는 distributions 사이 거리를 측정하는 적절한 방법.<br>
+  2. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;\underset{\hat{p}}{min}D(p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:T}))): 길이 (t-1)에 대한 feature가 주어졌을 때 t번째 time step의 temporal feature에 대한 distribution 차이를 학습하는 objective function으로, Kullback-Leibler divergence를 활용한다.<br>
 
-<br>
+#### **3. TimeGAN**
+
+- TimeGAN은 4개의 네트워크로 이루어짐: embedding function, recovery function, sequence generator, and sequence discriminator.
+  - Embedding function은 feature space to latent space mapping function, recovery function은 latent space to feature space mapping function.
+    - Embedding, recovery function은 architecture에 따라 parameterized 될 수 있음. 단지 autoregressive하고, causal ordering 하다는 것만 지키면 됨.
+    - 이 때 autoregressive는 temporal convolution, causal ordering은 attention-based decoder를 사용.
+  - Generator와 discriminator는 feature space가 아닌, embedding된 latent space에서 실행됨.
+
+- 3가지 Loss function<br>
+  1. 1. ![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{R})
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/86653075/179837645-66b3ebc3-a259-4fca-93ae-4f4064c942eb.png" width="400" height="auto">
+  <img src="https://user-images.githubusercontent.com/86653075/184839646-f7cee316-ffea-4cb4-a1f5-46f473f49ba8.png" width="400" height="auto">
 </p>
