@@ -47,8 +47,8 @@ Last update: 2022.08.15<br>
 - Feature 쌍은 시계열의 길이, 차원, 데이터의 분포 등에 depend 하므로 일반적인 GAN에서 수행하기 어렵기에 autoregressive decomposition을 
 ![Lf](https://latex.codecogs.com/svg.latex?\small&space;p(\mathbf{S},\mathbf{X}_{1:T})=p(\mathbf{S})\prod&space;_{t}p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:t-1}})) 을 통해 추가함
 - Two obejectives<br>
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;1.\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T}))): Real/synthetic feature의 distribution의 차이를 줄이고자 하는 objective function으로, Jensen-Shannon divergence를 활용한다. D는 distributions 사이 거리를 측정하는 적절한 방법.<br>
-![Lf](https://latex.codecogs.com/svg.latex?\small&space;2.\underset{\hat{p}}{min}D(p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:T}))): 길이 (t-1)에 대한 feature가 주어졌을 때 t번째 time step의 temporal feature에 대한 distribution 차이를 학습하는 objective function으로, Kullback-Leibler divergence를 활용한다.<br>
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;1.\underset{\hat{p}}{min}D(p(\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{S},\mathbf{X_{1:T})))<br>: Real/synthetic feature의 distribution의 차이를 줄이고자 하는 objective function으로, Jensen-Shannon divergence를 활용한다. D는 distributions 사이 거리를 측정하는 적절한 방법.<br>
+![Lf](https://latex.codecogs.com/svg.latex?\small&space;2.\underset{\hat{p}}{min}D(p(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:T})||\hat{p}(\mathbf{X_{t}}|\mathbf{S},\mathbf{X_{1:T})))<br>: 길이 (t-1)에 대한 feature가 주어졌을 때 t번째 time step의 temporal feature에 대한 distribution 차이를 학습하는 objective function으로, Kullback-Leibler divergence를 활용한다.<br>
 
 #### **3. TimeGAN**
 
