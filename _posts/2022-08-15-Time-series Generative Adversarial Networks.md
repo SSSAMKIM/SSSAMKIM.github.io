@@ -65,6 +65,5 @@ Last update: 2022.08.15<br>
 - 3가지 Loss function<br>
 1.![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{R}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}\sim p}[||\mathbf{s}-\mathbf{\tilde{s}||_{2}+\sum_{t}||\mathbf{x}_{t}-\mathbf{\tilde{x}_{t}}||_2])<br>
 2.![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{U}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}\sim&space;p}[logy_{\mathbf{S}}&plus;\sum_{t}log{y_{t}}]&plus;\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}\sim&space;\hat{p}}[log(1-\hat{p}_{\mathbf{S}})&plus;\sum_{t}log(1-\hat{y}_{t})])<br>
-
 3.![Lf](https://latex.codecogs.com/svg.latex?\small&space;L_{\mathbf{S}}=\mathbb{E}_{\mathbf{s},\mathbf{x}_{1:T}\sim p}[\sum_{t}||\mathbf{h}_{t}-g_{\chi}(\mathbf{h}_{\mathbf{S}},\mathbf{h}_{t-1},{mathb{z}_{t})||_{2}])
 
