@@ -100,23 +100,22 @@ def hilbert_transform(signal):
     amplitude_envelope = np.abs(analytic_signal)
     return amplitude_envelope
 
-def conv1d_dim(params:dict):
+def conv1d_dim(params:dict, prints:bool=False):
     x = []; input_dim = params['input_dim']
     for idx in range(len(params['kernel'])):
         k, p, d, s = params['kernel'], params['padding'], params['dilation'], params['stride']
         if input_dim <= int((input_dim + 2*p[idx] - d[idx] * (k[idx]-1) - 1)/s[idx]) + 1:
             raise Exception('Input dimension is lower than the kernel size')
         x.append(int((input_dim + 2*p[idx] - d[idx] * (k[idx]-1) - 1)/s[idx]) + 1)
-        print(f'Conv layer {idx+1} output dim: {x[idx]}')
+        if prints: print(f'Conv layer {idx+1} output dim: {x[idx]}')
         input_dim = x[idx]
     return x
 
-def convT1d_dim(params:dict):
+def convT1d_dim(params:dict, prints:bool=False):
     x = []; input_dim = params['input_dim']
     for idx in range(len(params['kernel'])):
         k, p, d, s = params['kernel'], params['padding'], params['dilation'], params['stride']
         x.append((input_dim-1)*s[idx] - 2*p[idx] + d[idx] * (k[idx]-1) + 1)
-        print(f'ConvTranspose layer {idx+1} output dim: {x[idx]}')
+        if prints: print(f'ConvTranspose layer {idx+1} output dim: {x[idx]}')
         input_dim = x[idx]
-        
     return x
