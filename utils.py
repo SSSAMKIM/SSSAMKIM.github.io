@@ -104,8 +104,18 @@ def conv1d_dim(input_dim, params:list):
     x = []
     for idx in range(len(params)):
         k, p, d, s = params[idx]['kernel'], params[idx]['padding'], params[idx]['dilation'], params[idx]['stride']
-        x.append(int((input_dim - 2*p - d * (k-1) - 1)/s) + 1)
+        if input_dim <= k: raise Exception('Input dimension is lower than the kernel size')
+        x.append(int((input_dim + 2*p - d * (k-1) - 1)/s) + 1)
         print(f'Conv layer {idx+1} output dim: {x[idx]}')
+        input_dim = x[idx]
+    return x
+
+def convT1d_dim(input_dim, params:list):
+    x = []
+    for idx in range(len(params)):
+        k, p, d, s = params[idx]['kernel'], params[idx]['padding'], params[idx]['dilation'], params[idx]['stride']
+        x.append((input_dim-1)*s - 2*p + d * (k-1) + 1)
+        print(f'ConvTranspose layer {idx+1} output dim: {x[idx]}')
         input_dim = x[idx]
         
     return x
