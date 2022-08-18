@@ -104,7 +104,8 @@ def conv1d_dim(params:dict):
     x = []; input_dim = params['input_dim']
     for idx in range(len(params['kernel'])):
         k, p, d, s = params['kernel'], params['padding'], params['dilation'], params['stride']
-        if input_dim <= k[idx]: raise Exception('Input dimension is lower than the kernel size')
+        if input_dim <= int((input_dim + 2*p[idx] - d[idx] * (k[idx]-1) - 1)/s[idx]) + 1:
+            raise Exception('Input dimension is lower than the kernel size')
         x.append(int((input_dim + 2*p[idx] - d[idx] * (k[idx]-1) - 1)/s[idx]) + 1)
         print(f'Conv layer {idx+1} output dim: {x[idx]}')
         input_dim = x[idx]
