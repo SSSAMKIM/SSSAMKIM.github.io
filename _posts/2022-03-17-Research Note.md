@@ -38,6 +38,7 @@ Last update: 2022.04.21<br>
 
 <br>
 
+**신호 생성 관련**<br><br>
 - Feature generation 관련
   - Fault diagnosis model에서 어떤 feature가 유의미한지 확인 후 신호 생성보다는 feature를 생성하는 것이 더 나을지?<br><br>
 - Quantitative metric 관련
@@ -52,7 +53,12 @@ Last update: 2022.04.21<br>
 - 작동 조건 다른 신호 생성 관련
   - RPM이 다른 신호를 생성하기 위해 discriminator가 하나 또는 두 파장의 신호만 보고 real/fake 판별<br>
     - 하나 또는 두 파장의 신호만 보고 판별하면 고장 특성만 볼 것이라 추측할 수 있고, generator는 들어온 신호가 어떤 속도 조건으로 움직이냐와 무관하게 다양한 파장을 가지는 신호를 생성할 수 있지 않을까?<br><br>
+- 신호 생성을 위한 추가 loss term 관련
+  - torch.fft를 loss에 추가<br><br>
+- Sequential model에 대한 네트워크 변경
+  - TCN, LSTM, GRU 시도<br><br>
 
+**신호 생성 이외 연구 관련**<br><br>
 - Data Imputation 관련
   - GNN을 활용한 결측치 or meta-learning<br><br>
 
@@ -64,5 +70,5 @@ Last update: 2022.04.21<br>
     - 딥러닝 모델을 통해서도 manual feature extraction 과정에서 얻을 수 있는 feature를 얻을 수는 있으나, 아마 특정 방향으로 학습이 되기에 manual feature extraction을 통해 얻은 feature는 포함될 수도 있고, 안될 수도 있을 듯?<br><br>
 
 - Feedback
-  - 2022 PHM Society의 경우, AutoEncoder를 학스 후 Encoder를 이용하여 classification 하느 것보다, Decoder 없이 Encoder와 Classifier를 동시에 학습하는 것이 학습하지 않은 individual의 data들도 잘 맞혔ㄷ.
-  - 이를 통해 단순히 유사한 task를 진행한다해서 shared feature를 뽑으 수 있느 것이 아니라는 것을 알 수 있고 (실제로 각 task에 해당하는 loss를 관찰했을 때 여러 task의 합의점을 못찾는 듯 보였다.), Multi-task learning을 진행할 때 추가적인 장치들이 필요할 것 같다.
+  - 2022 PHM Society의 경우, AutoEncoder를 학스 후 Encoder를 이용하여 classification 하느 것보다, Decoder 없이 Encoder와 Classifier를 동시에 학습하는 것이 학습하지 않은 individual의 data들도 잘 맞힘
+  - 이를 통해 단순히 유사한 task를 진행한다해서 shared feature를 뽑으 수 있느 것이 아니라는 것을 알 수 있고 (실제로 각 task에 해당하는 loss를 관찰했을 때 여러 task의 합의점을 못찾는 듯 보임), Multi-task learning을 진행할 때 추가적인 장치들이 필요할 것 같음
