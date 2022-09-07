@@ -4,7 +4,7 @@ title: "Discriminant Feature Extraction for Centrifugal Pump Fault Diagnosis 리
 summary: "Pump 고장 진단을 위한 feature extraction"
 author: taehun
 date: '2022-04-20 11:00:00 +0900'
-category: Literature review
+category: Literature_review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
