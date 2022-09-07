@@ -298,7 +298,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 6. pip install torchsummary
 7. pip install torch_snippets
 (torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
-8. pip install mlxtend, sklearn, celluloid
+8. pip install mlxtend, sklearn, celluloid, seaborn, ffmpeg-python
 ```
   
   <br>
