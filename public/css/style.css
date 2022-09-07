@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
 @import url('https://fonts.googleapis.com/css?family=Gelasio|Kulim+Park|Nanum+Myeongjo|Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Roboto&display=swap');
-/* @import url(syntax/monokai.css); */
-@import url(syntax/autumn.css);
+@import url(syntax/monokai.css);
+/* @import url(syntax/autumn.css); */
 
 :root {
   --blue: #007bff;
@@ -112,9 +112,11 @@ code {
 	padding-inline-start: 0px;
 }
 
+/* 아래는 홈페이지 Title 관련 */
 .sidebar-brand > a {
-	font-size: 150%;
-	font-family: 'Gelasio';
+	font-size: 200%;
+	font-family: 'Noto Sans';
+/* 	font-family: 'Gelasio'; */
 	color: #fff;
 }
 
