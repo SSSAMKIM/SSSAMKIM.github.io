@@ -279,7 +279,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 6. pip install keras
 7. conda install pandas
 8. conda install matplotlib
-9. pip install scikit-learn
+9. pip install sklearn
 ```
   
   <br>
@@ -289,19 +289,29 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
   <br>
   
 ```
-1. conda create -n 이름 python=3.7
-  (conda create --prefix path\이름 python=3.7) --> envs 이외에 다른 폴더에 가상환경 설치하는 경우
+1. conda create -n 이름 python=3.9
+  (conda create --prefix path\이름 python=3.9) --> envs 이외에 다른 폴더에 가상환경 설치하는 경우
 2. conda activate 이름
 3. conda install ipykernel jupyter
 4. python -m ipykernel install --user --name 이름 --display-name "이름"
-5. conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+5. conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
 6. pip install torchsummary
 7. pip install torch_snippets
 (torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
-8. pip install mlxtend
+8. pip install mlxtend, sklearn, celluloid
 ```
   
   <br>
+  
+- **사용환경**<br><br>
+  - CPU: Intel i7-12700KF
+  - RAM: 64GB
+  - GPU: Nvidia RTX 3090
+  - python 3.9
+  - CUDA 11.0(Nvidia driver의 CUDA Version과는 별개)
+  - cuDNN 8.0.x
+
+<br>
 
 #### **7. 로컬 환경과 주피터 내에서 가상환경 삭제**
 
