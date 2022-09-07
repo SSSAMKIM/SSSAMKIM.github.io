@@ -4,7 +4,7 @@ title: "Accurate Multivariate Stock Movement Prediction via Data-Axis Transforme
 summary: "다변수 입력에 대한 주가 예측 관련 논문 리뷰"
 author: taehun
 date: '2022-04-20 22:00:00 +0900'
-category: Literature review
+category: Literature_review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
