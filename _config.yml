@@ -29,7 +29,7 @@ svg:
   optimize: true
 # Build settings
 # theme: minima
-highlighter-theme: autumn
+highlighter-theme: borland
 date_format: "%Y-%M-%D"
 plugins:
   - jekyll-feed
