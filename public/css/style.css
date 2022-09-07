@@ -114,9 +114,10 @@ code {
 
 /* 아래는 홈페이지 Title 관련 */
 .sidebar-brand > a {
-	font-size: 250%;
+	font-size: 200%;
+	font-family: 'Roboto';
 /* 	font-family: 'Noto Sans'; */
-	font-family: 'Gelasio';
+/* 	font-family: 'Gelasio'; */
 	color: #fff;
 }
 
