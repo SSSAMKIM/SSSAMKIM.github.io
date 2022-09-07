@@ -26,15 +26,13 @@ use_math: true
 
 - [2. GPU Check and Allocation](#2-gpu-check-and-allocation)
 - [3. FFT](#3-fft)
-- [4. Data Generator](#4-data-generator)
-- [5. 1DCNN 10 times iteration and save confusion matrix](#5-1dcnn-10-times-iteration-and-save-confusion-matrix)
-- [6. GPU 설정 및 가상환경 설치](#6-gpu-설정-및-가상환경-설치)
-- [7. 로컬 환경과 주피터 내에서 가상환경 삭제](#7-로컬-환경과-주피터-내에서-가상환경-삭제)
-- [8. mat 파일 불러오기](#8-mat-파일-불러오기)
-- [9. Module내 함수 목록 확인](#9-module-내-함수-목록-확인)
-- [10. 긴 한 줄 코드 여러 줄로 작성](#10-긴-한-줄-코드-여러-줄로-작성)
-- [11. matplotlib.pyplot params](#11-matplotlib-pyplot-params)
-- [12. 신호에 SNR 값에 따른 노이즈 추가](#12-신호에-snr-값에-따른-노이즈-추가)
+- [4. GPU 설정 및 가상환경 설치](#4-gpu-설정-및-가상환경-설치)
+- [5. 로컬 환경과 주피터 내에서 가상환경 삭제](#5-로컬-환경과-주피터-내에서-가상환경-삭제)
+- [6. mat 파일 불러오기](#6-mat-파일-불러오기)
+- [7. Module내 함수 목록 확인](#7-module-내-함수-목록-확인)
+- [8. 긴 한 줄 코드 여러 줄로 작성](#8-긴-한-줄-코드-여러-줄로-작성)
+- [9. matplotlib.pyplot params](#9-matplotlib-pyplot-params)
+- [10. 신호에 SNR 값에 따른 노이즈 추가](#10-신호에-snr-값에-따른-노이즈-추가)
 
 #### **1. Callback and Learning rate decay**
 ---
@@ -164,94 +162,10 @@ def fft_th_low(data, sampling_frequency, label, mode = 1):
 ```   
    
    <br>
-   
-#### **4. Data Generator**
-
- <br>
- 
-  - Dataset 생성 코드 예시
-
-```python
-def data_generator(batch_size, sample_point, root_dir, label):
-    for i in range(len(label)):
-        df = pd.DataFrame(columns = range(sample_point))
-        data = pd.read_csv(root_dir + '\\' + label[i] +'.csv', engine = 'python', header = None)
-        L = len(data)
-        for n_batch in range(batch_size):
-            rand = np.random.randint(L - sample_point) + 1
-            df_ = pd.DataFrame(np.array(data[data.columns[0]][rand:rand + sample_point]).reshape(1,sample_point))
-            df = df.append(df_)
-        df.to_csv(root_dir + '\\' + 'sample_point_{}'.format(sample_point) + '\\' + '{}.csv'.format(i), header = None, index = None)
-```
-  
-```python
-batch_size = 1000
-sp = 512
-label = ['12k_OF_7_1797']
-root_dir = './'
-```
-
-sp : batch 하나에 포함될 data point
-
-```python
-data_generator(batch_size, sp,root_dir, label)
-```
-  
-  <br>
-  
-#### **5. 1DCNN 10 times iteration and save confusion matrix**
-
-```python
-def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
-                     file_path, label = ['Normal', 'Misalignment', 'Oil Whirl', 'Rubbing', 'Unbalance']):
-
-    def model_generate():
-        model = Sequential()
-        model.add(Conv1D(4,8, padding = 'same'))
-        model.add(BatchNormalization())
-        model.add(ReLU())
-
-        model.add(Conv1D(8,4, padding = 'same'))
-        model.add(BatchNormalization())
-        model.add(ReLU())
-        model.add(MaxPooling1D(padding = 'same'))
-
-        model.add(Flatten())
-
-        model.add(Dense(5))
-        model.add(Softmax())
-
-        lr_scheduler = keras.callbacks.ReduceLROnPlateau(factor = 0.5, patience = 5)
-
-        optimizer = keras.optimizers.Adam(lr = 0.0001)
-        model.compile(optimizer = optimizer
-                     ,loss = 'categorical_crossentropy' #'mse', 'categoricla_crossentropy', 'binary_crossentropy', 'sparse_categorical_crossentropy'
-                     ,metrics = ['accuracy'])
-
-        callbacks = [keras.callbacks.ModelCheckpoint(filepath= file_path,
-                                                        monitor='val_loss',
-                                                        save_best_only=True)]
-        return model, callbacks, lr_scheduler
-    
-    cf_stack = np.zeros([5,5], dtype = np.int32)
-
-    for i in range(n_iter):
-        print(f'----------------------------------------------------{i+1}th----------------------------------------------------')
-        model, callbacks, lr_scheduler = model_generate()
-        hist = model.fit(X_train, y_train,
-                             epochs = 100, validation_data = (X_valid, y_valid), callbacks = [callbacks, lr_scheduler])
-        model = load_model(file_path)
-        y_pred = model.predict(X_test)
-        cf = confusion_matrix(np.argmax(y_test, axis = 1), np.argmax(y_pred, axis = 1))
-        cf_stack = cf_stack + cf
-        
-    return cf_stack
-```
-**적절한 Hyperparameter 설정 후 사용**
 
 <br>
   
-#### **6. GPU 설정 및 가상환경 설치**
+#### **4. GPU 설정 및 가상환경 설치**
 
   <br>
 
@@ -298,7 +212,8 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 6. pip install torchsummary
 7. pip install torch_snippets
 (torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
-8. pip install mlxtend, sklearn, celluloid, seaborn, ffmpeg-python
+8. pip install mlxtend, sklearn, celluloid, seaborn
+9. conda install -c conda-forge ffmpeg
 ```
   
   <br>
@@ -313,7 +228,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
 
-#### **7. 로컬 환경과 주피터 내에서 가상환경 삭제**
+#### **5. 로컬 환경과 주피터 내에서 가상환경 삭제**
 
   <br>
 
@@ -324,7 +239,7 @@ def model_iterate(n_iter, X_train, y_train, X_valid, y_valid, X_test, y_test,
 
 <br>
   
-#### **8. mat 파일 불러오기**
+#### **6. mat 파일 불러오기**
 
 ```python
 import scipy.io
@@ -333,7 +248,7 @@ mat = scipy.io.loadmat('filepath')
 
 <br>
 
-#### **9. Module 내 함수 목록 확인**
+#### **7. Module 내 함수 목록 확인**
 
 ex)
 
@@ -343,7 +258,7 @@ dir(nn.Module)
 
 <br>
 
-#### **10. 긴 한 줄 코드 여러 줄로 작성**
+#### **8. 긴 한 줄 코드 여러 줄로 작성**
 
   - 역슬래시 이용
 
@@ -355,7 +270,7 @@ url = ‘abcdefghi’\
 
 <br>
 
-#### **11. matplotlib pyplot params**
+#### **9. matplotlib pyplot params**
 
 ```python
 params = {'axes.labelsize' : 16,
@@ -367,7 +282,7 @@ params = {'axes.labelsize' : 16,
 plt.rcParams.update(params)
 ```
 
-#### **12. 신호에 SNR 값에 따른 노이즈 추가**
+#### **10. 신호에 SNR 값에 따른 노이즈 추가**
 
 ```python
 def SNR(snr, signal):
