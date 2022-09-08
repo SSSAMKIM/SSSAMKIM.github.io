@@ -4,7 +4,7 @@ title: "GAN기반 이상 탐지 논문 리뷰"
 summary: "GAN기반 이상 탐지 논문 Review"
 author: taehun
 date: '2021-05-24 12:00:00 +0900'
-category: Literature review
+category: Literature_review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
