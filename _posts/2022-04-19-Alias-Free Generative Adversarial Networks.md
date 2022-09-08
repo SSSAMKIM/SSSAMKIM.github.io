@@ -4,7 +4,7 @@ title: "Alias-Free Generative Adversarial Networks 리뷰"
 summary: "GAN 모델의 Aliasing 발생 분석"
 author: taehun
 date: '2022-04-19 15:00:00 +0900'
-category: Literature review
+category: Literature_review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
