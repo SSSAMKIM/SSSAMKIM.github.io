@@ -33,33 +33,40 @@ Seoul National University, South Korea
 ## COMPETITIONS
 ---
 
-### 1. 현대중공업그룹 제2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
+### 1. 서울대학교 기계공학부 우수석사학위논문상, 2023년 2월
+Best Master's Thesis Award, Seoul National University, February, 2023<br>
+
+### 2. 2022 PHM Society 데이터 챌린지, 2022년 11월 - 2위
+Second Place, Prognostics and Health Management (PHM) Society Data Challenge, November, 2022<br>
+Link: <a href="https://me.snu.ac.kr/ko/board/news/view/17060">https://me.snu.ac.kr/ko/board/news/view/17060"</a>
+
+### 3. 현대중공업그룹 제2회 조선/해양산업 디지털 혁신을 위한 Big Data/AI 경진대회, 2022년 2월 - 장려상
 The Encourage Prize, Hyundai Heavy Industries Group The 2nd Shipbuilding/Marine Big Data/AI Contest for Digital Innovation, February, 2022<br>
 Link: <a href="https://me.snu.ac.kr/ko/board/news/view/15704">https://me.snu.ac.kr/ko/board/news/view/15704</a>
 <br>
-### 2. 제3회 산업AI해커톤 팩토리핵 코리아 2022, 2022년 2월 - 장려상
+### 4. 제3회 산업AI해커톤 팩토리핵 코리아 2022, 2022년 2월 - 장려상
 The Encourage Prize, The 3rd Industrial AI Hackathon Factory Hack Korea, February, 2022<br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/15576">https://me.snu.ac.kr/ko/board/news/view/15576</a>
 <br>
-### 3. 제3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3등 (동서발전 미래기술융합원장상)
+### 5. 제3회 동서발전(EWP) 발전 빅데이터 AI 경진대회, 2021년 12월 - 3위 (동서발전 미래기술융합원장상)
 The Encourage Prize, Director of Future Technology Convergence Center Award), The 3rd Korea Eeast-West Power Big data Competition, December, 2021<br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/15334">https://me.snu.ac.kr/ko/board/news/view/15334</a>
 <br>
-### 4. 제1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
+### 6. 제1회 K-인공지능 제조데이터 분석 경진대회, 2021년 12월 - 대상 (중소벤처기업부 장관상)
 The Grand Prize (The Minister of SMEs and Startups Award), The 1st Korea-AI Manufacturing Data Analysis Competition, December, 2021<br>
 Article: <a href="http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1">http://biz.heraldcorp.com/view.php?ud=20211217000210&ACE_SEARCH=1</a>
 <br>
-### 5. 2021 PHM Society 데이터 챌린지, 2021년 10월 - 4등
+### 7. 2021 PHM Society 데이터 챌린지, 2021년 10월 - 4위
 Prognostics and Health Management (PHM) Society Data Challenge, October, 2021<br>
 Leaderboard: <a href="https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/">https://data.phmsociety.org/2021-phm-conference-data-challenge-winners/</a>
 <br>
-### 6. 2021 POSTECH OIBC 태양광 발전량 예측 경진대회, November 2021년 9월 - 2등 (우수상)
+### 8. 2021 POSTECH OIBC 태양광 발전량 예측 경진대회, November 2021년 9월 - 2위 (우수상)
 The Excellent Prize (The 2nd Place Winner), Postech Open Innovation Big Data Challenge, September, 2021<br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14815">https://me.snu.ac.kr/ko/board/news/view/14815</a>
 <br>
 Leaderboard: <a href="https://opp.dershare.xyz/cmpt2021">https://opp.dershare.xyz/cmpt2021</a>
 <br>
-### 7. 2021 PHMAP 데이터 챌린지, 2021년 9월 - 1등
+### 9. 2021 PHMAP 데이터 챌린지, 2021년 9월 - 1등
 The 1st Place Winner, Prognostics and Health Management (PHM) Asia Pacific Data Challenge, September, 2021<br>
 Article: <a href="https://me.snu.ac.kr/ko/board/news/view/14739">https://me.snu.ac.kr/ko/board/news/view/14739</a>
 <br>
@@ -87,6 +94,14 @@ Kim T., Ko J.U., Lee J., Kim Y.C., Youn B.D., "Latent Space Analysis of GAN for 
 
 ### 3. Korean Society of Mechanical Engineers (KSME) 2021 Anual Meeting
 Kim T., Ko J.U., Lee J., Youn B.D., "A Quantitative Evaluation Metrics for Generative Model Improving Fault Diagnosis Performance of Rotating Machinery in Class Imbalance Problem," Proceedings of the Korean Society of Mechanical Engineers (KSME) 2021 Annual Meeting, Gwangju, Korea, November 3-6, 2021
+<br>
+<br>
+
+## SCHOLARSHIP
+---
+
+### 1. 현대차 정몽구 재단 온드림 미래산업인재 장학생, 2023년 6월 ~
+OnDream Future Technology Scholarship Funded by Hyundai Motor Chung Mong-Koo Foundation, June, 2023
 
 <br>
 <br>
