@@ -15,7 +15,7 @@ PHM, DeepLearning, Python 공부 정리하는 블로그<br><br>
 
 System Health and Risk Management Laboratory
 
-M.S Student in Mechanical Engineering
+Ph.D. Student in Mechanical Engineering
 
 Seoul National University, South Korea
 
