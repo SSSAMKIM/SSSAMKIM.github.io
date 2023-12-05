@@ -76,8 +76,13 @@ Last update: 2023.12.05<br>
 - Decoder가 하는 일은 latent space에 있는 surface를 output space로 fitting 하는 것인데 이 때 임의의 방향으로 stretching 하게 됨<br>
   -> 이 때 excessive stretching은 latent space에 불필요한 distortion을 가져 오게 됨<br>
 
+- **Jacobian determinant**
+  일반적으로 Jacobian determinant ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/45f438d8-1fea-4bbf-ade5-ff8f973d93fc)
+는 pre-image 위의 점 p가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/efa2e252-a0c5-4aa3-88d9-75dceb7aec65)를 만족시키는 함수 f에 대해 미소부피가 얼마나 변하는지를 측정하는 것<br>
+
 - **Generalized Jacobian determinant**
-  ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/53ad9e56-5751-49e7-ad99-d4ab184d1668)가 smooth immersion이라 가정하고(즉, decoder 작업을 떠올리면 됨), F는 diffeomorphism이며, Euclidean metric g에 대해 (N,g)가 Riemannian manifold라 할 때, F(M) 위의 Riemannian volume form ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/000c95af-ce93-439c-937e-8c5ab810f1a9)는 아래와 같이 정의됨<br>
+- Jacobian determinant는 동일 차원에서 미소 부피 변화를 측정하는 수식이나, 이를 확장하여 smooth immersion에서 미소 부피 변화를 tracking 하고자 하는 것이 generalized Jacobian determinant<br>
+- ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/53ad9e56-5751-49e7-ad99-d4ab184d1668)가 smooth immersion이라 가정하고(즉, decoder 작업을 떠올리면 됨), F는 diffeomorphism이며, Euclidean metric g에 대해 (N,g)가 Riemannian manifold라 할 때, F(M) 위의 Riemannian volume form ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/000c95af-ce93-439c-937e-8c5ab810f1a9)는 아래와 같이 정의됨<br>
   <p align="center">
     <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/479df772-a9a5-43ad-8311-51b762d76177">
   </p>
@@ -85,10 +90,5 @@ Last update: 2023.12.05<br>
   -> 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)
 가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음<br>
 
-
-
-
+- **Pullback metric**
   
-
-
-
