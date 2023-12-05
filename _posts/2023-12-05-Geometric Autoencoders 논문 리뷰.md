@@ -172,6 +172,10 @@ pullback metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/8
 
 <br><br>
 
+<p align = "center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/86936e7e-038b-4e31-8f77-314fe39cde7e" width = "800" height = "auto">
+</p>
+
 **2-2) Regularization**
 
 > - Generalized Jacobian determinant가 local expansion과 contraction을 측정하기에, 이 값들이 전역적으로 uniform하게 되면 distortion을 피할 수 있음
