@@ -3,7 +3,7 @@ layout: post
 title: "Geometric Autoencoders 논문 리뷰"
 summary: "Geometric Autoencoders 논문 리뷰"
 author: taehun
-date: '2023-10-31 17:30:00 +0900'
+date: '2023-12-05 12:00:00 +0900'
 category: Literature_review
 toc: true
 toc_sticky: true
@@ -18,7 +18,7 @@ use_math: true
 
 Last update: 2023.12.05<br>
 
-> `Time-series Generative Adversarial Networks 리뷰'<br>
+> `Geometric Autoencoders - What You See is What You Decode 리뷰'<br>
 > > 2023 ICML Conference
 
 <br>
@@ -45,10 +45,10 @@ Last update: 2023.12.05<br>
 
 <br>
 
-- Visualization을 위한 low-dimensional autoencoders에서 latent representation에서 distortion이 발생해도 낮은 reconstruction loss를 가지는 문제를 해결하고자 함
-  1) Generalized Jacobian determinant를 활용하여 local expansion, contraction을 측정하는 것을 제안
-  2) Generalized Jacobian dterminant의 log variance를 regularizer로 활용하여 이 값을 최소화함으로써 local expansion 및 contraction이 없는 즉, distortion이 발생하지 않도록 규제
-  3) Generalized Jacobian determinant는 undirected contraction만 측정하기에, indicatrices를 활용하여 latent space 위 각 점의 anisotropy를 시각화 함
+- Visualization을 위한 low-dimensional autoencoders에서 latent representation에서 distortion이 발생해도 낮은 reconstruction loss를 가지는 문제를 해결하고자 함<br>
+  1) Generalized Jacobian determinant를 활용하여 local expansion, contraction을 측정하는 것을 제안<br>
+  2) Generalized Jacobian dterminant의 log variance를 regularizer로 활용하여 이 값을 최소화함으로써 local expansion 및 contraction이 없는 즉, distortion이 발생하지 않도록 규제<br>
+  3) Generalized Jacobian determinant는 undirected contraction만 측정하기에, indicatrices를 활용하여 latent space 위 각 점의 anisotropy를 시각화 함<br>
  
 
 
