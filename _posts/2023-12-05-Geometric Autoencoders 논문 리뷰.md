@@ -149,7 +149,7 @@ Last update: 2023.12.05<br>
 pullback metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/ba1ae52d-b0a4-4188-871a-9564e64114e7)은 아래와 같이 정의됨
 
 <p align="center">
-  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/4bf7814e-a799-4dfb-941f-349b05a982e8">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/39e4ede7-c934-4060-97d9-1a2e6e57571f">
 </p>
 
 <br>
