@@ -37,9 +37,7 @@ Last update: 2023.12.05<br>
 1) 전사함수(surjection)
 ```
 
-```markdown
 > ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/54f77377-725f-421f-84c6-2d271ff8075e) 에서 f(x) (치역, range)와 Y (공역, codomain)가 일치할 때 f는 전사함수라 함<br>
-```
 
 ```markdown
 2) 단사함수(injection)
