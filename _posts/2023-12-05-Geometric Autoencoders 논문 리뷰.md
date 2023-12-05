@@ -71,7 +71,8 @@ Last update: 2023.12.05<br>
   <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8c696d4a-80a4-4582-9427-60c48518e8a5" width = "800" height = "auto">
 </p>
 
-- 위 figure에서 세계 지도에 대한 embeddings을 확인하면 Geometric AE가 정성적인 관점에서 더 우수한 성능을 보이나, Vanilla AE의 reconstruction loss가 Geometric AE의 절반만큼 낮음(Vanilla AE는 locally stretching or contracting하기 때문)<br><br>
+- 위 figure에서 세계 지도에 대한 embeddings을 확인하면 Geometric AE가 정성적인 관점에서 더 우수한 성능을 보이나, Vanilla AE의 reconstruction loss가 Geometric AE의 절반만큼 낮음<br>
+  (Vanilla AE는 locally stretching or contracting하기 때문)<br><br>
 
 - Decoder가 하는 일은 latent space에 있는 surface를 output space로 fitting 하는 것인데 이 때 임의의 방향으로 stretching 하게 됨<br>
   -> 이 때 excessive stretching은 latent space에 불필요한 distortion을 가져 오게 됨<br><br>
