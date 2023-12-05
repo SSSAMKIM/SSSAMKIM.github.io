@@ -83,7 +83,7 @@ Last update: 2023.12.05<br>
 <br>
 
 - Visualization을 위한 low-dimensional autoencoders에서 latent representation에서 distortion이 발생해도 낮은 reconstruction loss를 가지는 문제를 해결하고자 함<br>
-```python
+```markdown
 1) Generalized Jacobian determinant를 활용하여 local expansion, contraction을 측정하는 것을 제안
 2) Generalized Jacobian dterminant의 log variance를 regularizer로 활용하여 이 값을 최소화함으로써 local expansion 및 contraction이 없는 즉, distortion이 발생하지 않도록 규제
 3) Generalized Jacobian determinant는 undirected contraction만 측정하기에, indicatrices를 활용하여 latent space 위 각 점의 anisotropy를 시각화 함
@@ -106,16 +106,16 @@ Last update: 2023.12.05<br>
 <br><br>
 
 
-**중요 수식**<br>
+**2-1) 중요 수식**<br>
 
-```python
+```markdown
 1) Jacobian determinant
 ```
 
 > 일반적으로 Jacobian determinant ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/45f438d8-1fea-4bbf-ade5-ff8f973d93fc)
 는 pre-image 위의 점 p가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/efa2e252-a0c5-4aa3-88d9-75dceb7aec65)를 만족시키는 함수 f에 대해 미소부피가 얼마나 변하는지를 측정하는 것<br><br>
 
-```python
+```markdown
 2) Generalized Jacobian determinant
 ```
 
@@ -133,7 +133,7 @@ Last update: 2023.12.05<br>
   
 <br><br>
 
-```python
+```markdown
 3) Pullback metric
 ```
 
@@ -145,8 +145,47 @@ Last update: 2023.12.05<br>
 <br>
 
 > - Euclidean metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fd9e4027-9f27-4dbd-a749-5495a088150a)에 대하여
- Riemannian manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/20694325-14b5-420a-a250-33f3c54d91c9)가 존재할 때, decoder에 해당하는 immersion ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fce94910-b808-4ad0-a585-5278e0af64b7)을 정의하면 pullback metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/ba1ae52d-b0a4-4188-871a-9564e64114e7)은 아래와 같이 정의됨
+ Riemannian manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/20694325-14b5-420a-a250-33f3c54d91c9)가 존재할 때, decoder에 해당하는 immersion ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fce94910-b808-4ad0-a585-5278e0af64b7)에서 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/ac5c5f12-d0c4-4094-8bbb-f787650108ce)인 점 p에서
+pullback metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/ba1ae52d-b0a4-4188-871a-9564e64114e7)은 아래와 같이 정의됨
 
+<p align="center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/4bf7814e-a799-4dfb-941f-349b05a982e8">
+</p>
 
+<br>
 
+> 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/47831d8d-1bdb-495a-b510-abc76350e4d0)이며, 점 p에서 함수 F의 differential은 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fb202503-8d55-45e4-8a14-5edae1941f3e)로 나타남
+
+<br>
+
+```markdown
+4) Pullback metric in coordinates
+```
+
+<p align="center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fc8fc1e9-94d3-4787-99d0-3eba8f7b43c0">
+</p>
+
+<br>
+
+> 위 식은 pullback metric과 generalized Jacobian과의 관련성을 나타내며, pullback metric은 실제로는 latent space에서 immersed manifold를 따르는 길이로서의 lengths를 측정함
+
+<br><br>
+
+**2-2) Regularization**
+
+> - Generalized Jacobian determinant가 local expansion과 contraction을 측정하기에, 이 값들이 전역적으로 uniform하게 되면 distortion을 피할 수 있음
+> - Minibatch B의 모든 embedding point에서 generalized Jacobian determinant를 계산하고 이 값의 variance of logarithm을 regularizer로 활용
+
+<br>
+
+<p align="center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/db32992f-1ddf-455a-9354-cfb5e62b8acd">
+</p>
+
+> 위 regularizer에서, generalized Jacobian determinant 값이 1일 경우 isotropy지만, 각 지점에서 expansion도 있고 contraction도 있을 것이기에, variance가 최소화되는 방향으로 학습하면 전역적으로 isotropy에 가까워질 것을 의미
+
+<br>
+
+> Total loss는 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/337dfc70-94b5-4d03-a037-24138935be7d)
 
