@@ -46,7 +46,8 @@ Last update: 2023.12.05<br>
 
 **4) Differential of f at p**
 - Manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/1f778db5-627b-4064-b1a4-42aacf4b3808)를 만족하는 함수 f에 대해
-![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미한다.<br>
+![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미함<br>
+- Differential은 변수(x)의 미소 변화(dx)를 의미하며, differentiation과 동일하지는 않은 개념임
 
 **5) 위상동형(Homeomorphism)** 
 - 함수가 전사, 단사이며 모든 점에서 연속 역함수도 전사, 단사, 연속인 경우를 의미<br>
@@ -75,7 +76,19 @@ Last update: 2023.12.05<br>
 - Decoder가 하는 일은 latent space에 있는 surface를 output space로 fitting 하는 것인데 이 때 임의의 방향으로 stretching 하게 됨<br>
   -> 이 때 excessive stretching은 latent space에 불필요한 distortion을 가져 오게 됨<br>
 
-**Generalized Jacobian determinant**
+- **Generalized Jacobian determinant**
+  ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/53ad9e56-5751-49e7-ad99-d4ab184d1668)가 smooth immersion이라 가정하고(즉, decoder 작업을 떠올리면 됨), F는 diffeomorphism이며, Euclidean metric g에 대해 (N,g)가 Riemannian manifold라 할 때, F(M) 위의 Riemannian volume form ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/000c95af-ce93-439c-937e-8c5ab810f1a9)는 아래와 같이 정의됨<br>
+  <p align="center">
+    <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/479df772-a9a5-43ad-8311-51b762d76177">
+  </p>
+  <br>
+  -> 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)
+가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음<br>
+
+
+
+
+  
 
 
 
