@@ -57,7 +57,7 @@ Last update: 2023.12.05<br>
 ```
 
 > - Manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/1f778db5-627b-4064-b1a4-42aacf4b3808)를 만족하는 함수 f에 대해
-  ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미함<br>
+  ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미함
 > - Differential은 변수(x)의 미소 변화(dx)를 의미하며, differentiation과 동일하지는 않은 개념임<br>
 
 ```markdown
@@ -94,11 +94,12 @@ Last update: 2023.12.05<br>
 <p align="center">
   <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8c696d4a-80a4-4582-9427-60c48518e8a5" width = "800" height = "auto">
 </p>
-
 > 위 figure에서 세계 지도에 대한 embeddings을 확인하면 Geometric AE가 정성적인 관점에서 더 우수한 성능을 보이나, Vanilla AE의 reconstruction loss가 Geometric AE의 절반만큼 낮음<br>
-  (Vanilla AE는 locally stretching or contracting하기 때문)<br><br>
+  (Vanilla AE는 locally stretching or contracting하기 때문)
+  
+<br><br>
 
-- Decoder가 하는 일은 latent space에 있는 surface를 output space로 fitting 하는 것인데 이 때 임의의 방향으로 stretching 하게 됨<br>
+- Decoder가 하는 일은 latent space에 있는 surface를 output space로 fitting 하는 것인데 이 때 임의의 방향으로 stretching 하게 됨
   > 이 때 excessive stretching은 latent space에 불필요한 distortion을 가져 오게 됨
 
 
@@ -107,14 +108,14 @@ Last update: 2023.12.05<br>
 
 **중요 수식**<br>
 
-```markdown
+```python
 1) Jacobian determinant
 ```
 
 - 일반적으로 Jacobian determinant ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/45f438d8-1fea-4bbf-ade5-ff8f973d93fc)
 는 pre-image 위의 점 p가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/efa2e252-a0c5-4aa3-88d9-75dceb7aec65)를 만족시키는 함수 f에 대해 미소부피가 얼마나 변하는지를 측정하는 것<br><br>
 
-```markdown
+```python
 2) Generalized Jacobian determinant
 ```
 
@@ -124,7 +125,12 @@ Last update: 2023.12.05<br>
     <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/479df772-a9a5-43ad-8311-51b762d76177">
   </p>
   <br>
-  > 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음<br><br>
-
-- **Pullback metric**
+  > 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음
   
+<br><br>
+
+```python
+3) Pullback metric
+```
+
+- 
