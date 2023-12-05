@@ -33,30 +33,30 @@ Last update: 2023.12.05<br>
   
 <br>
 
-**1) 전사함수(surjection)**
-- ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/54f77377-725f-421f-84c6-2d271ff8075e) 에서 f(x) (치역, range)와 Y (공역, codomain)가 일치할 때 f는 전사함수라 함<br>
-
-**2) 단사함수(injection)**
-- ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/54f77377-725f-421f-84c6-2d271ff8075e) 에서 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/427b2c2e-02db-4833-86d2-519e2baacc86) 에 대해,
-![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bc78d3c8-9b4d-4495-b7b6-1079218e7a6e), 즉 일대일 함수인 경우 단사함수라 함<br>
-
-**3) Chart**
-- ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/a46a482d-5a6c-4a41-ac50-6136efab3157) domain U에서 range V로 가는 각각의 mapping을 chart라 함<br>
-- 혹은, smooth manifold에 대해, 어떤 open sets U가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/2c55be0b-7e1d-4d90-ba1e-afb84a747c89)의 부분공간에 대해 위상동형이고, open sets U에 의해 덮을 수 있을 때 덮어서 대응되는 각 mapping이 chart<br>
-
-**4) Differential of f at p**
-- Manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/1f778db5-627b-4064-b1a4-42aacf4b3808)를 만족하는 함수 f에 대해
-![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미함<br>
-- Differential은 변수(x)의 미소 변화(dx)를 의미하며, differentiation과 동일하지는 않은 개념임
-
-**5) 위상동형(Homeomorphism)** 
-- 함수가 전사, 단사이며 모든 점에서 연속 역함수도 전사, 단사, 연속인 경우를 의미<br>
-
-**6) 미분동형(Diffeomorphism)**
-- 함수가 homeomorphism이며 미분 가능하고, 역함수에 대해서도 미분가능한 경우를 의미<br>
-
-**7) Immersion**
-- from small space to big space<br>
+  **1) 전사함수(surjection)**
+  - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/54f77377-725f-421f-84c6-2d271ff8075e) 에서 f(x) (치역, range)와 Y (공역, codomain)가 일치할 때 f는 전사함수라 함<br>
+  
+  **2) 단사함수(injection)**
+  - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/54f77377-725f-421f-84c6-2d271ff8075e) 에서 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/427b2c2e-02db-4833-86d2-519e2baacc86) 에 대해,
+  ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bc78d3c8-9b4d-4495-b7b6-1079218e7a6e), 즉 일대일 함수인 경우 단사함수라 함<br>
+  
+  **3) Chart**
+  - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/a46a482d-5a6c-4a41-ac50-6136efab3157) domain U에서 range V로 가는 각각의 mapping을 chart라 함<br>
+  - 혹은, smooth manifold에 대해, 어떤 open sets U가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/2c55be0b-7e1d-4d90-ba1e-afb84a747c89)의 부분공간에 대해 위상동형이고, open sets U에 의해 덮을 수 있을 때 덮어서 대응되는 각 mapping이 chart<br>
+  
+  **4) Differential of f at p**
+  - Manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/1f778db5-627b-4064-b1a4-42aacf4b3808)를 만족하는 함수 f에 대해
+  ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미함<br>
+  - Differential은 변수(x)의 미소 변화(dx)를 의미하며, differentiation과 동일하지는 않은 개념임
+  
+  **5) 위상동형(Homeomorphism)** 
+  - 함수가 전사, 단사이며 모든 점에서 연속 역함수도 전사, 단사, 연속인 경우를 의미<br>
+  
+  **6) 미분동형(Diffeomorphism)**
+  - 함수가 homeomorphism이며 미분 가능하고, 역함수에 대해서도 미분가능한 경우를 의미<br>
+  
+  **7) Immersion**
+  - from small space to big space<br>
 
 #### **2. Summary**
 
