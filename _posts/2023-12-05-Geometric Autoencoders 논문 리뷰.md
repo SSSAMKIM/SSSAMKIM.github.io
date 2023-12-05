@@ -71,14 +71,14 @@ Last update: 2023.12.05<br>
   <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8c696d4a-80a4-4582-9427-60c48518e8a5" width = "800" height = "auto">
 </p>
 
-- 위 figure에서 세계 지도에 대한 embeddings을 확인하면 Geometric AE가 정성적인 관점에서 더 우수한 성능을 보이나, Vanilla AE의 reconstruction loss가 Geometric AE의 절반만큼 낮음(Vanilla AE는 locally stretching or contracting하기 때문)<br>
+- 위 figure에서 세계 지도에 대한 embeddings을 확인하면 Geometric AE가 정성적인 관점에서 더 우수한 성능을 보이나, Vanilla AE의 reconstruction loss가 Geometric AE의 절반만큼 낮음(Vanilla AE는 locally stretching or contracting하기 때문)<br><br>
 
 - Decoder가 하는 일은 latent space에 있는 surface를 output space로 fitting 하는 것인데 이 때 임의의 방향으로 stretching 하게 됨<br>
-  -> 이 때 excessive stretching은 latent space에 불필요한 distortion을 가져 오게 됨<br>
+  -> 이 때 excessive stretching은 latent space에 불필요한 distortion을 가져 오게 됨<br><br>
 
 - **Jacobian determinant**
   - 일반적으로 Jacobian determinant ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/45f438d8-1fea-4bbf-ade5-ff8f973d93fc)
-는 pre-image 위의 점 p가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/efa2e252-a0c5-4aa3-88d9-75dceb7aec65)를 만족시키는 함수 f에 대해 미소부피가 얼마나 변하는지를 측정하는 것<br>
+는 pre-image 위의 점 p가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/efa2e252-a0c5-4aa3-88d9-75dceb7aec65)를 만족시키는 함수 f에 대해 미소부피가 얼마나 변하는지를 측정하는 것<br><br>
 
 - **Generalized Jacobian determinant**
   - Jacobian determinant는 동일 차원에서 미소 부피 변화를 측정하는 수식이나, 이를 확장하여 smooth immersion에서 미소 부피 변화를 tracking 하고자 하는 것이 generalized Jacobian determinant<br>
@@ -87,7 +87,7 @@ Last update: 2023.12.05<br>
     <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/479df772-a9a5-43ad-8311-51b762d76177">
   </p>
   <br>
-  -> 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음<br>
+  -> 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음<br><br>
 
 - **Pullback metric**
   
