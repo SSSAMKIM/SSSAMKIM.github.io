@@ -112,20 +112,24 @@ Last update: 2023.12.05<br>
 1) Jacobian determinant
 ```
 
-- 일반적으로 Jacobian determinant ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/45f438d8-1fea-4bbf-ade5-ff8f973d93fc)
+> 일반적으로 Jacobian determinant ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/45f438d8-1fea-4bbf-ade5-ff8f973d93fc)
 는 pre-image 위의 점 p가 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/efa2e252-a0c5-4aa3-88d9-75dceb7aec65)를 만족시키는 함수 f에 대해 미소부피가 얼마나 변하는지를 측정하는 것<br><br>
 
 ```python
 2) Generalized Jacobian determinant
 ```
 
-- Jacobian determinant는 동일 차원에서 미소 부피 변화를 측정하는 수식이나, 이를 확장하여 smooth immersion에서 미소 부피 변화를 tracking 하고자 하는 것이 generalized Jacobian determinant<br>
-- ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/53ad9e56-5751-49e7-ad99-d4ab184d1668)가 smooth immersion이라 가정하고(즉, decoder 작업을 떠올리면 됨), F는 diffeomorphism이며, Euclidean metric g에 대해 (N,g)가 Riemannian manifold라 할 때, F(M) 위의 Riemannian volume form ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/000c95af-ce93-439c-937e-8c5ab810f1a9)는 아래와 같이 정의됨<br>
+> - Jacobian determinant는 동일 차원에서 미소 부피 변화를 측정하는 수식이나, 이를 확장하여 smooth immersion에서 미소 부피 변화를 tracking 하고자 하는 것이 generalized Jacobian determinant
+
+> - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/53ad9e56-5751-49e7-ad99-d4ab184d1668)가 smooth immersion이라 가정하고(즉, decoder 작업을 떠올리면 됨), F는 diffeomorphism이며, Euclidean metric g에 대해 (N,g)가 Riemannian manifold라 할 때, F(M) 위의 Riemannian volume form ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/000c95af-ce93-439c-937e-8c5ab810f1a9)는 아래와 같이 정의됨
+
+<br>
+
   <p align="center">
     <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/479df772-a9a5-43ad-8311-51b762d76177">
   </p>
   <br>
-  > 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음
+> 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음
   
 <br><br>
 
@@ -133,4 +137,16 @@ Last update: 2023.12.05<br>
 3) Pullback metric
 ```
 
-- 
+> - Autoencoder의 latent space를 이해하기 위해서는 decoding 이후의 angles과 distances가 어떻게 나타나는지 알아야 함
+> - 이 때 필요한 것이 latent space에 필요한 metric tensor이며, 그 이유는 angles와 distances들이 output manifold로 mapping 되기 때문에 metric tensor를 알아야 함
+<br>(후에 metric tensor를 output manifold로 변환시켜 output manifold에서의 angles와 distances들을 구하기 위해?)
+> - 이 latent space 상에 metric tensor를 pullback metric이라 정의함
+
+<br>
+
+> - Euclidean metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fd9e4027-9f27-4dbd-a749-5495a088150a)에 대하여
+ Riemannian manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/20694325-14b5-420a-a250-33f3c54d91c9)가 존재할 때, decoder에 해당하는 immersion ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/fce94910-b808-4ad0-a585-5278e0af64b7)을 정의하면 pullback metric ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/ba1ae52d-b0a4-4188-871a-9564e64114e7)은 아래와 같이 정의됨
+
+
+
+
