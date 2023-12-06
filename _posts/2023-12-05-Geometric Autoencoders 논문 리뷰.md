@@ -130,7 +130,8 @@ Last update: 2023.12.05<br>
     <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/479df772-a9a5-43ad-8311-51b762d76177">
   </p>
   <br>
-> 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음
+> - 이 때 square root 안의 식인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/7f4f4cd6-ccec-4d1d-af11-2761cfe86dd2)가 generalized Jacobian determinant이며, 이는 F에 의해 국부적으로 volumes이 얼마나 변하는지를 나타내고, 이를 통해 distortion of angles와 directed stretching에 대한 정보를 capture할 수 있음<br>
+> - Generalized에서 transposed Jacobian을 곱해주는 이유는 아마 immersion 이기에 Jacobian이 square matrix가 아니라 square matrix를 만들어주기 위함으로 생각됨됨
   
 <br><br>
 
