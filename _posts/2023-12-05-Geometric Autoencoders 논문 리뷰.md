@@ -58,7 +58,10 @@ Last update: 2023.12.05<br>
 
 > - Manifold ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/1f778db5-627b-4064-b1a4-42aacf4b3808)를 만족하는 함수 f에 대해
   ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bdf40a78-d8c0-48d7-aecc-dd56dd883bb9)를 manifold M 위의 점 p에서 함수 f의 differential이라 정의하며, 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/56fb0f11-974e-46e5-be59-f6bb9a4d2528)은 manifold M 위의 점 p에서의 tangent space를 의미함
-> - Differential은 변수(x)의 미소 변화(dx)를 의미하며, differentiation과 동일하지는 않은 개념임<br>
+> - Differential은 변수(x)의 미소 변화(dx)를 의미하며, differentiation과 동일하지는 않은 개념임
+> - Coordinates에서의 differential은 Jacobian으로 계산 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/1f7db2e2-fc44-4753-9653-d8392d19707f)
+
+<br>
 
 ```markdown
 5) 위상동형(Homeomorphism)
@@ -83,11 +86,9 @@ Last update: 2023.12.05<br>
 <br>
 
 - Visualization을 위한 low-dimensional autoencoders에서 latent representation에서 distortion이 발생해도 낮은 reconstruction loss를 가지는 문제를 해결하고자 함<br>
-```markdown
-1) Generalized Jacobian determinant를 활용하여 local expansion, contraction을 측정하는 것을 제안
-2) Generalized Jacobian dterminant의 log variance를 regularizer로 활용하여 이 값을 최소화함으로써 local expansion 및 contraction이 없는 즉, distortion이 발생하지 않도록 규제
-3) Generalized Jacobian determinant는 undirected contraction만 측정하기에, indicatrices를 활용하여 latent space 위 각 점의 anisotropy를 시각화 함
-```
+> 1) Generalized Jacobian determinant를 활용하여 local expansion, contraction을 측정하는 것을 제안
+> 2) Generalized Jacobian dterminant의 log variance를 regularizer로 활용하여 이 값을 최소화함으로써 local expansion 및 contraction이 없는 즉, distortion이 발생하지 않도록 규제
+> 3) Generalized Jacobian determinant는 undirected contraction만 측정하기에, indicatrices를 활용하여 latent space 위 각 점의 anisotropy를 시각화 함
 
 <br>
 
