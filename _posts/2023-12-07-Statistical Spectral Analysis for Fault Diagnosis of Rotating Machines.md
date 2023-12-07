@@ -68,7 +68,7 @@ Last update: 2023.12.07<br>
 
 #### **2-1. Statistical spectral analysis**<br>
 
-> Metrics이 만족해야 할 3가지 (in)equalities<br>
+- Metrics이 만족해야 할 3가지 (in)equalities<br>
 > [1] d(x,y) = 0 iff x = y (the identity axiom)<br>
 > [2] d(x,y) = d(y,x) (the symmetry axiom)<br>
 > [3] d(x,y) <= d(x,z) + d(z,y) (the triangle inequality)<br>
