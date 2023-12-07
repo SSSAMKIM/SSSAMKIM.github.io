@@ -83,7 +83,7 @@ Last update: 2023.12.07<br>
 - Symmetric KLD는 KLD(p||q)+KLD(q||p)로 정의되며, 수식은 아래와 같음
 
 <p align = "center">
-  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/eb45590e-66e3-4279-bf39-325c3f9919d1"
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/eb45590e-66e3-4279-bf39-325c3f9919d1">
 </p>
 
 <br>
