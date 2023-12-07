@@ -1,4 +1,4 @@
-![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/43c26bd9-9cef-487f-b8c4-b074365b4b89)---
+---
 layout: post
 title: "Statistical Spectral Analysis for Fault Diagnosis of Rotating Machines 논문 리뷰"
 summary: "Statistical Spectral Analysis for Fault Diagnosis of Rotating Machines 논문 리뷰"
