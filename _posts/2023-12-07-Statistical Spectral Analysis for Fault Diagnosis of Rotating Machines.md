@@ -47,7 +47,7 @@ Last update: 2023.12.07<br>
 
 <br>
 
-> 제안 방법 3가지 4개의 main steps<br>
+- 제안 방법 3가지 4개의 main steps<br>
 > [1] Time segmentation
 > - 다양한 길이(fixed periodic Hamming window로 segmentation)로 이루어진 진동 신호의 time segments들을 randomly divde<br>
 
