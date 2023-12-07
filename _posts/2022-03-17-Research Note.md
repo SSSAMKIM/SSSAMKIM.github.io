@@ -14,6 +14,8 @@ keywords: GAN, PHM, Latent space analysis, Signal Generation, Digital twin, Deep
 permalink: /11
 mathjax: true
 use_math: true
+published: false
+
 ---
 Last update: 2022.08.30<br>
 > `신호 생성 및 분석 관련 연구 노트`
