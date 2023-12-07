@@ -90,6 +90,7 @@ Last update: 2023.12.07<br>
 <br>
 
 #### **2-3. Hellinger distance**<br>
+- Hellinger distance는 두 분포가 Gaussian distribution을 따를 때 유사도를 측정하는 방법으로 아래와 같이 정의됨<br>
 
 <p align = "center">
   <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d58f8758-9f72-456e-9bfc-d731701b07d2">
