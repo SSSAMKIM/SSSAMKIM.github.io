@@ -1,9 +1,9 @@
----
+![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/43c26bd9-9cef-487f-b8c4-b074365b4b89)---
 layout: post
 title: "Statistical Spectral Analysis for Fault Diagnosis of Rotating Machines 논문 리뷰"
 summary: "Statistical Spectral Analysis for Fault Diagnosis of Rotating Machines 논문 리뷰"
 author: taehun
-date: '2023-12-06 17:00:00 +0900'
+date: '2023-12-07 12:00:00 +0900'
 category: Literature_review
 toc: true
 toc_sticky: true
@@ -48,20 +48,47 @@ Last update: 2023.12.07<br>
 <br>
 
 > 제안 방법 3가지 4개의 main steps
-> > **1) Time segmentation**
-> >    - 다양한 길이(fixed periodic Hamming window로 segmentation)로 이루어진 진동 신호의 time segments들을 randomly divde <br><br>
-> > **2) Statistical spectral image construction**
-> >    - x축은 주파수 영역대, y축은 time segment<br>
-> > **3) ECDF calculation**
-> >    - 각 주파수 영역대의 amplitudes가 sorted 되고, 이 sort operation은 각 주파수 영역대의 amplitude distribution의 statistical information을 얻기 위해 필요<br>
-> >    - Sort operation을 통해 univariate ECDF obtain하며, ECDF는 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/83e7ec8f-ead3-43eb-a3b5-9184b5d9c2ee)로 정의됨<br>
-> >    - 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/3d401909-672d-4f35-a85e-4431f587eada)는 Bernoulli distribution이고 F(x)를 parameter로 가짐, 즉 P(X=1)=F(x), P(x=0)=1-F(x)<br>
-> >    - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/6336c7e7-6dc5-42cf-8933-33f31bf8a351)은 Bernoulli distribution을 n번 시행한 것과 같으므로 결국 binomial distribution이며, ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d65da1ea-51f1-4cf7-ad23-393e8ea6810b)는 표본평균에 해당하므로 unbiased estimator가 됨<br>
+> > 1) Time segmentation
+> > - 다양한 길이(fixed periodic Hamming window로 segmentation)로 이루어진 진동 신호의 time segments들을 randomly divde<br>
+> > 2) Statistical spectral image construction
+> > - x축은 주파수 영역대, y축은 time segment
+> > 3) ECDF calculation
+> > - 각 주파수 영역대의 amplitudes가 sorted 되고, 이 sort operation은 각 주파수 영역대의 amplitude distribution의 statistical information을 얻기 위해 필요<br>
+> > - Sort operation을 통해 univariate ECDF obtain하며, ECDF는 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/83e7ec8f-ead3-43eb-a3b5-9184b5d9c2ee)로 정의됨<br>
+> > - 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/3d401909-672d-4f35-a85e-4431f587eada)는 Bernoulli distribution이고 F(x)를 parameter로 가짐, 즉 P(X=1)=F(x), P(x=0)=1-F(x)<br>
+> > - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/6336c7e7-6dc5-42cf-8933-33f31bf8a351)은 Bernoulli distribution을 n번 시행한 것과 같으므로 결국 binomial distribution이며, ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d65da1ea-51f1-4cf7-ad23-393e8ea6810b)는 표본평균에 해당하므로 unbiased estimator가 됨
 > > 4) Distance calculation
+> > - Training ECDFs의 outcomes ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/42c75dfe-b655-43a1-895a-b45c0ff945aa)와 testing ECDFs의 outcomes D에 대해 두 ECDFs의 dissimilarity에 대한 측정은 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/aa7e6100-6c75-403c-9482-067befe8321a)로 계산하며, 이 때 distance는 approximate Bayesian computation (ABC) theory 기반<br>
+
+
+#### **2-1. Statistical spectral analysis**<br>
+
+> Metrics이 만족해야 할 3가지 (in)equalities
+> > 1) d(x,y) = 0 iff x = y (the identity axiom)
+> > 2) d(x,y) = d(y,x) (the symmetry axiom)
+> > 3) d(x,y) <= d(x,z) + d(z,y) (the triangle inequality)<br>
+
+
+#### **2-2. Symmetric Kullback-Leibler Divergence**<br>
+- 먼저 Kullback-Leibler Divergence KLD(p||q)는 cross-entropy H(p,q)로부터 유도됨(H(p)는 entropy)
+<p align = "center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/2e6082c6-e914-402d-8bd9-ee107858da15">
+</p>
+- 즉, Cross-entropy H(p,q)는 p의 엔트로피 H(p)와 그 차이로 decompose 될 수 있고, 그 차이를 확률 밀도 함수 p와 q의 차이인 KLD(p||q)로 정의함
 
 <br>
 
-#### **2-1. Statistical spectral analysis**
+- Symmetric KLD는 KLD(p||q)+KLD(q||p)로 정의되며, 수식은 아래와 같음
+
+<p align = "center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/eb45590e-66e3-4279-bf39-325c3f9919d1"
+</p>
 
 <br>
+
+#### **2-3. Hellinger distance**<br>
+
+<p align = "center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d58f8758-9f72-456e-9bfc-d731701b07d2">
+</p>
 
