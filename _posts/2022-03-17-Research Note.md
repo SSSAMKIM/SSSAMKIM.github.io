@@ -4,7 +4,7 @@ title: "연구 노트 - Signal generation, Latent space analysis of GAN"
 summary: "신호 생성 및 분석 관련 연구 노트"
 author: taehun
 date: '2022-03-17 23:00:00 +0900'
-category: -
+category: etc
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
