@@ -60,6 +60,7 @@ Last update: 2023.12.07<br>
 > > 4) Distance calculation
 > > - Training ECDFs의 outcomes ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/42c75dfe-b655-43a1-895a-b45c0ff945aa)와 testing ECDFs의 outcomes D에 대해 두 ECDFs의 dissimilarity에 대한 측정은 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/aa7e6100-6c75-403c-9482-067befe8321a)로 계산하며, 이 때 distance는 approximate Bayesian computation (ABC) theory 기반<br>
 
+<br>
 
 #### **2-1. Statistical spectral analysis**<br>
 
@@ -68,6 +69,7 @@ Last update: 2023.12.07<br>
 > > 2) d(x,y) = d(y,x) (the symmetry axiom)
 > > 3) d(x,y) <= d(x,z) + d(z,y) (the triangle inequality)<br>
 
+<br>
 
 #### **2-2. Symmetric Kullback-Leibler Divergence**<br>
 - 먼저 Kullback-Leibler Divergence KLD(p||q)는 cross-entropy H(p,q)로부터 유도됨(H(p)는 entropy)
@@ -84,6 +86,7 @@ Last update: 2023.12.07<br>
   <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/eb45590e-66e3-4279-bf39-325c3f9919d1"
 </p>
 
+<br>
 <br>
 
 #### **2-3. Hellinger distance**<br>
