@@ -59,7 +59,8 @@ Last update: 2023.12.07<br>
 > - Sort operation을 통해 univariate ECDF obtain하며, ECDF는 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/83e7ec8f-ead3-43eb-a3b5-9184b5d9c2ee)로 정의됨<br>
 > - 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/3d401909-672d-4f35-a85e-4431f587eada)는 Bernoulli distribution이고 F(x)를 parameter로 가짐, 즉 P(X=1)=F(x), P(x=0)=1-F(x)<br>
 > - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/6336c7e7-6dc5-42cf-8933-33f31bf8a351)은 Bernoulli distribution을 n번 시행한 것과 같으므로 결국 binomial distribution이며, ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d65da1ea-51f1-4cf7-ad23-393e8ea6810b)는 표본평균에 해당하므로 unbiased estimator가 됨<br>
-> - 다양한 운행 조건 및 SNR에서 얻은 frequency amplitude를 오름차순 혹은 내림차순 정렬하게 되면 분포가 유사한 CDF를 가지고, 이 ECDF를 가지고 distribution discrepancy를 측정하는 metric을 활용해서 진단 및 분류함<br>
+> - n개의 time segments에 frequency amplitude들을 대해 평균낸 것이 ECDF(?)<br>
+> - 다양한 운행 조건 및 SNR 각각에서 얻은 frequency amplitude를 오름차순 혹은 내림차순 정렬하게 되면 여러 운행 조건/SNR에서 얻은 분포가 기존 CDF에 비해 유사하며, 이 ECDF를 가지고 distribution discrepancy를 측정하는 metric을 활용해서 진단 및 분류함<br>
 
 > [4] Distance calculation
 > - Training ECDFs의 outcomes ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/42c75dfe-b655-43a1-895a-b45c0ff945aa)와 testing ECDFs의 outcomes D에 대해 두 ECDFs의 dissimilarity에 대한 측정은 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/aa7e6100-6c75-403c-9482-067befe8321a)로 계산하며, 이 때 distance는 approximate Bayesian computation (ABC) theory 기반임<br>
