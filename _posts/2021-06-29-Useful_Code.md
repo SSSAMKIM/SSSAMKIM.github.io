@@ -210,9 +210,9 @@ def fft_th_low(data, sampling_frequency, label, mode = 1):
 4. python -m ipykernel install --user --name 이름 --display-name "이름"
 5. conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
 6. pip install torchsummary
-7. pip install torch_snippets
+7. pip install torch_snippets, torchmetrics, plotly
 (torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
-8. pip install mlxtend, sklearn, celluloid, seaborn
+8. pip install mlxtend, sklearn, celluloid, seaborn, optuna
 9. conda install -c conda-forge ffmpeg
 ```
   
