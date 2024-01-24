@@ -4,7 +4,7 @@ title: "Geometric Autoencoders 논문 리뷰"
 summary: "Geometric Autoencoders 논문 리뷰"
 author: taehun
 date: '2023-12-05 12:00:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
