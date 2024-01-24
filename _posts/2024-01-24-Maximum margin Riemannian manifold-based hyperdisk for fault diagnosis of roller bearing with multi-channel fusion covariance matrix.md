@@ -27,14 +27,18 @@ Last update: 2024.01.24<br>
 ---
 
 - [1. Abstract](#1-abstract)
-- [2. Abstract](#2-abstract)
-- [3. Methods](#3-methods)<br><br>
+- [2. Introduction](#2-introduciton)
+- [3. Background theory](#3-background-theory)<br><br>
 
 #### **1. Abstract**
 
 <br>
 
-**Proposed method 요약**<br>
+> Sensor 위치에 따라 진동 신호의 시간 영역 표현이 달라지기에, single-channel data보다는 채널 간 관계성을 분석할 수 있는 multi-channel data를 활용함<br>
+
+<br>
+
+- **Proposed method 요약**
 
 1) Multi-channel fusion covariance matrix (MFCM)
 
@@ -47,54 +51,63 @@ Last update: 2024.01.24<br>
 
 > - MFCM이 Riemannian manifold에 속하므로 Riemannian metric을 정의해야 하며, 보통 2가지가 사용됨
 > - [1] Affine-invariant Riemannian metric (AIRM), [2] Log-Euclidean metric (LEM)
-> - AIRM의 경우 eigenvalue decomposition을 진행하며, Riemannian manifold의 curvature 때문에 computationally expensive한 문제점이 있음
-> - 반면에 LEM은 non-flat Riemannian manifold를 상대적으로 flat tangent-vector space로 확장함으로써 연산량을 줄여줌<br>
-
-#### **1. Abstract**
-  
-<br>
-
-> - 회전체 고장 진단을 위해 강건한 features를 추출하는 것이 핵심이며, 이는 신호의 품질과 연관되어 있음
->   - Quasi-stationary 특성을 보이는 진동 신호에서, 주파수 영역에서 추출한 features의 quality가 SNR, 운행 조건 변화, 데이터 segmentation 변화(sliding window size 등)에 dependency를 가짐<br>
-
-- 이를 달성하기 위해,
-
-> - 진동 신호의 spectral contents의 amplitudes가 정렬되고, statistical spectral images로 transformed 됨<br>
-> - 위 sort operation을 통해 얻은 images들로부터 각 주파수 영역대 크기에 대한 empirical cumulative distribution function (ECDF)를 얻어서 고장 진단에 활용<br>
+> - **AIRM의 경우 eigenvalue decomposition을 진행하며, Riemannian manifold의 curvature 때문에 computationally expensive한 문제점**이 있음
+> - 반면에 **LEM은 non-flat Riemannian manifold를 상대적으로 flat tangent-vector space로 확장**함으로써 연산량을 줄여줌(Riemannian manifold로 근사)
+> - 결론적으로, **LEM-based kernel function으로 MFCM을 고차원의 Hilbert space로 사상**하고, (kernelized) MMRMHD를 classifier로 사용<br>
 
 <br>
 
-#### **2. Methods**
+#### **2. Introduction**
 
 <br>
 
-- 제안 방법 3가지 4개의 main steps<br>
+- Manifold learning은 고차원 데이터를, 원 데이터에 embedded 된 내재적 특성을 보존하는 저차원 특성 공간에 사상할 수 있음<br>
 
-> [1] Time segmentation
-> - 다양한 길이(fixed periodic Hamming window로 segmentation)로 이루어진 진동 신호의 time segments들을 randomly divde<br>
+- Manifold learning 기반 방식의 이점
+> - 데이터의 국부적 정보가 유지됨
+> - 복잡한 데이터에 embedded된 nonlinear freedom degrees가 발견될 수 있음<br>
 
-> [2] Statistical spectral image construction
-> - x축은 주파수 영역대, y축은 time segment<br>
+- 기존 feature-level fusion 방법 기반의 manifold learning 연구는 multi-channel features를 하나의 log vector로 변환하기에, 채널 간 상관관계를 학습하지는 못함<br>
 
-> [3] ECDF calculation
-> - 각 주파수 영역대의 amplitudes가 sorted 되고, 이 sort operation은 각 주파수 영역대의 amplitude distribution의 statistical information을 얻기 위해 필요<br>
-> - Sort operation을 통해 univariate ECDF obtain하며, ECDF는 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/83e7ec8f-ead3-43eb-a3b5-9184b5d9c2ee)로 정의됨<br>
-> - 이 때 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/3d401909-672d-4f35-a85e-4431f587eada)는 Bernoulli distribution이고 F(x)를 parameter로 가짐, 즉 P(X=1)=F(x), P(x=0)=1-F(x)<br>
-> - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/6336c7e7-6dc5-42cf-8933-33f31bf8a351)은 Bernoulli distribution을 n번 시행한 것과 같으므로 결국 binomial distribution이며, ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d65da1ea-51f1-4cf7-ad23-393e8ea6810b)는 표본평균에 해당하므로 unbiased estimator가 됨<br>
-> - 식의 의미는 x를 서서히 증가시키면서, x보다 작은 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/ce9d4b35-1cbc-41aa-b5f6-b87633c5f40c)의 개수를 누적하면서 discrete CDF를 구하고, n개의 time segments에 대해 구한 discrete CDF를 평균낸 것이 ECDF<br>
-> - 다양한 운행 조건 및 SNR 각각에서 얻은 frequency amplitude를 오름차순 혹은 내림차순 정렬하게 되면 여러 운행 조건/SNR에서 얻은 분포가 기존 CDF에 비해 유사하며, 이 ECDF를 가지고 distribution discrepancy를 측정하는 metric을 활용해서 진단 및 분류함<br>
-
-> [4] Distance calculation
-> - Training ECDFs의 outcomes ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/42c75dfe-b655-43a1-895a-b45c0ff945aa)와 testing ECDFs의 outcomes D에 대해 두 ECDFs의 dissimilarity에 대한 측정은 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/aa7e6100-6c75-403c-9482-067befe8321a)로 계산하며, 이 때 distance는 approximate Bayesian computation (ABC) theory 기반임<br>
+- MMRMHD의 목적
+> - Riemannian manifold 공간 상에서 다른 MFCMs을 maximum margin을 가지면서 분류할 수 있는 hyperplane을 찾는 것<br>
 
 <br>
 
-#### **2-1. Statistical spectral analysis**<br>
+#### **3. Background theory**<br>
 
-- Metrics이 만족해야 할 3가지 (in)equalities<br>
-> [1] d(x,y) = 0 iff x = y (the identity axiom)<br>
-> [2] d(x,y) = d(y,x) (the symmetry axiom)<br>
-> [3] d(x,y) <= d(x,z) + d(z,y) (the triangle inequality)<br>
+1) Riemannian manifold
+> - **SPD matrix는 Euclidean이 아닌 non-smooth Riemannian manifold에 위치**함
+> - SPD에 의해 구성된 Riemannian manifold는 **locally smooth linear structure**를 가지며, 따라서 Euclidean space의 기하학적 특성을 만족하지 않음
+> - **SPD matrices 간 거리**를 계산하기 위해서는 **Euclidean metric을 활용하는 것이 불가, geodesic metric을 활용**해야 함<br>
+
+<br>
+
+1-1) AIRM
+> - Riemannian manifold에서 흔히 활용되는 geodesic metric으로, ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/e5bc1387-b5c3-4b2c-a799-760f96d40719)로 계산되며, ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/b822ec94-41e1-496c-bfbf-678fdb9e9e35)는 Frobenius norm을 의미, log는 matrix logarithm operator를 의미
+> - 이 때 Frobenius norm은 다음과 같다: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/51cf39d2-35d5-4716-b8f3-aeecf8d2fe31)<br>
+
+
+1-2) matrix logarithm and exponential operator
+> - Logarithm operator: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d71f7e8b-47a6-4dd5-a973-36d73d37c5cb)
+> - Exponential operator: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/810a10dd-3a10-4fd0-9b85-3ae53810c5c7), log(Z)의 inverse transofrm<br>
+
+1-3) Loarithm product operation과 LEM-based geodesic metric
+> - SPD matrices 간 logarithm product operation: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/41e1fe3a-add5-45ba-a83b-c08af55c3d9e)
+> - LEM-based geodesic metric: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/e889c20d-4aca-4b64-b264-5aa10af2ab17)
+> - LEM-based로 non-smooth Riemannian manifold에서 relatively flat tangent vector space로 mapping이 되며, 이 경우 Euclidean geometry의 여러 계산 규칙 적용할 수 있음
+ <br>
+
+
+
+2) Hyperdisk
+
+<p align = "center">
+  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/a2fb7765-5645-4a6a-ad7c-599af53f758d">
+</p>
+
+
+
 
 <br>
 
