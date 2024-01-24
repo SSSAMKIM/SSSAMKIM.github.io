@@ -4,7 +4,7 @@ title: "Rolling element bearing diagnostics using the Case Western Reserve Unive
 summary: "CWRU bearing dataset에 대한 적합성 검증 논문"
 author: taehun
 date: '2022-07-08 21:00:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
