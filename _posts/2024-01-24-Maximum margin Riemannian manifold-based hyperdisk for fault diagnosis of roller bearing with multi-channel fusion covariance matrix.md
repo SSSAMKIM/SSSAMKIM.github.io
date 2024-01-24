@@ -159,3 +159,7 @@ Last update: 2024.01.24<br>
 > - Riemannian manifold-based kernel hyperdisk (RMKHD)는 mapping function ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f4b49131-f1e7-457e-aba6-f4bf468f280c)를 활용하여 다음과 같이 정의됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8dea3fa1-0e91-4a46-bf62-17659fec4520)
 > - RMKHD는 mapping function이 MFCM을 고차원의 힐버트 공간으로 직접적으로 사상함
 > - Euclidean space에서 kernel functions은 MFCM에 바로 적용이 불가하나, log-E polynomial kernel, log-E exponential kernel, log-E Gaussian kernel과 같이 LEM을 활용한 Riemannian kernel function을 활용하게 되면 적용 가능함<br>
+
+<br>
+
+- 번외: MFCM이 아닌 기존 feature fusion 방식은 local linear embedding (LLE), locality preserving projections (LPP), 그리고 mRMR이 있음<br>
