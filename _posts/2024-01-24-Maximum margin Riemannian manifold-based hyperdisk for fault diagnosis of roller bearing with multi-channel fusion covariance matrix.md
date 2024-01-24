@@ -144,8 +144,8 @@ Last update: 2024.01.24<br>
 > - log(C)와 r은 다음과 같이 계산됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/81cc7822-e491-4bde-9646-23e5c6520246)
 > - 위 식을 계산하기 위해 Lagrange multipllier ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/04dfdcb7-433f-4e43-ac5f-2a54ef9c0628)와 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/e3c3a010-21e3-4df2-80a1-ade538b79df6)를 활용하여 Largrangian function을 구성: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/254855ee-891a-4107-a33c-d4e886d7e385)
 > - Lagrangian function의 derivative: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/13852163-7dd6-4e7c-8dae-d2e8392c1a00)
-> - Minimization 과정은 다음과 같이 대체됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/0d4fd917-87f4-461f-b0c7-fcb15f00ad8a)
-> - MMRMHD의 objective function은 다음과 같이 정의됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f08d7679-9b25-4b0b-a0cd-301499d9276b)<br>
+> - Minimization 과정은 다음과 같이 대체됨: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/0d4fd917-87f4-461f-b0c7-fcb15f00ad8a)
+> - MMRMHD의 objective function은 다음과 같이 정의됨: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f08d7679-9b25-4b0b-a0cd-301499d9276b)<br>
 
 <br>
 
@@ -156,7 +156,7 @@ Last update: 2024.01.24<br>
 
 3) MMRMKHD
 > - MFCMs이 Riemannian manifold space에서 linearly separable 하다면 MMRMHD로 분류가 가능하나, 비선형성이 존재하는 경우 필요함
-> - Riemannian manifold-based kernel hyperdisk (RMKHD)는 mapping function ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f4b49131-f1e7-457e-aba6-f4bf468f280c)를 활용하여 다음과 같이 정의됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8dea3fa1-0e91-4a46-bf62-17659fec4520)
+> - Riemannian manifold-based kernel hyperdisk (RMKHD)는 mapping function ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f4b49131-f1e7-457e-aba6-f4bf468f280c)를 활용하여 다음과 같이 정의됨: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8dea3fa1-0e91-4a46-bf62-17659fec4520)
 > - RMKHD는 mapping function이 MFCM을 고차원의 힐버트 공간으로 직접적으로 사상함
 > - Euclidean space에서 kernel functions은 MFCM에 바로 적용이 불가하나, log-E polynomial kernel, log-E exponential kernel, log-E Gaussian kernel과 같이 LEM을 활용한 Riemannian kernel function을 활용하게 되면 적용 가능함<br>
 
