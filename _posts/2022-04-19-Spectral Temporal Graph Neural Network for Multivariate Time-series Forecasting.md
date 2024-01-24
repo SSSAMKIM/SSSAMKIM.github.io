@@ -4,7 +4,7 @@ title: "Spectral Temporal Graph Neural Network for Multivariate Time-series Fore
 summary: "GNN, Meta-learning 활용한 다변수 시계열 예측"
 author: taehun
 date: '2022-04-19 21:00:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
