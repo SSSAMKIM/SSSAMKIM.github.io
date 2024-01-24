@@ -28,7 +28,8 @@ Last update: 2024.01.24<br>
 
 - [1. Abstract](#1-abstract)
 - [2. Introduction](#2-introduciton)
-- [3. Background theory](#3-background-theory)<br><br>
+- [3. Background theory](#3-background-theory)
+- [4. Proposed method](#4-proposed-method)<br><br>
 
 #### **1. Abstract**
 
@@ -98,7 +99,7 @@ Last update: 2024.01.24<br>
 > - LEM-based로 non-smooth Riemannian manifold에서 relatively flat tangent vector space로 mapping이 되며, 이 경우 Euclidean geometry의 여러 계산 규칙 적용할 수 있음
  <br>
 
-
+<br>
 
 2) Hyperdisk
 
@@ -106,44 +107,20 @@ Last update: 2024.01.24<br>
   <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/a2fb7765-5645-4a6a-ad7c-599af53f758d">
 </p>
 
-
-
-
-<br>
-
-#### **2-2. Symmetric Kullback-Leibler Divergence**<br>
-- 먼저 Kullback-Leibler Divergence ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/973ca2a8-94ea-46da-bc01-c12dab2587f7)
-는 cross-entropy H(p,q)로부터 유도됨(H(p)는 entropy)
-<p align = "center">
-  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/2e6082c6-e914-402d-8bd9-ee107858da15">
-</p>
-- 즉, Cross-entropy H(p,q)는 p의 엔트로피 H(p)와 그 차이로 decompose 될 수 있고, 그 차이를 확률 밀도 함수 p와 q의 차이인 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f06e1f08-b3c4-4458-95d3-1f303dad11db)
-로 정의함
+> - Hyperdisk는 affine hull과 hypersphere의 교집합임
+> - Hyperdisk는 sample region 근사에 대해 affine hull 보다는 tight하고, conve hull 보다는 loose한 근사를 제공함
+> - Sample dataset ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/8dcb3881-f724-43b5-a3b6-96f23c317bb3)에 대해, hyperdisk는 다음과 같이 정의됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/30e60a12-f3f3-4bb9-96e9-65256e6a5fa5)
+> - 이 때 r은 hyperdisk의 반지름, c는 중심을 의미하며 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/43ed32dc-f101-45b9-ac5b-0654f7c99293)는 각 sample ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/c5f6c472-ec60-4fc6-a22a-257eaaea3b34)에 대한 combination coefficient임
+> - c와 r은 다음 식을 통해 결정됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/c8b97a14-a8d1-4000-ae16-c4bda82b99d2)
+> - ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/5dc7b486-f67f-4112-8b51-d51f81afbaf8)
+는 trade-off parameter로, over-distant한 points (outliers)를 제거하는 역할을 함(아마 s.t. 이후 constraint에서 sample들이 hypersphere 안으로 들어가기 위해 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/74983bcc-0c65-4153-84fb-f0bf541e83dd) 값을 키우는데, minimizaiton 관점에서 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/75cbb607-fc40-4587-bed3-86d9e94b282f)의 영향을 낮추기 위해 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/e386bddb-1387-43d5-8d08-f801fb5e13ff) 값을 줄이는 방식으로 outlier의 영향을 줄이려는 것 같음
+> - Hyperdisk를 기반으로 MMHD classifier는 postiive sample dataset ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f3cc9256-2e0f-4778-b5b8-013ff1d25032)와 negative sample dataset ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/bc393b9e-7743-49ef-ab8e-6fb652c12480)에 대해 MMHD의 objective function은 다음과 같이 작성됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/19515bd9-614f-4c62-a737-b3b7d0ba30c7)<br>
 
 <br>
 
-- Symmetric KLD는 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/c9d3580e-bdba-4e15-a199-ed51fde920ee)
-+![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/5d77b827-07b2-49f6-b1f6-eb8691023177)
-로 정의되며, 수식은 아래와 같음
-
-<p align = "center">
-  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/eb45590e-66e3-4279-bf39-325c3f9919d1">
-</p>
+**4. Proposed method**
 
 <br>
 
-#### **2-3. Hellinger distance**<br>
-- Hellinger distance는 두 분포가 Gaussian distribution을 따를 때 유사도를 측정하는 방법으로 아래와 같이 정의됨<br>
-
-<p align = "center">
-  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/d58f8758-9f72-456e-9bfc-d731701b07d2">
-</p>
-
-<br>
-
-#### **2-4. Kolomogorov distance**<br>
-
-<p align = "center">
-  <img src = "https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/cd479944-21a8-4f7e-8939-6a580e575c0b">
-</p>
+1) Multi-channel fusion covariance matrix (MFCM)
 
