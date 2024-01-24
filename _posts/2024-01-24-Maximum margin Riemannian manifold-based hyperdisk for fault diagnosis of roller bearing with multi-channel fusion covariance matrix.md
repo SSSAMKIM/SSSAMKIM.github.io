@@ -27,9 +27,11 @@ Last update: 2024.01.24<br>
 ---
 
 - [1. Abstract](#1-abstract)
-- [2. Introduction](#2-introduciton)
+- [2. Introduction](#2-introduction)
 - [3. Background theory](#3-background-theory)
-- [4. Proposed method](#4-proposed-method)<br><br>
+- [4. Proposed method](#4-proposed-method)
+
+<br><br>
 
 #### **1. Abstract**
 
