@@ -4,7 +4,7 @@ title: "Maximum margin Riemannian manifold-based hyperdisk for fault diagnosis o
 summary: "Riemannian manifold-based 고장 진단 논문 리뷰"
 author: taehun
 date: '2024-01-24 09:50:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
