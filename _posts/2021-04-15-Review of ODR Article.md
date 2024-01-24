@@ -4,7 +4,7 @@ title: "ODR논문 리뷰"
 summary: "ODR논문 Review"
 author: taehun
 date: '2021-04-15 11:00:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
