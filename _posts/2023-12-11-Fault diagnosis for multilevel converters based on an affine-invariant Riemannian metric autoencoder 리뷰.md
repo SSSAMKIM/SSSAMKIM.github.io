@@ -4,7 +4,7 @@ title: "Fault diagnosis for multilevel converters based on an affine-invariant R
 summary: "Fault diagnosis for multilevel converters based on an affine-invariant Riemannian metric autoencoder 리뷰"
 author: taehun
 date: '2023-12-11 19:00:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
