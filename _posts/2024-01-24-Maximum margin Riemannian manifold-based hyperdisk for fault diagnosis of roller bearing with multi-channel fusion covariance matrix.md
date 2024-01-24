@@ -142,14 +142,14 @@ Last update: 2024.01.24<br>
 > - 따라서, 위 RMHD를 단순화하기 위해 SPD 행렬을 matrix logarithm domain으로 사상하게 되며, matrix logarithm domain에서는 Euclidean에서의 계산 규칙과 유사함
 > - 단순화된 RMHD는 다음과 같이 정의됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/34d9e784-812a-4a5f-8107-3c8c6f6f5a86)
 > - log(C)와 r은 다음과 같이 계산됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/81cc7822-e491-4bde-9646-23e5c6520246)
-> - 위 식을 계산하기 위해 Lagrange multipllier ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/04dfdcb7-433f-4e43-ac5f-2a54ef9c0628)와 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/e3c3a010-21e3-4df2-80a1-ade538b79df6)를 활용하여 Largrangian function을 구성: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/254855ee-891a-4107-a33c-d4e886d7e385)
-> - Lagrangian function의 derivative: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/13852163-7dd6-4e7c-8dae-d2e8392c1a00)
+> - 위 식을 계산하기 위해 Lagrange multipllier ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/04dfdcb7-433f-4e43-ac5f-2a54ef9c0628)와 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/e3c3a010-21e3-4df2-80a1-ade538b79df6)를 활용하여 Largrangian function을 구성: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/254855ee-891a-4107-a33c-d4e886d7e385)
+> - Lagrangian function의 derivative: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/13852163-7dd6-4e7c-8dae-d2e8392c1a00)
 > - Minimization 과정은 다음과 같이 대체됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/0d4fd917-87f4-461f-b0c7-fcb15f00ad8a)
 > - MMRMHD의 objective function은 다음과 같이 정의됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/f08d7679-9b25-4b0b-a0cd-301499d9276b)<br>
 
 <br>
 
-> - 최적의 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/304dee6b-0cca-4803-92a5-6517031b1d4e)와 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/0f57ea06-101b-4a66-a2e4-3c6471917fe0)를 찾으면, 분류를 위한 hyperplane의 weight matrix W와 bias b는 다음과 같이 계산됨: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/4edc8b5f-25fe-4cd5-be90-3d874c52fc20)
+> - 최적의 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/304dee6b-0cca-4803-92a5-6517031b1d4e)와 ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/0f57ea06-101b-4a66-a2e4-3c6471917fe0)를 찾으면, 분류를 위한 hyperplane의 weight matrix W와 bias b는 다음과 같이 계산됨: <br> ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/4edc8b5f-25fe-4cd5-be90-3d874c52fc20)
 > - 최종적으로 testing SPD matrix sample Z에 대한 MMRMHD의 decision function은 다음과 같음: ![image](https://github.com/SSSAMKIM/SSSAMKIM.github.io/assets/86653075/053ddc52-65a2-45c0-a1f8-afd32313ecac)<br>
 
 <br>
