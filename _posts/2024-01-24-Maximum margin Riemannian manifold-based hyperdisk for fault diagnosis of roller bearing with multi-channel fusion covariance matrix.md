@@ -77,7 +77,9 @@ Last update: 2024.01.24<br>
 
 <br>
 
-#### **3. Background theory**<br>
+#### **3. Background theory**
+
+<br>
 
 1) Riemannian manifold
 > - **SPD matrix는 Euclidean이 아닌 non-smooth Riemannian manifold에 위치**함
@@ -123,7 +125,7 @@ Last update: 2024.01.24<br>
 
 <br>
 
-**4. Proposed method**
+#### **4. Proposed method**
 
 <br>
 
