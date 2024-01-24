@@ -4,7 +4,7 @@ title: "Time-series Generative Adversarial Networks 리뷰"
 summary: "시계열 데이터 생성에 관한 논문"
 author: taehun
 date: '2022-08-15 00:00:00 +0900'
-category: Literature_review
+category: Review
 toc: true
 toc_sticky: true
 toc_label: "My Table of Contents"
