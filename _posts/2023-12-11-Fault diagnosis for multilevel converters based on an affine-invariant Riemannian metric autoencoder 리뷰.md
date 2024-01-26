@@ -40,10 +40,13 @@ Last update: 2023.12.11<br>
 
 > **Affine은 rotation, translation, scaling, shearing과 같은 기하학적 변화**를 의미하며, 어떤 metric이 affine-invariant라는 것은 metric 값이 affine tansformation에 무관하게 일정하다는 의미임<br>
 
-2) Riemannian manifol
+```markdown
+2) Riemannian manifold
 ```
 
-> **Affine은 rotation, translation, scaling, shearing과 같은 기하학적 변화**를 의미하며, 어떤 metric이 affine-invariant라는 것은 metric 값이 affine tansformation에 무관하게 일정하다는 의미임<br>
+> - Riemannian metric을 가진 smooth manifold이며, manifold 위 각 점에서 tangent space 위에 inner product가 smoothly varying 해야 함
+> - 이 때 계산되는 inner product가 Riemannian metric이며 이 metric으로 manifold 위 두 점의 distance 및 angle을 정의할 수 있음
+> - Riemannian manifold는 locally Euclidean space이지만, globally curvature를 가짐<br>
 
 
 #### **1. Abstract**
