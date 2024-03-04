@@ -26,6 +26,7 @@ use_math: true
 - [3. 신호에 SNR 값에 따른 노이즈 추가](#3-신호에-snr-값에-따른-노이즈-추가)
 - [4. Bayesian Optimization](#4-bayesian-optimization)
 - [5. t-SNE](#5-tsne)
+- [6. torch unbind](#6-torch-unbind)
 
 
 #### **3. FFT**
@@ -147,3 +148,25 @@ for i in range(len(y_test)):
     
 plt.show()
 ```
+
+<br>
+
+#### **6. torch unbind**
+
+```python
+rand_tensor = torch.randn(3,3)
+unbind_tensor = torch.unbind(rand_tensor, dim = 1)
+print(rand_tensor)
+print(unbind_tensor)
+```
+
+<br>
+
+```python
+tensor([[0.2345, 0.9998, 0.4811],
+        [0.9889, 0.1879, 0.3026],
+        [0.5751, 0.4428, 0.5709]])
+
+(tensor([0.2345, 0.9889, 0.5751]), tensor([0.9998, 0.1879, 0.4428]), tensor([0.4811, 0.3026, 0.5709]))
+​```
+<br>
