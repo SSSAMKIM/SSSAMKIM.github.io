@@ -208,7 +208,7 @@ def fft_th_low(data, sampling_frequency, label, mode = 1):
 2. conda activate 이름
 3. conda install ipykernel jupyter
 4. python -m ipykernel install --user --name 이름 --display-name "이름"
-5. conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
+5. conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.7 -c pytorch -c nvidia
 6. pip install torchsummary
 7. pip install torch_snippets, torchmetrics, plotly
 (torch_snippets에 np, pd 등등 다양한 라이브러리 있음)
